@@ -8,8 +8,18 @@ function CheckEmail(emailid){
 	return check();
 }
 
-var email = document.getElementById('email');
-var pass = document.getElementById('pass');
 function check(){
-	console.log(email+"  "+pass);
+	var email = document.getElementById("email").value;
+	var pass = document.getElementById("pass").value;
+	if(email=="mittalrahul074@gmail.com"){
+		if(pass=="mittalrahul074@gmail.com"){
+			window.location.href = "file:///C:/Users/mitta/Desktop/ifest/js/class/Project/index.html"
+		}
+		else{
+			alert("Please Enter Valid Details");
+		}
+	}
+	else{
+		alert("Please Enter Valid Details");
+	}
 }
