@@ -13,7 +13,7 @@ function check(){
 	var pass = document.getElementById("pass").value;
 	if(email=="mittalrahul074@gmail.com"){
 		if(pass=="mittalrahul074@gmail.com"){
-			window.location.href = "file:///C:/Users/mitta/Desktop/ifest/js/class/Project/index.html"
+			window.location.href = "index.html"
 		}
 		else{
 			alert("Please Enter Valid Details");

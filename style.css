@@ -1,3 +1,21 @@
 .fa{
     line-height: 10px;
 }
+
+body{
+    background-image: url(./bg.png);
+    text-align: center;
+}
+
+.row{
+    margin-left: 30%;
+    float: r;
+    margin-top: 1%;
+    background-color: aqua;
+    width: 40%;  
+}
+
+.top{
+    color: Yellow;
+    font-family: Calibri, Helvetica, sans-serif;
+}

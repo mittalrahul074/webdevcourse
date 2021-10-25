@@ -7,17 +7,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./vit-university-logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        WEB DEV COURSE
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-1">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./login.html" role="button" aria-expanded="false"> <i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
     <div id="link1">
       <div class="container">
-        
-        <div class="row">
-          <i class="fa fa-caret-down"></i>
-          <ul>Course Overview</ul>
+        <div class="top">
+          <ul><h1> Course Overview </h1></ul>
         </div>
         <div class="row">
-          <ul> <a href="./Internet Basics/Subtopic.html" >Internet Basics</a></ul>
+          <ul><a href="./Internet Basics/Subtopic.html" >Internet Basics</a></ul>
         </div>
         <div class="row">
           <ul><a href="./HTML5/index.html">HTML 5</a></ul>
