@@ -9,13 +9,2519 @@
 <body>
     <li>
         <ul>Introducton</ul>
+        <p>CSS Tutorial
+CSS tutorial or CSS 3 tutorial provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners and professionals. The major points of CSS are given below:
+
+CSS stands for Cascading Style Sheet.
+CSS is used to design HTML tags.
+CSS is a widely used language on the web.
+HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.
+CSS Example with CSS Editor
+In this tutorial, you will get a lot of CSS examples, you can edit and run these examples with our online CSS editor tool.
+            Example:
+
+<!DOCTYPE>  
+<html>  
+<head>  
+<style>  
+h1{  
+color:white;  
+background-color:red;  
+padding:5px;  
+}  
+p{  
+color:blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Write Your First CSS Example</h1>  
+<p>This is Paragraph.</p>  
+</body>  
+</html>
+ What is CSS
+CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
+
+CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.
+
+What does CSS do
+You can add new looks to your old HTML documents.
+            You can completely change the look of your website with only a few changes in CSS code.</br>
+CSS Syntax
+A CSS rule set contains a selector and a declaration block.
+
+CSS syntax
+Selector: Selector indicates the HTML element you want to style. It could be any tag like <h1>, <title> etc.
+
+Declaration Block: The declaration block can contain one or more declarations separated by a semicolon. For the above example, there are two declarations:
+
+color: yellow;
+font-size: 11 px;
+Each declaration contains a property name and value, separated by a colon.
+    CSS Selector
+CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+
+There are several different types of selectors in CSS.
+
+CSS Element Selector
+CSS Id Selector
+CSS Class Selector
+CSS Universal Selector
+CSS Group Selector
+1) CSS Element Selector
+The element selector selects the HTML element by name.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p{  
+    text-align: center;  
+    color: blue;  
+}   
+</style>  
+</head>  
+<body>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html>    
+
+
+Output:
+This style will be applied on every paragraph.
+
+Me too!
+
+And me!
+
+2) CSS Id Selector
+The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
+
+It is written with the hash character (#), followed by the id of the element.
+
+Let?s take an example with the id "para1".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+#para1 {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<p id="para1">Hello Javatpoint.com</p>  
+<p>This paragraph will not be affected.</p>  
+</body>  
+</html>    
+Test it Now
+Output:
+
+Hello Javatpoint.com
+
+This paragraph will not be affected.
+
+3) CSS Class Selector
+The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
+
+Note: A class name should not be started with a number.
+Let's take an example with a class "center".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is blue and center-aligned.</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>  
+Test it Now
+Output:
+
+This heading is blue and center-aligned.
+This paragraph is blue and center-aligned.
+
+
+CSS Class Selector for specific element
+If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
+
+Let's see an example.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is not affected</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>   
+Test it Now
+Output:
+
+
+This heading is not affected
+This paragraph is blue and center-aligned.
+
+4) CSS Universal Selector
+The universal selector is used as a wildcard character. It selects all the elements on the pages.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+* {  
+   color: green;  
+   font-size: 20px;  
+}   
+</style>  
+</head>  
+<body>  
+<h2>This is heading</h2>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html>    
+Test it Now
+Output:
+
+This is heading
+This style will be applied on every paragraph.
+
+Me too!
+
+And me!
+
+5) CSS Group Selector
+The grouping selector is used to select all the elements with the same style definitions.
+
+Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
+
+Let's see the CSS code without group selector.
+
+
+h1 {  
+    text-align: center;  
+    color: blue;  
+}  
+h2 {  
+    text-align: center;  
+    color: blue;  
+}  
+p {  
+    text-align: center;  
+    color: blue;  
+}  
+As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
+
+h1,h2,p {  
+    text-align: center;  
+    color: blue;  
+}  
+Let's see the full example of CSS group selector.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+h1, h2, p {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Hello Javatpoint.com</h1>  
+<h2>Hello Javatpoint.com (In smaller font)</h2>  
+<p>This is a paragraph.</p>  
+</body>  
+</html>  
+    How to add CSS
+CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.
+
+Inline CSS
+Internal CSS
+External CSS
+1) Inline CSS
+Inline CSS is used to apply CSS on a single line or element.
+
+For example:
+
+
+<p style="color:blue">Hello CSS</p>  
+For more visit here: Inline CSS
+
+2) Internal CSS
+Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. It is written inside the style tag within head section of html.
+
+For example:
+
+<style>  
+p{color:blue}  
+</style>  
+For more visit here: Internal CSS
+
+3) External CSS
+External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file. Its extension must be .css for example style.css.
+
+For example:
+
+p{color:blue}  
+You need to link this style.css file to your html pages like this:
+
+<link rel="stylesheet" type="text/css" href="style.css">  
+The link tag must be used inside head section of html.
+    </p>
         <ul>-Selectors and Pseudo Classes</ul>
+    <p>CSS Selector
+CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+
+There are several different types of selectors in CSS.
+
+CSS Element Selector
+CSS Id Selector
+CSS Class Selector
+CSS Universal Selector
+CSS Group Selector
+1) CSS Element Selector
+The element selector selects the HTML element by name.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p{  
+    text-align: center;  
+    color: blue;  
+}   
+</style>  
+</head>  
+<body>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html>
+        2) CSS Id Selector
+The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
+
+It is written with the hash character (#), followed by the id of the element.
+
+Let?s take an example with the id "para1".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+#para1 {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<p id="para1">Hello Javatpoint.com</p>  
+<p>This paragraph will not be affected.</p>  
+</body>  
+</html>    
+        3) CSS Class Selector
+The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
+
+Note: A class name should not be started with a number.
+Let's take an example with a class "center".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is blue and center-aligned.</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>  
+        CSS Class Selector for specific element
+If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
+
+Let's see an example.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is not affected</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>  
+        4) CSS Universal Selector
+The universal selector is used as a wildcard character. It selects all the elements on the pages.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+* {  
+   color: green;  
+   font-size: 20px;  
+}   
+</style>  
+</head>  
+<body>  
+<h2>This is heading</h2>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html> 
+        5) CSS Group Selector
+The grouping selector is used to select all the elements with the same style definitions.
+
+Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
+
+Let's see the CSS code without group selector.
+
+
+h1 {  
+    text-align: center;  
+    color: blue;  
+}  
+h2 {  
+    text-align: center;  
+    color: blue;  
+}  
+p {  
+    text-align: center;  
+    color: blue;  
+}  
+As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
+
+h1,h2,p {  
+    text-align: center;  
+    color: blue;  
+}  
+Let's see the full example of CSS group selector.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+h1, h2, p {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Hello Javatpoint.com</h1>  
+<h2>Hello Javatpoint.com (In smaller font)</h2>  
+<p>This is a paragraph.</p>  
+</body>  
+</html>  
+        CSS pseudo-classes
+A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. It is added to the selector for adding an effect to the existing elements based on their states. For example, The ":hover" is used for adding special effects to an element when the user moves the cursor over the element.
+
+The names of the pseudo-class are not case-sensitive.
+
+Syntax
+A pseudo-class starts with a colon (:). Let's see its syntax.
+
+selector: pseudo-class {  
+  property: value;  
+}  
+Although there are various CSS pseudo-classes, here we are going to discuss some of the most commonly used pseudo-classes. The widely used CSS classes are tabulated as follows:
+
+
+pseudo-class	Description
+:active	         IIt is used to add style to an active element.
+:hover	         IIt adds special effects to an element when the user moves the mouse pointer over the element.
+:link	         IIt adds style to the unvisited link.
+:visited	     IIt adds style to a visited link.
+:lang	         IIt is used to define a language to use in a specified element.
+:focus	         IIt selects the element which is focused by the user currently.
+:first-child	It adds special effects to an element, which is the first child of another element.
+        Let's discuss the above pseudo-classes, along with an example.
+
+:hover pseudo-class
+This pseudo-class adds a special style to an element when the user moves the cursor over it. If you want to make it effective, it must be applied after the ":link" and ":visited" pseudo-classes.
+
+Example
+<html>  
+   <head>  
+      <style>  
+         body{  
+     text-align:center;  
+     }  
+     h1:hover{  
+     color:red;  
+     }  
+     h2:hover{  
+     color:blue;  
+     }  
+      </style>  
+   </head>  
+  
+   <body>  
+      <h1>Hello world </h1>  
+      <h2>This is an example of :hover pseudo class</h2>  
+   </body>  
+</html>  
+Test it Now
+:active pseudo-class
+It applies when the elements are clicked or activated. It selects the activated element.
+
+We can understand it with the example given below.
+
+Example
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+    body{  
+    text-align:center;  
+    }  
+    a:active{   
+        color: yellow;   
+    }   
+    h1, h2, h3{   
+        color:red; ;   
+    }   
+    </style>   
+</head>   
+    
+<body>   
+    <h1>Hello World</h1>   
+    <h2>The :active pseudo-class</h2>   
+    <h3>Click the following link to see the effect</h3>  
+    <a href="#">Click the link</a>  
+</body>   
+</html>  
+Test it Now
+:visited pseudo-class
+It selects the visited links and adds special styles to them. Its possible values can be any color name in a valid format.
+
+Example
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+    body{  
+    text-align:center;  
+    }  
+    a:visited{   
+        color: red;   
+    }   
+  
+    </style>   
+</head>   
+    
+<body>   
+    <h1>Hello World</h1>   
+    <h2>The :visited pseudo-class</h2>   
+    <h3>Click the following link to see the effect</h3>  
+    <a href="#">Click the link</a>  
+</body>   
+</html>  
+Test it Now
+:lang pseudo-class
+It is helpful in documents that require multiple languages. It allows us to define special rules for different languages.
+
+Example
+In this example, we specify p:lang(fr) which selects the elements having attribute lang="fr".
+
+<!DOCTYPE HTML>  
+ <html>  
+  <head>  
+    <style>  
+    body{  
+    text-align:center;  
+    }  
+       p:lang(fr)  
+    {  
+        font-family:Verdana;  
+        color:blue;  
+          
+    }  
+   </style>  
+ </head>  
+<body>  
+    
+  <p>Without :lang pseudo class</p>  
+  <p lang="fr">With :lang pseudo class with the value fr</p>  
+</body>  
+</html>   
+Test it Now
+:focus pseudo-class
+It selects the elements that are currently focused on by the user. It is generally used in input elements of the forms and triggers when the user clicks on it.
+
+
+Example
+<!DOCTYPE HTML>  
+<html>  
+  <style>  
+  form{  
+  text-align:center;  
+  }  
+  input:focus{  
+         border:5px solid lightblue;  
+         box-shadow:10px 10px 10px black;  
+         color: blue;  
+         width:300px;  
+         }  
+   </style>  
+ <body>  
+  <form>  
+    <h1>Name: <input type="text" value="Enter your name"></h1>  
+   </form>  
+</body>  
+</html>  
+Test it Now
+:first-child pseudo-class
+It matches a particular element, which is the first child of another element and adds a special effect to the corresponding element.
+
+Note: We have to declare a <!DOCTYPE> at the top of the document to make ":first-child" pseudo-class to work in IE8 and its earlier versions.
+
+The following illustration explains it more clearly.
+
+Example
+<!DOCTYPE HTML>  
+<html>  
+   <head>  
+      <style>  
+          h1:first-child {  
+            text-indent: 200px;  
+    color:blue;  
+         }  
+      </style>  
+   </head>  
+  
+   <body>  
+     
+      <div>  
+         <h1>It is the first heading in div. It will be indented, and its color will be blue.</h1>  
+         <h1>It is the Second heading in div, which will not be affected.</h1>  
+      </div>  
+   </body>  
+</html>  
+Test it Now
+The simple tooltip hover
+A tooltip specifies extra information about something when the user moves the cursor over the element. Let's create a tooltip by using the ":hover" pseudo-class.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body{  
+text-align:center;  
+}  
+h2{  
+  display: none;  
+  background-color: red;  
+  color:white;  
+  padding: 20px;  
+}  
+div{  
+font-size:40px;  
+}  
+div:hover h2 {  
+  display: block;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Move your mouse to the below text to see the effect</h1>   
+<div>Hello World  
+  <h2>Welcome to the javaTpoint</h2>  
+</div>  
+  
+</body>  
+</html>  
+
+CSS classes and pseudo-classes
+The classes in CSS can be combined with pseudo-classes. We can write it as-
+
+
+Syntax
+selector.class: pseudo-class {  
+  property: value;  
+}  
+We can understand it with the following example.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body{  
+text-align:center;  
+}  
+div.hello:hover {  
+  color: red;  
+  font-size:40px;  
+}   
+</style>  
+</head>  
+<body>  
+<h1>CSS Classes and pseudo-classes</h1>  
+<h2>Move your cursor to the below text</h2>  
+<div class="hello">Hello World</p>  
+  
+</body>  
+</html>
+    </p>
         <ul>Fonts and Text Effects</ul>
+    <p>CSS Font
+CSS Font property is used to control the look of texts. By the use of CSS font property you can change the text size, color, style and more. You have already studied how to make text bold or underlined. Here, you will also know how to resize your font using percentage.
+
+These are some important font attributes:
+
+CSS Font color: This property is used to change the color of the text. (standalone attribute)
+CSS Font family: This property is used to change the face of the font.
+CSS Font size: This property is used to increase or decrease the size of the font.
+CSS Font style: This property is used to make the font bold, italic or oblique.
+CSS Font variant: This property creates a small-caps effect.
+CSS Font weight: This property is used to increase or decrease the boldness and lightness of the font.
+1) CSS Font Color
+CSS font color is a standalone attribute in CSS although it seems that it is a part of CSS fonts. It is used to change the color of the text.
+
+
+There are three different formats to define a color:
+
+By a color name
+By hexadecimal value
+By RGB
+In the above example, we have defined all these formats.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body {  
+    font-size: 100%;  
+}  
+h1 { color: red; }  
+h2 { color: #9000A1; }   
+p { color:rgb(0, 220, 98); }   
+}  
+</style>  
+</head>  
+<body>  
+<h1>This is heading 1</h1>  
+<h2>This is heading 2</h2>  
+<p>This is a paragraph.</p>  
+</body>  
+</html>  
+        
+Output:
+
+This is heading 1
+  
+This is heading 2
+  
+This is a paragraph.
+
+ 
+2) CSS Font Family
+CSS font family can be divided in two types:
+
+Generic family: It includes Serif, Sans-serif, and Monospace.
+Font family: It specifies the font family name like Arial, New Times Roman etc.
+Serif: Serif fonts include small lines at the end of characters. Example of serif: Times new roman, Georgia etc.
+
+Sans-serif: A sans-serif font doesn't include the small lines at the end of characters. Example of Sans-serif: Arial, Verdana etc.
+
+CSS font serif
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body {  
+font-size: 100%;  
+}  
+h1 { font-family: sans-serif; }  
+h2 { font-family: serif; }   
+p { font-family: monospace; }   
+}  
+</style>  
+</head>  
+<body>  
+<h1>This heading is shown in sans-serif.</h1>  
+<h2>This heading is shown in serif.</h2>  
+<p>This paragraph is written in monospace.</p>  
+</body>  
+</html>  
+
+Output:
+
+This heading is shown in sans-serif.
+  
+This heading is shown in serif.
+  
+This paragraph is written in monospace.
+
+  
+3) CSS Font Size
+CSS font size property is used to change the size of the font.
+
+
+These are the possible values that can be used to set the font size:
+
+Font Size Value	Description
+xx-small	used to display the extremely small text size.
+x-small	used to display the extra small text size.
+small	used to display small text size.
+medium	used to display medium text size.
+large	used to display large text size.
+x-large	used to display extra large text size.
+xx-large	used to display extremely large text size.
+smaller	used to display comparatively smaller text size.
+larger	used to display comparatively larger text size.
+size in pixels or %	used to set value in percentage or in pixels.
+<html>  
+<head>  
+<title>Practice CSS font-size property</title>  
+</head>  
+<body>  
+<p style="font-size:xx-small;">  This font size is extremely small.</p>    
+<p style="font-size:x-small;">  This font size is extra small</p>    
+<p style="font-size:small;">  This font size is small</p>    
+<p style="font-size:medium;">  This font size is medium. </p>    
+<p style="font-size:large;">  This font size is large. </p>    
+<p style="font-size:x-large;">  This font size is extra large. </p>    
+<p style="font-size:xx-large;">  This font size is extremely large. </p>    
+<p style="font-size:smaller;">  This font size is smaller. </p>    
+<p style="font-size:larger;">  This font size is larger. </p>    
+<p style="font-size:200%;">  This font size is set on 200%. </p>    
+<p style="font-size:20px;">  This font size is 20 pixels.  </p>    
+</body>  
+</html>  
+
+Output:
+
+  This font size is extremely small.
+
+  
+  This font size is extra small
+
+  
+  This font size is small
+
+  
+  This font size is medium. 
+
+  
+  This font size is large. 
+
+  
+  This font size is extra large. 
+
+  
+  This font size is extremely large. 
+
+  
+  This font size is smaller. 
+
+  
+  This font size is larger. 
+
+  
+  This font size is set on 200%. 
+
+  
+  This font size is 20 pixels.  
+
+  
+4) CSS Font Style
+CSS Font style property defines what type of font you want to display. It may be italic, oblique, or normal.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body {  
+font-size: 100%;  
+}  
+h2 { font-style: italic; }  
+h3 { font-style: oblique; }  
+h4 { font-style: normal; }   
+}  
+</style>  
+</head>  
+<body>  
+<h2>This heading is shown in italic font.</h2>  
+<h3>This heading is shown in oblique font.</h3>  
+<h4>This heading is shown in normal font.</h4>  
+</body>  
+</html>  
+
+Output:
+
+This heading is shown in italic font.
+  
+This heading is shown in oblique font.
+  
+This heading is shown in normal font.
+ 
+5) CSS Font Variant
+CSS font variant property specifies how to set font variant of an element. It may be normal and small-caps.
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p { font-variant: small-caps; }  
+h3 { font-variant: normal; }  
+</style>  
+</head>  
+<body>  
+<h3>This heading is shown in normal font.</h3>  
+<p>This paragraph is shown in small font.</p>  
+</body>  
+</html>  
+
+Output:
+
+This heading is shown in normal font.
+  
+This paragraph is shown in small font.
+
+
+6) CSS Font Weight
+CSS font weight property defines the weight of the font and specify that how bold a font is. The possible values of font weight may be normal, bold, bolder, lighter or number (100, 200..... upto 900).
+
+<!DOCTYPE html>  
+<html>  
+<body>  
+<p style="font-weight:bold;">This font is bold.</p>  
+<p style="font-weight:bolder;">This font is bolder.</p>  
+<p style="font-weight:lighter;">This font is lighter.</p>  
+<p style="font-weight:100;">This font is 100 weight.</p>  
+<p style="font-weight:200;">This font is 200 weight.</p>  
+<p style="font-weight:300;">This font is 300 weight.</p>  
+<p style="font-weight:400;">This font is 400 weight.</p>  
+<p style="font-weight:500;">This font is 500 weight.</p>  
+<p style="font-weight:600;">This font is 600 weight.</p>  
+<p style="font-weight:700;">This font is 700 weight.</p>  
+<p style="font-weight:800;">This font is 800 weight.</p>  
+<p style="font-weight:900;">This font is 900 weight.</p>  
+</body>  
+</html>  
+
+Output:
+
+
+This font is bold.
+
+
+This font is bolder.
+
+
+This font is lighter.
+
+
+This font is 100 weight.
+
+
+This font is 200 weight.
+
+
+This font is 300 weight.
+
+
+This font is 400 weight.
+
+
+This font is 500 weight.
+
+
+This font is 600 weight.
+
+
+This font is 700 weight.
+
+
+This font is 800 weight.
+
+
+This font is 900 weight.</p>
+    <p>CSS Text Effects
+We can apply different effects on the text used within an HTML document. Some properties can be used for adding the effects on text.
+
+Using CSS, we can style the web documents and affects the text. The properties of the text effect help us to make the text attractive and clear. There are some text effect properties in CSS that are listed below:
+
+word-break
+text-overflow
+word-wrap
+writing-mode
+Let's discuss the above CSS properties along with illustrations.
+
+word-break
+It specifies how words should break at the end of the line. It defines the line break rules.
+
+
+Syntax
+word-break: normal |keep-all |  break-all | inherit ;  
+The default value of this property is normal. So, this value is automatically used when we don't specify any value.
+
+Values
+keep-all: It breaks the word in the default style.
+
+break-all: It inserts the word break between the characters in order to prevent the word overflow.
+
+Example
+<!DOCTYPE html>   
+<html>   
+    <head>   
+        <title>word-break: break-all</title>   
+        <style>    
+            .jtp{   
+                width: 150px;    
+                border: 2px solid black;   
+                word-break: break-all;    
+                text-align: left;   
+                font-size: 25px;   
+    color: blue;  
+            }   
+            .jtp1{   
+                width: 156px;    
+                border: 2px solid black;   
+                word-break: keep-all;    
+                text-align: left;   
+                font-size: 25px;  
+    color: blue;  
+            }   
+        </style>   
+    </head>   
+      <center>  
+    <body>   
+        <h2>word-break: break-all;</h2>   
+            
+        <p class="jtp">   
+           Welcome to the javaTpoint.com  
+        </p>   
+        <h2>word-break: keep-all;</h2>   
+        <p class="jtp1">   
+            Welcome to the javaTpoint.com   
+        </p>  
+</center>       
+    </body>   
+</html>  
+
+word-wrap
+CSS word-wrap property is used to break the long words and wrap onto the next line. This property is used to prevent overflow when an unbreakable string is too long to fit in the containing box.
+
+Syntax
+word-wrap: normal| break-word| inherit ;  
+Values
+normal: This property is used to break words only at allowed break points.
+
+break-word: It is used to break unbreakable words.
+
+initial: It is used to set this property to its default value.
+
+inherit: It inherits this property from its parent element.
+
+
+Example
+<!DOCTYPE html>    
+<html>    
+<head>    
+<style>     
+.test {    
+    width: 200px;    
+    background-color: lightblue;     
+    border: 2px solid black;    
+    padding:10px;  
+    font-size: 20px;  
+      
+}  
+.test1 {    
+    width: 11em;    
+    background-color: lightblue;     
+    border: 2px solid black;    
+    padding:10px;    
+    word-wrap: break-word;    
+    font-size: 20px;  
+}      
+</style>    
+</head>    
+<body>  
+<center>    
+<h1> Without Using word-wrap </h1>  
+<p class="test"> In this paragraph, there is a very long word:    
+ iamsooooooooooooooooooooooooooooooolongggggggggggggggg. </p>    
+<h1> Using word-wrap: break-word; </h1>  
+<p class="test1"> In this paragraph, there is a very long word:    
+ iamsooooooooooooooooooooooooooooooolongggggggggggggggg. The long word will break and wrap to the next line. </p>    
+ </center>      
+</body>    
+</html>  
+
+text-overflow
+It specifies the representation of overflowed text, which is not visible to the user. It signals the user about the content that is not visible. This property helps us to decide whether the text should be clipped or show some dots (ellipsis).
+
+This property does not work on its own. We have to use white-space: nowrap; and overflow: hidden; with this property.
+
+Syntax
+text-overflow: clip | ellipsis;  
+Property Values
+clip: It is the default value that clips the overflowed text.
+
+ellipsis: This value displays an ellipsis (…) or three dots to show the clipped text. It is displayed within the area, decreasing the amount of text.
+
+Example
+<!DOCTYPE html>   
+<html>   
+    <head>   
+        <style>    
+            .jtp{   
+                white-space: nowrap;    
+        height: 30px;  
+                width: 250px;                 
+                overflow: hidden;    
+                border: 2px solid black;   
+                font-size: 25px;   
+                text-overflow: clip;   
+            }   
+     .jtp1 {   
+                white-space: nowrap;    
+      height: 30px;  
+                width: 250px;    
+                overflow: hidden;    
+                border: 2px solid black;   
+                font-size: 25px;   
+                text-overflow: ellipsis;   
+            }   
+                
+    h2{  
+    color: blue;  
+    }  
+            div:hover {   
+                overflow: visible;   
+            }   
+    p{  
+    font-size: 25px;  
+    font-weight: bold;  
+    color: red;  
+    }  
+        </style>   
+    </head>   
+    <center>  
+    <body>         
+<p> Hover over the bordered text to see the full content. </p>  
+  
+        <h2>   
+            text-overflow: clip;   
+        </h2>   
+            
+        <div class="jtp">   
+            Welcome to the javaTpoint.com  
+        </div>   
+        <h2>   
+            text-overflow: ellipsis;   
+        </h2>   
+  
+        <div class="jtp1">   
+            Welcome to the javaTpoint.com   
+        </div>  
+        </center>  
+    </body>   
+</html>  
+
+writing-mode
+It specifies whether the text will be written in the horizontal or vertical direction. If the writing direction is vertical, then it can be from left to right (vertical-lr) or from right to left (vertical-rl).
+
+
+Syntax
+writing-mode: horizontal-tb | vertical-lr | vertical-rl | inherit ;  
+Property values
+horizontal-tb: It is the default value of this property in which the text is in the horizontal direction and read from left to right and top to bottom.
+
+vertical-rl: It displays the text in the vertical direction, and the text is read from right to left and top to bottom.
+
+vertical-lr: It is similar to vertical-rl, but the text is read from left to right.
+
+
+Example
+<!DOCTYPE html>  
+<html>  
+ <head>  
+  <style>  
+    h2 {     
+      border: 2px solid black;  
+      width: 300px;  
+      height: 100px;  
+    }  
+    #tb {  
+      writing-mode: horizontal-tb;  
+    }  
+      
+    #lr {  
+      writing-mode: vertical-lr;  
+    }  
+      
+    #rl {  
+       writing-mode: vertical-rl;  
+    }  
+  </style>  
+ </head>  
+ <center>  
+ <body>  
+   <h1> Example of CSS writing-mode property </h1>  
+   <h2 id="tb"> writing-mode: horizontal-tb; </h2>  
+   <h2 id="lr" style= "height: 300px;"> writing-mode: vertical-lr; </h2><br>  
+   <h2 id="rl" style= "height: 300px;"> writing-mode: vertical-rl; </h2>  
+   </center>  
+ </body>  
+ </html>  </p>
         <ul>Background</ul>
+    <p>CSS  - Background Properties
+
+ CSS background properties are used to define the background effects of 
+an element.
+ CSS properties used for background effects:
+background-color
+background-image 
+background-repeat 
+background-attachment 
+background-position 
+background-color
+
+ body {background-color:#b0c4de;} 
+ p {background-color:#e0ffff;}
+ div {background-color:#b0c4de;}
+ h4 { background-color: white; }
+ ul { background-color: rgb( 149, 206, 145); } 
+background-image
+
+ By default, the image is repeated so it covers the entire element
+body {background-image:url(“paper.gif ”);} 
+ You can have a background image repeat vertically (y-axis), horizontally (x-
+axis), in both directions, or in neither direction.
+p {    background-image: url(“smallPic.jpg”); 
+background-repeat: repeat; } 
+h4 {  background-image: url(“../smallPic.jpg”);
+background-repeat: repeat-y;} 
+ol {  background-image: url(“../image/smallPic.jpg”); 
+background-repeat: repeat-x;} 
+ul { background-image: url(“c:/IWP/image/smallPic.jpg”); 
+background-repeat: no-repeat;}
+Background-attachment
+
+ You may choose to have your background scroll naturally, or to have it 
+in a fixed position. 
+ body {
+background-image: url(smallPic.jpg); 
+background-attachment: fixed; } 
+ body { 
+background-image: url(smallPic.jpg); 
+background-attachment: scroll;} 
+background-position
+
+ If you would like to define where exactly an image appears within an 
+HTML element, you may use CSS's background-position. 
+ Three different ways of defining position: 
+ length, percentages, and keywords. 
+ p {    background-image: url(smallPic.jpg); 
+background-position: 20px 10px; } 
+h4 { background-image: url(smallPic.jpg); 
+background-position: 30% 30%; } 
+ol { background-image: url(smallPic.jpg); 
+background-position: top center; } 
+ The location of the image will be (A)px from the left of the screen and 
+(B)px from the top of the screen.
+Background - Shorthand property
+
+ To shorten the code, it is also possible to specify all the properties in 
+one single property. This is called a shorthand property.
+body {background: url(“img_tree.png”) no-repeat right top;}
+ When using the shorthand property the order of the property values 
+are:
+background-color 
+background-image 
+background-repeat 
+background-attachment 
+background-position 
+ It does not matter if one of the property values is missing, as long as the 
+ones that are present are in this order.
+Multiple Backgrounds
+
+<!DOCTYPE html>
+        <html> 
+            <head> 
+                <style> 
+#example1 { background: url(img_flwr.gif) right bottom no-repeat, 
+url(paper.gif) left top repeat;  padding: 15px;} </style> 
+</head>  <body><h1>Multiple Backgrounds</h1> <p>The 
+following div element has two background images:</p><div 
+id="example1">  <h1>Lorem Ipsum Dolor</h1>  <p>Lorem ipsum
+dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>  
+<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+consequat.</p></div>
+        </p>
         <ul>Borders and Box effects</ul>
+            <p>Border Properties
+
+Border Style
+ The border-style property 
+specifies what kind of border to 
+display.
+Dotted
+Dashed
+Solid
+Double
+Groove
+Ridge
+Inset
+outset
+Border Color
+ The border-color property is used
+to set the color of the border. The
+color can be set by:
+ You can also set the border color
+to "transparent".
+ Note: The "border-color"
+property does not work if it is
+used alone. Use the "border-
+style" property to set the borders
+first.
+It allows you to specify the style and color of an element's border.
+
+Border - Individual sides
+ In CSS it is possible to specify 
+different borders for different 
+sides.
+p
+{
+border-top-style:dotted;
+border-right-style:solid;
+border-bottom-
+style:dotted;
+border-left-style:solid;
+}
+ The border-style property can 
+have from one to four values.
+Example: 
+border-style:dotted solid 
+double dashed; 
+ top border is dotted 
+ right border is solid 
+ bottom border is double 
+ left border is dashed
+border-style:dotted solid 
+double;
+ top border is dotted 
+ right and left borders are solid 
+ bottom border is double
+border-style:dotted solid;
+ top and bottom borders are dotted 
+ right and left borders are solid
+border-style:dotted;
+ all four borders are dotted</p>
+  <p>     BOX MODEL
+
+ Margin - Clears an area around the border. The margin does not have
+a background color, it is completely transparent .
+ Border - A border that goes around the padding and content. The
+border is affected by the background color of the box.
+ Padding - Clears an area around the content. The padding is affected
+by the background color of the box.
+ Content - The content of the box, where text and images appear.
+In CSS, the term "box model" is used when talking about design and layout. It is essentially a box that wraps around HTML elements.
+Width and Height of an Element
+Dr.MAREESWARI V/ AP(Sr) / SITE43
+ When you set the width and height properties of an element with CSS, you 
+just set the width and height of the content area.
+ The total width of an element should be calculated like this:
+Total element width = width + left padding + right padding + left 
+border + right border + left margin + right margin
+ The total height of an element should be calculated like this:
+Total element height = height + top padding + bottom padding + 
+top border + bottom border + top margin + bottom margin
+ Example: width:250px;
+padding:10px;
+border:5px solid gray;
+margin:10px;     
+  <meta name="viewport" content="width=device-width, initial-
+scale=1">
+ Using the meta viewport value width=device-width instructs the page 
+to match the screen's width in device-independent pixels. This allows 
+the page to reflow content to match different screen sizes, whether 
+rendered on a small mobile phone or a large desktop monitor.
+ Adding the attribute initial-scale=1 instructs browsers to establish a 1:1 
+relationship between CSS pixels and device-independent pixels 
+regardless of device orientation, and allows the page to take advantage 
+of the full landscape width.</p>    
+
         <ul>Transitions,transforms, animations</ul>
+            <p>
+                CSS transition-delay property
+This CSS property specifies the duration to start the transition effect. The value of this property is defined as either seconds (s) or milliseconds (ms). The CSS transitions are effects that are added to change the element gradually from one style to another, without using flash or JavaScript.
+
+Without using the transition-delay, the animation will start with the hover on the element, but using this CSS property, we can delay the animation by an amount of time.
+
+Syntax
+transition-delay: time | initial | inherit;  
+The default value of the transition-delay property is 0, which means that the transition will start to occur immediately without any delay.
+
+Property values
+time: It specifies the amount of time (in seconds or milliseconds) to wait before the transition starts.
+
+
+initial: It sets this property to its default value.
+
+inherit: It inherits this property from its parent element.
+
+The delay can be negative, positive, or zero.
+
+The negative value of the transition-delay property will immediately start the transition effect i.e., the effect will be animated as though it had already begun. The positive value of this property causes the transition effect to start for the given time.
+
+We can specify multiple delays that are helpful when transitioning several properties. Each delay will be applied to the related property, as defined by the transition-property property. For example, suppose we provide two transition-delay values. The first value affects the first property given by the transition-property property. The second transition-delay affects the second property from the list of property names given by the transition property.
+
+Let's see some examples of the transition-delay property.
+
+Example1
+In this example, we are using the transition-property, transition-duration, and transition-delay properties. There is a delay of 0.5s to start the transition effect, i.e., the background color of the div element will be changed after the given amount of time.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>  
+CSS transition-delay Property  
+</title>  
+<style>  
+div{  
+width: 100px;  
+height: 100px;  
+background: lightblue;  
+transition-property: background-color;  
+transition-duration: 1s;  
+transition-delay: 0.5s;                
+    
+/* For Safari browser */  
+-webkit-transition-property: background-color;  
+-webkit-transition-duration: 1s;  
+-webkit-transition-delay: 0.5s;  
+}  
+div:hover {  
+background-color: brown;  
+}  
+</style>  
+</head>  
+<body>  
+<div></div>  
+<p> Move the cursor over the div element above, to see the transition effect. </p>  
+</body>  
+</html>  
+
+
+CSS transition-delay property
+Example2
+In this example, there are two div elements. In the first div we are using the value initial of the transition-delay property. In the second div, we are applying the negative value of the transition-delay property, i.e., -2s. We have to move the cursor over the div elements to see the transition effect.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>  
+CSS transition-delay Property  
+</title>  
+  
+<style>  
+p{  
+font-size: 20px;  
+}  
+.first{  
+width: 150px;  
+height: 150px;  
+background-color: lightblue;  
+transition-property: width;  
+transition-duration: 1s;  
+transition-delay: initial;  
+  
+/* For Safari browser */  
+-webkit-transition-property: width;  
+-webkit-transition-duration: 1s;  
+-webkit-transition-delay: initial;  
+  
+}  
+.second{  
+width: 150px;  
+height: 150px;  
+background-color: lightgreen;  
+transition: width 1s, height 2s, background-color 2s;  
+transition-delay: -2s;  
+}  
+  
+.first:hover {  
+width: 300px;  
+}  
+.second:hover{  
+width: 250px;  
+height: 250px;  
+background-color: brown;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<center>  
+<h2> Example of transition-delay Property </h2>  
+<p> Move the cursor over the div element, to see the transition effect. </p>  
+<div class = "first">  
+<p> transition-delay: initial </p>  
+</div>  
+<div class = "second">  
+<p> transition-delay: -2s </p>  
+</div>  
+</center>  
+</body>  
+</html>  
+
+
+CSS transition-delay property
+Example
+Now, there is another example in which there is a multiple transition effect. Here, the transition effects on width, height, and transformation. There is also a transition-delay in the milliseconds (ms), i.e., 2.5ms.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+padding:15px;  
+width: 200px;  
+height: 200px;  
+background: lightgreen;  
+transition: background-color 1s, width 2s, height 2s, transform 2s;  
+transition-delay: 1.5ms;  
+}  
+p{  
+font-size: 20px;  
+}  
+div:hover {  
+width: 300px;  
+height: 300px;  
+-webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  
+transform: rotate(360deg);  
+background-color: orange;  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+<h2>JavaTpoint.com</h2>  
+<p> (Move your cursor on me to see the effect)</p></div>  
+</body>  
+</html>
+            </p>
+            <p>CSS transform-origin property
+This CSS property is used to change the position of transformed elements. It is a point around which the transformation is applied. It establishes the origin of the transformation of an element. It can be applied to both 2D and 3D rotations.
+
+The transform-origin property must be used with the transform property. The 2d transformation can change the x-axis and y-axis of the element, whereas the 3D transformation can change the z-axis along with the x-axis and y-axis.
+
+This property can be specified by using one, two, or three values. The first value affects the horizontal position, the second value affects the vertical position, and the third value indicates the position of the z-axis. The third value can also work on 3D transformations and cannot be defined using a percentage.
+
+If we specify only one value, the value must be a length or percentage, or one of the keyword values left, center, right, top, and bottom.
+If we specify two values, the first value must be a length or percentage or the keyword values left, right, and center. The second value must be a length or percentage or one of the keyword values center, top, and bottom.
+When we specify three values, then the first two values are same as the two-value syntax, but the third value represents the z-offset, so it must be a length.
+The default value of the transform-origin property is 50% 50%, which represents the center of the element.
+
+
+Syntax
+transform-origin: x-axis y-axis z-axis | initial | inherit;  
+The values of this property are tabulated as follows.
+
+Values	Description
+x-axis	It represents the horizontal position. This value specifies the position of the view at x-axis. Its possible values are length, percentage, left, right, and center.
+y-axis	It represents the vertical position. This value specifies the position of the view at y-axis. Its possible values are length, percentage, top, bottom, and center.
+z-axis	This value is used with the 3D transformations. This value specifies the position of the view at z-axis. It can be defined using the length values. It does not allow the percentage values.
+initial	It sets the property to its default value.
+inherit	It inherits the property from its parent element.
+Let's understand this property by using some illustrations.
+
+Example
+In this example, we are applying the transform-origin property with the length and percentage values. There is a rotation of 45deg in both of the elements. Here, there is the 2D transformation of elements.
+
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+<style>  
+div{  
+height: 100px;  
+width: 400px;  
+border: 5px dotted violet;  
+font-size: 20px;  
+}  
+.outer {  
+margin: 100px;  
+background-color: cyan;  
+}  
+.box {  
+background: url( "diamond.png");  
+transform: rotate(35deg);  
+transform-origin: 5% 2%;  
+}  
+.outer1{  
+margin-left: 500px;  
+background-color: cyan;  
+}  
+.box1 {  
+background: url( "diamond.png");  
+transform: rotate(45deg);  
+transform-origin: 5% 2%;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1> Example of the CSS transform-origin Property </h1>  
+  
+<div class="outer"> transform-origin: 5% 2%;  
+<div class="box"></div>  
+</div>  
+<div class="outer1"> transform-origin: 100px 200px;  
+<div class="box1"></div>  
+</div>  
+</body>  
+  
+</html>  
+
+
+CSS transform-origin property
+Now, in the next example, we will specify the position using the keyword values.
+
+Example
+In this example, we are applying the transform-origin property with the keyword values.
+
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+<style>  
+div{  
+height: 100px;  
+width: 400px;  
+border: 5px dotted violet;  
+font-size: 20px;  
+}  
+.outer {  
+margin: 100px;  
+background-color: cyan;  
+}  
+.box {  
+background: url( "diamond.png");  
+transform: rotate(35deg);  
+transform-origin: left bottom;  
+}  
+.outer1{  
+margin-left: 500px;  
+background-color: cyan;  
+}  
+.box1 {  
+background: url( "diamond.png");  
+transform: rotate(45deg);  
+transform-origin: right top;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1> Example of the CSS transform-origin Property </h1>  
+  
+<div class="outer"> transform-origin: left bottom;  
+<div class="box"></div>  
+</div>  
+<div class="outer1"> transform-origin: right top;  
+<div class="box1"></div>  
+</div>  
+</body>  
+  
+</html>  
+
+
+CSS transform-origin property
+Now, let's apply the transform-origin property on elements with 3D transformation.
+
+
+Example
+In this example, we are applying the transform-origin property on the 3D transformed elements.
+
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+<style>  
+div{  
+height: 100px;  
+width: 400px;  
+border: 5px dotted violet;  
+font-size: 20px;  
+}  
+.outer {  
+margin: 100px;  
+background-color: cyan;  
+text-align: center;  
+}  
+.box {  
+background: url( "diamond.png");  
+  transform: rotate3d(3, 2, 1, 75deg);  
+  transform-origin: 70% 10% 150px;  
+}  
+.outer1{  
+margin-left: 500px;  
+background-color: cyan;  
+text-align: center;  
+}  
+.box1 {  
+background: url( "diamond.png");  
+  transform: rotate3d(2, 2, 1, 75deg);  
+  transform-origin: bottom right 200px;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1> Example of the CSS transform-origin Property </h1>  
+  
+<div class="outer"> transform-origin: 70% 10% 150px;  
+<div class="box"></div>  
+</div>  
+<div class="outer1"> transform-origin: bottom right 200px;  
+<div class="box1"></div>  
+</div>  
+</body>  
+</html></p>
+            <p>CSS Animation
+CSS Animation property is used to create animation on the webpage. It can be used as a replacement of animation created by Flash and JavaScript.
+
+CSS3 @keyframes Rule
+The animation is created in the @keyframe rule. It is used to control the intermediate steps in a CSS animation sequence.
+
+What animation does
+An animation makes an element change gradually from one style to another. You can add as many as properties you want to add. You can also specify the changes in percentage.0% specify the start of the animation and 100% specify its completion.
+
+
+
+How CSS animation works
+When the animation is created in the @keyframe rule, it must be bound with selector; otherwise the animation will have no effect.
+
+The animation could be bound to the selector by specifying at least these two properties:
+
+The name of the animation
+The duration of the animation
+CSS animation properties
+Property	Description
+@keyframes	It is used to specify the animation.
+animation	This is a shorthand property, used for setting all the properties, except the animation-play-state and the animation-fill- mode property.
+animation-delay	It specifies when the animation will start.
+animation-direction	It specifies if or not the animation should play in reserve on alternate cycle.
+animation-duration	It specifies the time duration taken by the animation to complete one cycle.
+animation-fill-mode	it specifies the static style of the element. (when the animation is not playing)
+animation-iteration-count	It specifies the number of times the animation should be played.
+animation-play-state	It specifies if the animation is running or paused.
+animation-name	It specifies the name of @keyframes animation.
+animation-timing-function	It specifies the speed curve of the animation.
+CSS animation example: changing background color
+Let's see a simple CSS animation example that changes background color of rectangle from RED to BLACK.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>   
+div {  
+    width: 100px;  
+    height: 100px;  
+    background: red;  
+    -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */  
+    animation: myfirst 5s;  
+}  
+/* Chrome, Safari, Opera */  
+@-webkit-keyframes myfirst {  
+    from {background: red;}  
+    to {background: green;}  
+}  
+/* Standard syntax */  
+@keyframes myfirst {  
+    from {background: red;}  
+    to {background: green;}  
+}  
+</style>  
+</head>  
+<body>  
+<p><b>Note:</b> The IE 9 and earlier versions don't support CSS3 animation property. </p>  
+<div></div>  
+</body>  
+</html>  
+
+CSS animation example: Moving Rectangle
+Let's take another example to display animation with percentage value.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>   
+div {  
+    width: 100px;  
+    height: 100px;  
+    background: red;  
+    position: relative;  
+    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */  
+    animation: myfirst 5s;  
+}  
+/* Chrome, Safari, Opera */  
+@-webkit-keyframes myfirst {  
+    0%   {background:red; left:0px; top:0px;}  
+    25%  {background:yellow; left:300px; top:0px;}  
+    50%  {background:blue; left:200px; top:300px;}  
+    75%  {background:green; left:0px; top:200px;}  
+    100% {background:red; left:0px; top:0px;}  
+}  
+/* Standard syntax */  
+@keyframes myfirst {  
+    0%   {background:red; left:0px; top:0px;}  
+    25%  {background:yellow; left:300px; top:0px;}  
+    50%  {background:blue; left:300px; top:200px;}  
+    75%  {background:green; left:0px; top:200px;}  
+    100% {background:red; left:0px; top:0px;}  
+}  
+</style>  
+</head>  
+<body>  
+<p><b>Note:</b> The Internet Explorer 9 and its earlier versions don't support this example.</p>  
+<div></div>  
+</body>  
+</html></p>  
         <ul>Embedding Images and Media</ul>
+            <p>CSS Images
+Images are an important part of any web application. Including a lot of images in a web application is generally not recommended, but it is important to use the images wherever they required. CSS helps us to control the display of images in web applications.
+
+The styling of an image in CSS is similar to the styling of an element by using the borders and margins. There are multiple CSS properties such as border property, height property, width property, etc. that helps us to style an image.
+
+Let's discuss the styling of images in CSS by using some illustrations.
+
+Thumbnail Image
+The border property is used to make a thumbnail image.
+
+
+Example
+
+ <!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+img{  
+border: 2px solid red;  
+border-radius:5px;  
+padding:10px;  
+}  
+h2{  
+color:red;  
+}  
+    </style>   
+</head>   
+    
+<body>  
+ <h1>Thumbnail Image</h1>  
+<img src="jtp.png"></img>  
+<h2>Welcome to javaTpoint</h2>  
+</body>   
+</html>  
+
+Transparent image
+To make an image transparent, we have to use the opacity property. The value of this property lies between 0.0 to 1.0, respectively.
+
+Example
+
+ <!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+img{  
+border: 2px solid red;  
+border-radius:5px;  
+padding:10px;  
+opacity:0.3;  
+}  
+h2{  
+color:red;  
+}  
+    </style>   
+</head>   
+    
+<body>  
+ <h1>Transparent Image</h1>  
+<img src="jtp.png"></img>  
+<h2>Welcome to javaTpoint</h2>  
+</body>  
+</html>  
+
+Rounded image
+The border-radius property sets the radius of the bordered image. It is used to create the rounded images. The possible values for the rounded corners are given as follows:
+
+border-radius: It sets all of the four border-radius property.
+border-top-right-radius: It sets the border of the top-right corner.
+border-top-left-radius: It sets the border of the top-left corner.
+border-bottom-right-radius: It sets the border of the bottom-right corner.
+border-bottom-left-radius: It sets the border of the bottom-left corner.
+Example
+
+ <!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+#img1{  
+border: 2px solid green;  
+border-radius:10px;  
+padding:5px;  
+}  
+#img2{  
+border: 2px solid green;  
+border-radius:50%;  
+padding:5px;  
+}  
+  
+h2{  
+color:red;  
+}  
+    </style>   
+</head>   
+    
+<body>  
+ <h1>Rounded Image</h1>  
+<img src="jtp.png" id="img1"></img>  
+<h2>Welcome to javaTpoint</h2>  
+  
+ <h1>Circle Image</h1>  
+<img src="jtp.png" id="img2"></img>  
+<h2>Welcome to javaTpoint</h2>  
+</body>   
+</html>  
+
+Responsive Image
+It automatically adjusts to fit on the screen size. It is used to adjust the image to the specified box automatically.
+
+Example
+
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+#img1{  
+max-width:100%;  
+height:auto;  
+}  
+h2{  
+color:red;  
+}  
+    </style>   
+</head>   
+    
+<body>  
+ <h1>Responsive image</h1>  
+ <h2>You can resize the browser to see the effect</h2>  
+<img src="jtp.png" id="img1" width="1000" height="300"></img>  
+<h2>Welcome to javaTpoint</h2>  
+</body>   
+</html>  
+
+Center an Image
+We can center an image by using the left-margin and right-margin property. We have to set these properties to auto in order to make a block element.
+
+
+Example
+
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <style>   
+#img1{  
+margin-left:auto;  
+margin-right:auto;  
+display:block;  
+}  
+h1,h2{  
+text-align:center;  
+}  
+    </style>   
+</head>   
+    
+<body>  
+ <h1>Center image</h1>  
+<img src="jtp.png" id="img1"></img>  
+<h2>Welcome to javaTpoint</h2>  
+</body>   
+</html></p>
+<p>What is Media Query?
+CSS Media query is a W3C recommendation and a CSS3 module which is used to adapt to conditions such as screen resolution (e.g. Smartphone screen vs. computer screen).
+
+The media query technique first used in CSS3.
+It became a W3C recommendation in June 2012.
+It is an extension of media dependent stylesheets used in different media types (i.e. screen and print) found in CSS2.
+The most commonly used media feature is "width".
+It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+Recommended Media features for Media queries
+Following is a list of media features recommended for media queries by W3C.
+
+Feature	Value	Min/Max	Description
+color	integer	yes	It specifies the number of bits per color component.
+color-index	integer	yes 	It specifies the number of entries in the color lookup table.
+device-aspect-ratio	integer/integer	yes	It specifies the aspect ratio of the device.
+device-height	length	yes	It specifies the height of the output device.
+device-width	length	yes	It specifies the width of the output device.
+grid	integer	no	It is true for a grid-based device.
+height	length	yes	It specifies the height of the rendering surface.
+monochrome	integer	yes	It specifies the number of bits per pixel in a monochrome frame buffer.
+resolution	resolution ("dpi" or "dpcm")	yes	It specifies the resolution of the display screen.
+scan	"progressive" or "interlaced"	no	It specifies scanning process of "tv" media types.
+width	length	yes	It specifies the width of the rendering surface.
+What is Responsive Web Design?
+The term Responsive Web Design was given by Ethan Marcotte. 
+It facilitates you to use fluid grids, flexible images, and media queries to progressively enhance a web page for different
+viewing contexts i.e. Desktop, Smartphone, Tablet etc.
+    Media Queries Simple Examples
+One way to use media queries is to have an alternate CSS section right inside your style sheet.
+
+The following example changes the background-color to lightgreen if the viewport is 480 pixels wide or wider
+    (if the viewport is less than 480 pixels, the background-color will be pink):
+    Example:
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: pink;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Resize the browser window to see the effect!</h1>
+<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+
+</body>
+    </html></p>
         <ul>Navigation Bar</ul>
+<p>CSS Navigation bar
+A Navigation bar or navigation system comes under GUI that helps the visitors in accessing information. It is the UI element on a webpage that includes links for the other sections of the website.
+
+A navigation bar is mostly displayed on the top of the page in the form of a horizontal list of links. It can be placed below the logo or the header, but it should always be placed before the main content of the webpage.
+
+It is important for a website to have easy-to-use navigation. It plays an important role in the website as it allows the visitors to visit any section quickly.
+
+Let's discuss the horizontal navigational bar and vertical navigational bar in detail.
+
+Horizontal Navigation Bar
+The horizontal navigation bar is the horizontal list of links, which is generally on the top of the page.
+
+Let's see how to create a horizontal navigation bar by using an example.
+
+Example
+In this example, we are adding the overflow: hidden property that prevents the li elements from going outside of the list, display: block property displays the links as the block elements and makes the entire link area clickable.
+
+We are also adding the float: left property, which uses float for getting the block elements to slide them next to each other.
+
+If we want the full-width background color then we have to add the background-color property to <ul> rather than the <a> element.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  margin: 0;  
+  padding: 0px;  
+  overflow: hidden;  
+  background-color: lightgray;  
+}  
+  
+li {  
+  float: left;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+ font-size:20px;  
+  text-align: center;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+}  
+.active{  
+background-color: gray;  
+color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<ul>  
+  <li><a class="active" href="#home">Home</a></li>  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">HTML</a></li>  
+  <li><a href="#">CSS</a></li>  
+</ul>  
+  
+</body>  
+</html>  
+
+Border dividers
+We can add the border between the links in the navigation bar by using the border-right property. The following example explains it more clearly.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  margin: 0;  
+  padding: 0px;  
+  overflow: hidden;  
+  background-color: lightgray;  
+}  
+  
+li {  
+  float: left;  
+    border-right: 1px solid blue;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+ font-size:20px;  
+  text-align: center;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+}  
+.active{  
+background-color: gray;  
+color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<ul>  
+  <li><a class="active" href="#home">Home</a></li>  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">HTML</a></li>  
+  <li><a href="#">CSS</a></li>  
+</ul>  
+  
+</body>  
+</html>  
+
+Fixed Navigation bars
+When we scrolls the page, fixed navigation bars stay at the bottom or top of the page. See an example of the same.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  position: fixed;  
+  width:100%;  
+  top:0;  
+  margin: 0;  
+  padding: 0px;  
+  overflow: hidden;  
+  background-color: lightgray;  
+}  
+  
+li {  
+  float: left;  
+    border-right: 1px solid blue;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+ font-size:20px;  
+  text-align: center;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+}  
+.active{  
+background-color: gray;  
+color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+<ul>  
+  <li><a class="active" href="#home">Home</a></li>  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">HTML</a></li>  
+  <li><a href="#">CSS</a></li>  
+</ul>  
+<h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
+<h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the fixed navigation bar</h2>  
+  
+</body>  
+</html>  
+
+Sticky Navbar
+The position: sticky; property is used to position the element based on the scroll position of the user.
+
+This CSS property allows the elements to stick when the scroll reaches to a certain point. Depending upon the scroll position, a sticky element toggles in between fixed and relative property.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  position: sticky;  
+  width:100%;  
+  top:0;  
+  margin: 0;  
+  padding: 0px;  
+  overflow: hidden;  
+  background-color: lightgray;  
+}  
+  
+li {  
+  float: left;  
+    border-right: 1px solid blue;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+ font-size:20px;  
+  text-align: center;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+}  
+.active{  
+background-color: gray;  
+color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+<h1> Example of sticky navigation bar</h1>  
+<ul>  
+  <li><a class="active" href="#home">Home</a></li>  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">HTML</a></li>  
+  <li><a href="#">CSS</a></li>  
+</ul>  
+<h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
+<h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the sticky navigation bar</h2>  
+  
+</body>  
+</html>  
+
+Dropdown Navbar
+Following example explain how to create a dropdown menu inside a navigation bar.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+  
+ul {  
+  list-style-type: none;  
+  margin: 0;  
+  padding: 0;  
+  overflow: hidden;  
+  background-color: lightgray;  
+}  
+  
+li {  
+  float: left;  
+}  
+  
+li a, .dropbtn {  
+  display: inline-block;  
+  color: blue;  
+ font-size:20px;  
+  text-align: center;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+}  
+.active{  
+background-color: gray;  
+color: white;  
+}  
+li a:hover , .dropdown:hover .dropbtn{  
+  background-color: orange;  
+  color: white;  
+}  
+  
+.dropdown-content {  
+  display: none;  
+  position: absolute;  
+  background-color: lightblue;  
+  min-width: 160px;  
+  box-shadow: 5px 8px 10px 0px black;  
+ }  
+  
+.dropdown-content a {  
+  color: black;  
+  padding: 12px 16px;  
+  text-decoration: none;  
+  display: block;  
+  text-align: left;  
+}  
+  
+.dropdown-content a:hover {  
+background-color: gray;  
+color:white;  
+}  
+  
+.dropdown:hover .dropdown-content {  
+  display: block;  
+}  
+h1,h2,h3{  
+text-align:center;   
+color: green;  
+}  
+</style>  
+</head>  
+<body>  
+<ul>  
+  <li><a class="active" href="#home">Home</a></li>  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">C</a></li>  
+  <li><a href="#">C++</a></li>  
+  <li class="dropdown">  
+    <a href="#" class="dropbtn">Web-designing</a>  
+    <div class="dropdown-content">  
+      <a href="#">HTML</a>  
+      <a href="#">CSS</a>  
+      <a href="#">Bootstrap</a>  
+    </div>  
+  </li>  
+</ul>  
+<h1>Welcome to the javaTpoint.com</h1>  
+<h2>Example of Dropdown Menu inside a Navigation Bar</h2>  
+<h3>Move your cursor on the "web-designing" to see the dropdown effect.</h3>  
+  
+</body>  
+</html>  
+
+Vertical Navigation bar
+In this example, we are going to see how to build a vertical navigation bar.
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  margin: 0;  
+  padding: 0;  
+  width: 200px;  
+  background-color: lightblue;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+  font-size:20px;  
+  padding: 8px 16px;  
+  text-decoration: none;  
+}  
+.active{  
+  background-color: orange;  
+  color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<h2>Vertical Navigation Bar</h2>  
+  
+<ul>  
+  <li><a href="#" class = "active">Home</a></li>  
+  <li><a href = "#">Java</a></li>  
+  <li><a href = "#">CSS</a></li>  
+  <li><a href = "#">HTML</a></li>  
+  <li><a href = "#">Bootstrap</a></li>  
+</ul>  
+  
+</body>  
+</html>  
+
+    We can align the links to the center and add borders between them. See an example of the same.
+
+Example
+In this example, we are adding the text-align: center; property to <li> and <a> to center the links and border property to <ul> to add the border. We will also add the border-bottom property to all <li> elements.
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul {  
+  list-style-type: none;  
+  margin: 0;  
+  padding: 0;  
+  width: 200px;  
+  background-color: lightblue;  
+  border: 1px solid blue;  
+}  
+  
+li a {  
+  display: block;  
+  color: blue;  
+  font-size:20px;  
+  padding: 10px 20px;  
+  text-decoration: none;  
+  border-bottom: 1px solid blue;  
+}  
+ul:last-child {  
+  border-bottom: none;  
+}  
+.active{  
+  background-color: orange;  
+  color: white;  
+}  
+li a:hover {  
+  background-color: orange;  
+  color: white;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<h2>Vertical Navigation Bar</h2>  
+  
+<ul>  
+  <li><a href="#" class = "active">Home</a></li>  
+  <li><a href = "#">Java</a></li>  
+  <li><a href = "#">CSS</a></li>  
+  <li><a href = "#">HTML</a></li>  
+  <li><a href = "#">Bootstrap</a></li>  
+</ul>  
+  
+</body>  
+</html>  
+
+Full-height fixed Vertical Navbar
+We can also create the fixed full-height side navigation bar by using the properties height: 100%; and postion: fixed;
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+body{  
+background-color: pink;  
+}  
+ul {  
+list-style-type: none;  
+margin: 0;  
+padding: 0;  
+height:100%;  
+top:0;  
+width:150px;  
+overflow: auto;  
+background-color: lightblue;  
+border: 1px solid blue;  
+position: fixed;  
+}  
+li a {  
+display: block;  
+color: blue;  
+font-size:20px;  
+padding: 10px 20px;  
+text-decoration: none;  
+border-bottom: 1px solid blue;  
+}  
+.active{  
+background-color: orange;  
+color: white;  
+}  
+li a:hover {  
+background-color: orange;  
+color: white;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<ul>  
+<li><a href = "#" class = "active">Home</a></li>  
+<li><a href = "#">Java</a></li>  
+<li><a href = "#">CSS</a></li>  
+<li><a href = "#">HTML</a></li>  
+<li><a href = "#">Bootstrap</a></li>  
+</ul>  
+<div style="margin-left:20%;padding-bottom:2000px;color:blue;">  
+<h1>Welcome to the javaTpoint.com</h1>  
+<h2>Side navigation bar with height: 100%; and position: fixed;</h2>  
+<h3>Scroll the page, and see how the sidenav sticks to the page</h3>  
+  
+</div>  
+</body>  
+    </html>  </p>
     </li>
 </body>
 </html>
