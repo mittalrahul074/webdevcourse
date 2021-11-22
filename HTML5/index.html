@@ -9,9 +9,464 @@
 <body>
     <li>
         <ul>Introduction</ul>
+        <p>
+Welcome to Learn HTML and CSS . This book is for Web users learning to create their own Web pages using HTML, the standard tagging language for the World Wide Web. </p>
+        <p>HTML
+With HTML, you can create your own Web site. HTML is the core technology in which 
+all Web pages are written. This tutorial teaches you everything about HTML. HTML is 
+easy to learn—you will enjoy it.
+What You Should Already Know
+Before you continue, you should have a basic understanding of how to use a browser to 
+view pages on the Web.
+If you want to study these subjects first, please read The Internet For Dummies, 12th Edition, also from Wiley Publishing.
+What is HTML?
+HTML is a language for describing Web pages.
+-	HTML stands for HyperText Markup Language.
+-	HTML is not a programming language, it is a markup language.
+-	A markup language is a collection of markup tags.
+-	HTML uses markup tags to describe Web pages.
+            What are Tags?
+-	HTML markup tags are usually called HTML tags or just tags.
+-	HTML tags are keywords surrounded by angle brackets like <html>.
+-	HTML tags normally come in pairs, like <b> and </b>.
+-	The first tag in a pair is the start tag; the second tag is the end tag.
+-	Start and end tags are also called opening tags and closing tags.
+HTML Documents = Web Pages
+-	HTML documents describe Web pages.
+-	HTML documents contain HTML tags and plain text.
+-	HTML documents are also called Web pages.
+The purpose of a Web browser (like Internet Explorer or Mozilla Firefox) is to read 
+HTML documents and display them as Web pages. The browser does not display 
+the HTML tags, but uses the tags to interpret the content of the page. In your 
+browser, it looks like figure I.1.
+<html>
+<body>
+<h1>My First Heading</h1>
+<p>My first paragraph</p>
+</body>
+</html>
+In the previous code example,
+-	The text between <html> and </html> describes the Web page.
+-	The text between <body> and </body> is the visible page content.
+-	The text between <h1> and </h1> is displayed as a heading.
+-	The text between <p> and </p> is displayed as a paragraph.
+            HTML Headings
+HTML headings are defined with the <h1> to <h6> tags. The lower the number,
+the larger the heading size.
+            Try it yourself >>
+<html>
+<body>
+<h1>This is Heading 1</h1>
+<h2>Heading 2 is Smaller</h2>
+<h3>Heading 3 is Smaller Still</h3>
+</body>
+</html>
+            HTML Paragraphs
+HTML paragraphs are defined with the <p> tag. Most browsers automatically put
+a line break and space after a </p> tag.
+            Try it yourself >>
+<html>
+<body>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+</body>
+</html>
+            HTML Links
+HTML links are defined with the <a> tag.
+            Try it yourself >>
+<html>
+<body>
+<a href="https://github.com">This is a link .</a>
+</body>
+</html>
+            HTML Images
+HTML images are defined with the <img> tag. It tells the browser where to find the
+image file and what size to display it, among other things.
+            Try it yourself >>
+<html>
+<body>
+<img src="https://image.shutterstock.com/image-vector/web-icon-contact-us-blog-260nw-1704145135.jpg"widtg="104" height="142"/>
+</body>
+</html>
+
+
         <ul>Structure Tages</ul>
         <ul>Form Tags</ul>
+            <p>Forms
+HTML forms are used to collect different kinds of user input. A form is an area that
+can contain form elements.
+Form elements are elements that allow the user to enter information in a form (like
+text fields, text area fields, drop-down menus, radio buttons, check boxes, and so
+on).
+
+A form is defined with the <form> tag:
+<form>
+.
+input elements
+.
+</form>
+input Tag and Attributes
+The most used form tag is the <input> tag. The type of input is specified with
+the type attribute. The following types are the most commonly used input types.
+Text Fields
+Text fields are used when you want the user to type letters, numbers, and so on in
+a form.  Note that the form itself is not
+visible.
+            
+Try it yourself >>
+<html>
+<body>
+<form action="">
+First name:
+<input type="text" name="firstname" />
+<br />
+Last name:
+<input type="text" name="lastname" />
+</form>
+</body>
+</html>	
+            
+
+Check Boxes
+This example demonstrates how to create check boxes on an HTML page .
+ A user can select or deselect a check box.
+
+            Try it yourself >>
+<html>
+<body>
+<form action="">
+I have a bike:
+<input type="checkbox" name="vehicle" value="Bike">
+<br />
+I have a car:
+<input type="checkbox" name="vehicle" value="Car">
+<br />
+I have an airplane:
+<input type="checkbox" name="vehicle" value="Airplane">
+</form>
+</body>
+</html>
+
+
+Radio Buttons
+The example demonstrated in Figure 13.4 shows how to create radio buttons on an
+HTML form. When a user clicks a radio button, that button becomes selected, and
+all other buttons in the same group become deselected.
+Try it yourself >>
+<html>
+<body>
+<form action="">
+Male:
+<input type="radio" checked="checked"
+name="Sex" value="male">
+<br>
+Female:
+<input type="radio"
+name="Sex" value="female">
+</form>
+</body>
+</html>
+
+Drop-Down List
+The next example shows how to create a simple drop-down list on an HTML page.
+A drop-down list is a selectable list.
+
+            Try it yourself >>
+<html>
+<body>
+<form action="">
+<select name="cars">
+Chapter 13: HTML Forms & Input
+103
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+</body>
+</html>
+
+Text Area
+Using a textarea (a multiline text input control) like the one in Figure 13.7, you can
+write an unlimited number of characters. A textarea can be in a form or elsewhere
+on a page.
+
+            Try it yourself >>
+<html>
+<body>
+<textarea rows="10" cols="30"> The cat was playing in the
+garden. </textarea>
+</body>
+</html>
+Figure 13.7
+Buttons
+Buttons are common items on a form. This example demonstrates how to create a
+button. You can define your own text on the face of the button. The results of this
+code appear in Figure 13.8.
+Try it yourself >>
+<html>
+<body>
+<form action="">
+<input type="button" value="Hello world!">
+</form>
+</body>
+</html>
+
+  Fieldset
+A fieldset is a grouping of data fields. This example demonstrates how to draw a
+border with a caption around your data, as shown in Figure 13.9.
+            
+Try it yourself >>
+<html>
+<body>
+<fieldset>
+<legend>
+Health information:
+</legend>
+<form action="">
+Height <input type="text" size="3">
+Weight <input type="text" size="3">
+</form>
+</fieldset>
+<p>
+If there is no border around the input form, your browser is
+too old.
+</p>
+</body>
+</html>
+
+action Attribute
+When the user clicks the Submit button, the content of the form is sent to the
+server. The form’s action attribute defines the name of the file to send the content to. The file defined in the action attribute usually does something with the
+received input.
+<form name="input" action="html_form_submit.asp"
+method="get">
+Username:
+<input type="text" name="user" />
+<input type="submit" value="Submit" />
+</form>
+Figure 13.10 shows how it looks in a browser. If you type some characters in the
+text field and click the Submit button, the browser sends your input to a page called
+"html_form_submit.asp". The page will show you the received input.
+Form Examples
+This example demonstrates how to add a form to a page. The form contains two
+input fields and a Submit button. The resulting form appears in Figure 13.11.
+Try it yourself >>
+<html>
+<body>
+<form name="input" action="html_form_action.asp"
+method="get">
+Type your first name:
+<input type="text" name="FirstName" value="Mickey" size="20">
+<br>Type your last name:
+<input type="text" name="LastName" value="Mouse" size="20">
+<br>
+<input type="submit" value="Submit">
+</form>
+<p>
+If you click the "Submit" button, you will send your input
+to a new page called html_form_action.asp.
+</p>
+</body>
+</html>
+
+Form with Check Boxes
+The following form contains three check boxes and a Submit button. The results of
+the code appear.
+            
+Try it yourself >>
+<html>
+<body>
+<form name="input" action="html_form_action.asp"
+method="get">
+I have a bike:
+<input type="checkbox" name="vehicle" value="Bike"
+checked="checked" />
+<br />
+I have a car:
+<input type="checkbox" name="vehicle" value="Car" />
+<br />
+I have an airplane:
+<input type="checkbox" name="vehicle" value="Airplane" />
+<br /><br />
+<input type="submit" value="Submit" />
+</form> (continued)
+Learn HTML and CSS with w3schools
+108
+<p>
+If you click the "Submit" button, you send your input to a
+new page called html_form_action.asp.
+</p>
+</body>
+</html>
+
+Form with Radio Buttons
+
+Try it yourself >>
+<html>
+<body>
+<form name="input" action="html_form_action.asp"
+method="get">
+Male:
+<input type="radio" name="Sex" value="Male"
+checked="checked">
+<br>
+Female:
+<input type="radio" name="Sex" value="Female">
+<br>
+<input type ="submit" value ="Submit">
+</form>
+<p>
+If you click the "Submit" button, you will send your input
+(continued)to a new page called html_form_action.asp.
+</p>
+</body>
+</html>
+
+Send E-Mail from a Form
+The next example demonstrates how to send e-mail from a form. The results of the
+code appear in Figure 13.14.
+            
+Try it yourself >>
+<html>
+<body>
+<form action="MAILTO:someone@w3schools.com" method="post"
+enctype="text/plain">
+<h3>This form sends an e-mail to W3Schools.</h3>
+Name:<br>
+<input type="text" name="name"
+value="yourname" size="20">
+<br>
+Mail:<br>
+<input type="text" name="mail"
+value="yourmail" size="20">
+<br>
+Comment:<br>
+<input type="text" name="comment"
+value="yourcomment" size="40">
+<br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset"> (continued)
+</form>
+</body>
+</html>
+            Form Tags
+TAG DESCRIPTION
+<form>-Defines a form for user input
+<input>-Defines an input field
+<textarea>-Defines a textarea (a multiline text input control)
+<label>-efines a label to a control
+<fieldset>-Defines a fieldset
+<legend>-Defines a caption for a fieldset
+<select>-Defines a selectable list (a drop-down box)
+<optgroup>-Defines an option group
+<option>-Defines an option in the drop-down box
+<button>-Defines a pushbutton
+<isindex>-Deprecated. Use <input> instead
         <ul>Media Tags</ul>
+    <p>HTML Video
+        The HTML <video> element is used to show a video on a web page.
+        Example:
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+        HTML <video> Autoplay
+To start a video automatically, use the autoplay attribute.
+Add muted after autoplay to let your video start playing automatically (but muted):
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" autoplay muted>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+        HTML Video Tags
+Tag	     Description
+<video>	Defines a video or movie
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
+    <track>	Defines text tracks in media players</p>
+    <p>The HTML <audio> Element
+To play an audio file in HTML, use the <audio> element
+        HTML <audio> Autoplay
+To start an audio file automatically, use the autoplay attribute
+Add muted after autoplay to let your audio file start playing automatically (but muted)
+        Example:
+        <!DOCTYPE html>
+<html>
+<body>
+
+<audio controls autoplay muted>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+        HTML Audio Tags
+Tag	      Description
+<audio>	  Defines sound content
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
+
+<p>Plug-ins
+Plug-ins were designed to be used for many different purposes:
+
+To run Java applets
+To run Microsoft ActiveX controls
+To display Flash movies
+To display maps
+To scan for viruses
+To verify a bank id
+    The <object> Element
+The <object> element is supported by all browsers.
+
+The <object> element defines an embedded object within an HTML document.
+
+It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML
+    Example:<!DOCTYPE html>
+<html>
+<body>
+
+<object width="100%" height="500px" data="snippet.html"></object>
+ 
+</body>
+</html>
+Ex:<!DOCTYPE html>
+<html>
+<body>
+
+<object data="audi.jpeg"></object>
+ 
+</body>
+</html>
+
+The <embed> element can also be used to include HTML in HTMl
+    <!DOCTYPE html>
+<html>
+<body>
+
+<embed width="100%" height="500px" src="snippet.html">
+
+</body>
+</html>
+
+
     </li>
 </body>
 </html>
