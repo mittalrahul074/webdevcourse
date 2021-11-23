@@ -5,460 +5,452 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Subtopic_style.css">
 </head>
 <body>
     <li>
-        <ul>Introducton</ul>
+        <h1>Introducton</h1>
         <p>CSS Tutorial
-CSS tutorial or CSS 3 tutorial provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners and professionals. The major points of CSS are given below:
+          CSS tutorial or CSS 3 tutorial provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners and professionals. The major points of CSS are given below:
 
-CSS stands for Cascading Style Sheet.
-CSS is used to design HTML tags.
-CSS is a widely used language on the web.
-HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.
-CSS Example with CSS Editor
-In this tutorial, you will get a lot of CSS examples, you can edit and run these examples with our online CSS editor tool.
-            Example:
+          CSS stands for Cascading Style Sheet.
+          CSS is used to design HTML tags.
+          CSS is a widely used language on the web.
+          HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.
+          CSS Example with CSS Editor
+          In this tutorial, you will get a lot of CSS examples, you can edit and run these examples with our online CSS editor tool.
+          Example:
+          <xmp>
+            <!DOCTYPE>  
+            <html>  
+            <head>  
+            <style>  
+            h1{  
+            color:white;  
+            background-color:red;  
+            padding:5px;  
+            }  
+            p{  
+            color:blue;  
+            }  
+            </style>  
+            </head>  
+            <body>  
+            <h1>Write Your First CSS Example</h1>  
+            <p>This is Paragraph.</p>  
+            </body>  
+            </html>
+          </xmp>
+          <h1>What is CSS?</h1>
+          <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
 
-<!DOCTYPE>  
-<html>  
-<head>  
-<style>  
-h1{  
-color:white;  
-background-color:red;  
-padding:5px;  
-}  
-p{  
-color:blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1>Write Your First CSS Example</h1>  
-<p>This is Paragraph.</p>  
-</body>  
-</html>
- What is CSS
-CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
+          CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.</p>
+          <h1>What does CSS do</h1>
+          <p>You can add new looks to your old HTML documents.
+          You can completely change the look of your website with only a few changes in CSS code.</br></p>
+          <h1>CSS Syntax</h1>
+          <p>A CSS rule set contains a selector and a declaration block.
 
-CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.
+          CSS syntax
+          Selector: Selector indicates the HTML element you want to style. It could be any tag like &lt;h1&gt;, &lt;title&gt; etc.</p>
+          <p>Declaration Block: The declaration block can contain one or more declarations separated by a semicolon. For the above example, there are two declarations:</p>
+          <xmp>
+            color: yellow;
+            font-size: 11 px;
+          </xmp>
+          <p>Each declaration contains a property name and value, separated by a colon.</p>
+          <h1>CSS Selector</h1>
+          <p>CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
+          <p>
+            There are several different types of selectors in CSS.
+            <ol>CSS Element Selector: <br> The element selector selects the HTML element by name.
+            <xmp>
+              <!DOCTYPE html>  
+              <html>  
+              <head>  
+              <style>  
+              p{  
+                  text-align: center;  
+                  color: blue;  
+              }   
+              </style>  
+              </head>  
+              <body>  
+              <p>This style will be applied on every paragraph.</p>  
+              <p id="para1">Me too!</p>  
+              <p>And me!</p>  
+              </body>  
+              </html> 
+            </xmp></ol>
+            <ol>
+              CSS Id Selector: <br>The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
 
-What does CSS do
-You can add new looks to your old HTML documents.
-            You can completely change the look of your website with only a few changes in CSS code.</br>
-CSS Syntax
-A CSS rule set contains a selector and a declaration block.
+              It is written with the hash character (#), followed by the id of the element.
+              
+              Let?s take an example with the id "para1".
+              <xmp>
+                <!DOCTYPE html>  
+                  <html>  
+                  <head>  
+                  <style>  
+                  #para1 {  
+                      text-align: center;  
+                      color: blue;  
+                  }  
+                  </style>  
+                  </head>  
+                  <body>  
+                  <p id="para1">Hello Javatpoint.com</p>  
+                  <p>This paragraph will not be affected.</p>  
+                  </body>  
+                  </html> 
+              </xmp>
+            </ol>
+            <ol>CSS Class Selector: <br> The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
 
-CSS syntax
-Selector: Selector indicates the HTML element you want to style. It could be any tag like <h1>, <title> etc.
+              Note: A class name should not be started with a number.
+              Let's take an example with a class "center".
+            <xmp>
+              <!DOCTYPE html>  
+              <html>  
+              <head>  
+              <style>  
+              .center {  
+                  text-align: center;  
+                  color: blue;  
+              }  
+              </style>  
+              </head>  
+              <body>  
+              <h1 class="center">This heading is blue and center-aligned.</h1>  
+              <p class="center">This paragraph is blue and center-aligned.</p>   
+              </body>  
+              </html>  
+            </xmp></ol>
+            <ol>CSS Class Selector for specific element: <br>
+              If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
 
-Declaration Block: The declaration block can contain one or more declarations separated by a semicolon. For the above example, there are two declarations:
+              Let's see an example.
+              <xmp>
+                <!DOCTYPE html>  
+                <html>  
+                <head>  
+                <style>  
+                p.center {  
+                    text-align: center;  
+                    color: blue;  
+                }  
+                </style>  
+                </head>  
+                <body>  
+                <h1 class="center">This heading is not affected</h1>  
+                <p class="center">This paragraph is blue and center-aligned.</p>   
+                </body>  
+                </html>
+              </xmp>
+            </ol>
+            <ol>
+              CSS Universal Selector: <br>The universal selector is used as a wildcard character. It selects all the elements on the pages.
+              <xmp>
+                <!DOCTYPE html>  
+                <html>  
+                <head>  
+                <style>  
+                * {  
+                  color: green;  
+                  font-size: 20px;  
+                }   
+                </style>  
+                </head>  
+                <body>  
+                <h2>This is heading</h2>  
+                <p>This style will be applied on every paragraph.</p>  
+                <p id="para1">Me too!</p>  
+                <p>And me!</p>  
+                </body>  
+                </html>   
+              </xmp>
+            </ol>
+            <ol> 
+              CSS Group Selector: 
+              <p>
+                The grouping selector is used to select all the elements with the same style definitions.
 
-color: yellow;
-font-size: 11 px;
-Each declaration contains a property name and value, separated by a colon.
-    CSS Selector
-CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+                Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
 
-There are several different types of selectors in CSS.
+                Let's see the CSS code without group selector.
+                <xmp>
+                  h1 {  
+                    text-align: center;  
+                    color: blue;  
+                  }  
+                  h2 {  
+                      text-align: center;  
+                      color: blue;  
+                  }  
+                  p {  
+                      text-align: center;  
+                      color: blue;  
+                  }
+                </xmp>
+                As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
+                <xmp>
+                  h1,h2,p {  
+                    text-align: center;  
+                    color: blue;  
+                  } 
+                </xmp>
+              </p>
+            </ol>
+          </p>
+          <p>
+            Let's see the full example of CSS group selector.
+          </p>
+          <xmp>
+            <!DOCTYPE html>  
+            <html>  
+            <head>  
+            <style>  
+            h1, h2, p {  
+                text-align: center;  
+                color: blue;  
+            }  
+            </style>  
+            </head>  
+            <body>  
+            <h1>Hello Javatpoint.com</h1>  
+            <h2>Hello Javatpoint.com (In smaller font)</h2>  
+            <p>This is a paragraph.</p>  
+            </body>  
+            </html>  
+          </xmp>
+          <p>
+            How to add CSS
+            CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.
+            <ol>Inline CSS
+              Inline CSS is used to apply CSS on a single line or element.
+              For example:
+              <xmp>
+                <p style="color:blue">Hello CSS</p>  
+              </xmp>
+            </ol>
+            <ol>
+              2) Internal CSS
+              Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. It is written inside the style tag within head section of html.
 
-CSS Element Selector
-CSS Id Selector
-CSS Class Selector
-CSS Universal Selector
-CSS Group Selector
-1) CSS Element Selector
-The element selector selects the HTML element by name.
+              For example:
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-p{  
-    text-align: center;  
-    color: blue;  
-}   
-</style>  
-</head>  
-<body>  
-<p>This style will be applied on every paragraph.</p>  
-<p id="para1">Me too!</p>  
-<p>And me!</p>  
-</body>  
-</html>    
+              <xmp>
+                <style>  
+                  p{color:blue}  
+                </style>
+              </xmp>
+            </ol>
+            <ol>
+              External CSS
+              External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file. Its extension must be .css for example style.css.
 
+              For example:
+              <xmp>
+                p{color:blue}
+              </xmp>
+              <p>
+                You need to link this style.css file to your html pages like this:
+              </p>
+              <xmp>
+                <link rel="stylesheet" type="text/css" href="style.css">  
+              </xmp>
+              <p>
+                The link tag must be used inside head section of html.
+              </p>
+              <h1>CSS Selector</h1>
+              <p>
+                CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+              </p>
+            </ol>
+          </p>
+          <p>
+            There are several different types of selectors in CSS.
+            <ol>CSS Element Selector
+              <p>
+                The element selector selects the HTML element by name.
+                <xmp>
+                  <!DOCTYPE html>  
+                  <html>  
+                  <head>  
+                  <style>  
+                  p{  
+                      text-align: center;  
+                      color: blue;  
+                  }   
+                  </style>  
+                  </head>  
+                  <body>  
+                  <p>This style will be applied on every paragraph.</p>  
+                  <p id="para1">Me too!</p>  
+                  <p>And me!</p>  
+                  </body>  
+                  </html>
+                </xmp>
+              </p>
+            </ol>
+            <ol>CSS Id Selector
+              <p>
+                The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
 
-Output:
-This style will be applied on every paragraph.
+                It is written with the hash character (#), followed by the id of the element.
 
-Me too!
-
-And me!
-
-2) CSS Id Selector
-The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
-
-It is written with the hash character (#), followed by the id of the element.
-
-Let?s take an example with the id "para1".
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-#para1 {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<p id="para1">Hello Javatpoint.com</p>  
-<p>This paragraph will not be affected.</p>  
-</body>  
-</html>    
-Test it Now
-Output:
-
-Hello Javatpoint.com
-
-This paragraph will not be affected.
-
-3) CSS Class Selector
-The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
-
-Note: A class name should not be started with a number.
-Let's take an example with a class "center".
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-.center {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1 class="center">This heading is blue and center-aligned.</h1>  
-<p class="center">This paragraph is blue and center-aligned.</p>   
-</body>  
-</html>  
-Test it Now
-Output:
-
-This heading is blue and center-aligned.
-This paragraph is blue and center-aligned.
-
-
-CSS Class Selector for specific element
-If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
-
-Let's see an example.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-p.center {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1 class="center">This heading is not affected</h1>  
-<p class="center">This paragraph is blue and center-aligned.</p>   
-</body>  
-</html>   
-Test it Now
-Output:
-
-
-This heading is not affected
-This paragraph is blue and center-aligned.
-
-4) CSS Universal Selector
-The universal selector is used as a wildcard character. It selects all the elements on the pages.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-* {  
-   color: green;  
-   font-size: 20px;  
-}   
-</style>  
-</head>  
-<body>  
-<h2>This is heading</h2>  
-<p>This style will be applied on every paragraph.</p>  
-<p id="para1">Me too!</p>  
-<p>And me!</p>  
-</body>  
-</html>    
-Test it Now
-Output:
-
-This is heading
-This style will be applied on every paragraph.
-
-Me too!
-
-And me!
-
-5) CSS Group Selector
-The grouping selector is used to select all the elements with the same style definitions.
-
-Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
-
-Let's see the CSS code without group selector.
-
-
-h1 {  
-    text-align: center;  
-    color: blue;  
-}  
-h2 {  
-    text-align: center;  
-    color: blue;  
-}  
-p {  
-    text-align: center;  
-    color: blue;  
-}  
-As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
-
-h1,h2,p {  
-    text-align: center;  
-    color: blue;  
-}  
-Let's see the full example of CSS group selector.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-h1, h2, p {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1>Hello Javatpoint.com</h1>  
-<h2>Hello Javatpoint.com (In smaller font)</h2>  
-<p>This is a paragraph.</p>  
-</body>  
-</html>  
-    How to add CSS
-CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.
-
-Inline CSS
-Internal CSS
-External CSS
-1) Inline CSS
-Inline CSS is used to apply CSS on a single line or element.
-
-For example:
-
-
-<p style="color:blue">Hello CSS</p>  
-For more visit here: Inline CSS
-
-2) Internal CSS
-Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. It is written inside the style tag within head section of html.
-
-For example:
-
-<style>  
-p{color:blue}  
-</style>  
-For more visit here: Internal CSS
-
-3) External CSS
-External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file. Its extension must be .css for example style.css.
-
-For example:
-
-p{color:blue}  
-You need to link this style.css file to your html pages like this:
-
-<link rel="stylesheet" type="text/css" href="style.css">  
-The link tag must be used inside head section of html.
-    </p>
-        <ul>-Selectors and Pseudo Classes</ul>
-    <p>CSS Selector
-CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
-
-There are several different types of selectors in CSS.
-
-CSS Element Selector
-CSS Id Selector
-CSS Class Selector
-CSS Universal Selector
-CSS Group Selector
-1) CSS Element Selector
-The element selector selects the HTML element by name.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-p{  
-    text-align: center;  
-    color: blue;  
-}   
-</style>  
-</head>  
-<body>  
-<p>This style will be applied on every paragraph.</p>  
-<p id="para1">Me too!</p>  
-<p>And me!</p>  
-</body>  
-</html>
-        2) CSS Id Selector
-The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
-
-It is written with the hash character (#), followed by the id of the element.
-
-Let?s take an example with the id "para1".
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-#para1 {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<p id="para1">Hello Javatpoint.com</p>  
-<p>This paragraph will not be affected.</p>  
-</body>  
-</html>    
-        3) CSS Class Selector
-The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
+                Let?s take an example with the id "para1".
+                <xmp>
+                  <!DOCTYPE html>  
+                  <html>  
+                  <head>  
+                  <style>  
+                  #para1 {  
+                      text-align: center;  
+                      color: blue;  
+                  }  
+                  </style>  
+                  </head>  
+                  <body>  
+                  <p id="para1">Hello Javatpoint.com</p>  
+                  <p>This paragraph will not be affected.</p>  
+                  </body>  
+                  </html> 
+                </xmp>
+              </p>
+            </ol>
+            <ol>CSS Class Selector
+              <p>
+                The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
 
 Note: A class name should not be started with a number.
 Let's take an example with a class "center".
+              </p>
+              <xmp>
+                <!DOCTYPE html>  
+                <html>  
+                <head>  
+                <style>  
+                .center {  
+                    text-align: center;  
+                    color: blue;  
+                }  
+                </style>  
+                </head>  
+                <body>  
+                <h1 class="center">This heading is blue and center-aligned.</h1>  
+                <p class="center">This paragraph is blue and center-aligned.</p>   
+                </body>  
+                </html> 
+              </xmp>
+            </ol>
+            <ol>CSS Class Selector for specific element
+              <p>
+                If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-.center {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1 class="center">This heading is blue and center-aligned.</h1>  
-<p class="center">This paragraph is blue and center-aligned.</p>   
-</body>  
-</html>  
-        CSS Class Selector for specific element
-If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
+                Let's see an example.
+              </p>
+              <Xmp>
+                <!DOCTYPE html>  
+                <html>  
+                <head>  
+                <style>  
+                p.center {  
+                    text-align: center;  
+                    color: blue;  
+                }  
+                </style>  
+                </head>  
+                <body>  
+                <h1 class="center">This heading is not affected</h1>  
+                <p class="center">This paragraph is blue and center-aligned.</p>   
+                </body>  
+                </html>  
+              </Xmp>
+            </ol>
+            <ol>
+              CSS Universal Selector
+              <p>
+                The universal selector is used as a wildcard character. It selects all the elements on the pages.
+              </p>
+              <xmp>
+                <!DOCTYPE html>  
+                <html>  
+                <head>  
+                <style>  
+                * {  
+                  color: green;  
+                  font-size: 20px;  
+                }   
+                </style>  
+                </head>  
+                <body>  
+                <h2>This is heading</h2>  
+                <p>This style will be applied on every paragraph.</p>  
+                <p id="para1">Me too!</p>  
+                <p>And me!</p>  
+                </body>  
+                </html>
+              </xmp>
+            </ol>
+            <ol>
+              CSS Group Selector
+              <p>The grouping selector is used to select all the elements with the same style definitions.
 
-Let's see an example.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-p.center {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1 class="center">This heading is not affected</h1>  
-<p class="center">This paragraph is blue and center-aligned.</p>   
-</body>  
-</html>  
-        4) CSS Universal Selector
-The universal selector is used as a wildcard character. It selects all the elements on the pages.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-* {  
-   color: green;  
-   font-size: 20px;  
-}   
-</style>  
-</head>  
-<body>  
-<h2>This is heading</h2>  
-<p>This style will be applied on every paragraph.</p>  
-<p id="para1">Me too!</p>  
-<p>And me!</p>  
-</body>  
-</html> 
-        5) CSS Group Selector
-The grouping selector is used to select all the elements with the same style definitions.
-
-Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
-
-Let's see the CSS code without group selector.
-
-
-h1 {  
-    text-align: center;  
-    color: blue;  
-}  
-h2 {  
-    text-align: center;  
-    color: blue;  
-}  
-p {  
-    text-align: center;  
-    color: blue;  
-}  
-As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
-
-h1,h2,p {  
-    text-align: center;  
-    color: blue;  
-}  
-Let's see the full example of CSS group selector.
-
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-h1, h2, p {  
-    text-align: center;  
-    color: blue;  
-}  
-</style>  
-</head>  
-<body>  
-<h1>Hello Javatpoint.com</h1>  
-<h2>Hello Javatpoint.com (In smaller font)</h2>  
-<p>This is a paragraph.</p>  
-</body>  
-</html>  
-        CSS pseudo-classes
-A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. It is added to the selector for adding an effect to the existing elements based on their states. For example, The ":hover" is used for adding special effects to an element when the user moves the cursor over the element.
-
-The names of the pseudo-class are not case-sensitive.
-
-Syntax
-A pseudo-class starts with a colon (:). Let's see its syntax.
-
-selector: pseudo-class {  
-  property: value;  
-}  
+                Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
+                
+                Let's see the CSS code without group selector.
+              </p>
+              <xmp>
+                h1 {  
+                  text-align: center;  
+                  color: blue;  
+              }  
+              h2 {  
+                  text-align: center;  
+                  color: blue;  
+              }  
+              p {  
+                  text-align: center;  
+                  color: blue;  
+              }  
+              As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
+              
+              h1,h2,p {  
+                  text-align: center;  
+                  color: blue;  
+              }  
+              </xmp>
+            </ol>
+          </p>
+          <h2>Let's see the full example of CSS group selector.</h2>
+          <xmp>
+            <!DOCTYPE html>  
+            <html>  
+            <head>  
+            <style>  
+            h1, h2, p {  
+                text-align: center;  
+                color: blue;  
+            }  
+            </style>  
+            </head>  
+            <body>  
+            <h1>Hello Javatpoint.com</h1>  
+            <h2>Hello Javatpoint.com (In smaller font)</h2>  
+            <p>This is a paragraph.</p>  
+            </body>  
+            </html>  
+          </xmp>
+          <h1>CSS pseudo-classes</h1>
+          <p>
+            A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. It is added to the selector for adding an effect to the existing elements based on their states. For example, The ":hover" is used for adding special effects to an element when the user moves the cursor over the element.<br>The names of the pseudo-class are not case-sensitive.<br>Syntax <br>A pseudo-class starts with a colon (:). Let's see its syntax.
+          </p>
+          <xmp>
+            selector: pseudo-class {  
+              property: value;  
+            } 
+          </xmp>
 Although there are various CSS pseudo-classes, here we are going to discuss some of the most commonly used pseudo-classes. The widely used CSS classes are tabulated as follows:
 
 
@@ -476,6 +468,8 @@ pseudo-class	Description
 This pseudo-class adds a special style to an element when the user moves the cursor over it. If you want to make it effective, it must be applied after the ":link" and ":visited" pseudo-classes.
 
 Example
+<xmp>
+  
 <html>  
    <head>  
       <style>  
@@ -496,6 +490,8 @@ Example
       <h2>This is an example of :hover pseudo class</h2>  
    </body>  
 </html>  
+
+</xmp>
 Test it Now
 :active pseudo-class
 It applies when the elements are clicked or activated. It selects the activated element.
@@ -503,6 +499,7 @@ It applies when the elements are clicked or activated. It selects the activated 
 We can understand it with the example given below.
 
 Example
+<xmp>
 <!DOCTYPE html>   
 <html>   
 <head>   
@@ -525,12 +522,15 @@ Example
     <h3>Click the following link to see the effect</h3>  
     <a href="#">Click the link</a>  
 </body>   
-</html>  
+</html> 
+
+</xmp> 
 Test it Now
 :visited pseudo-class
 It selects the visited links and adds special styles to them. Its possible values can be any color name in a valid format.
 
 Example
+<xmp>
 <!DOCTYPE html>   
 <html>   
 <head>   
@@ -552,6 +552,8 @@ Example
     <a href="#">Click the link</a>  
 </body>   
 </html>  
+
+</xmp>
 Test it Now
 :lang pseudo-class
 It is helpful in documents that require multiple languages. It allows us to define special rules for different languages.
@@ -559,6 +561,7 @@ It is helpful in documents that require multiple languages. It allows us to defi
 Example
 In this example, we specify p:lang(fr) which selects the elements having attribute lang="fr".
 
+<xmp>
 <!DOCTYPE HTML>  
  <html>  
   <head>  
@@ -579,13 +582,15 @@ In this example, we specify p:lang(fr) which selects the elements having attribu
   <p>Without :lang pseudo class</p>  
   <p lang="fr">With :lang pseudo class with the value fr</p>  
 </body>  
-</html>   
+</html> 
+</xmp>  
 Test it Now
 :focus pseudo-class
 It selects the elements that are currently focused on by the user. It is generally used in input elements of the forms and triggers when the user clicks on it.
 
 
 Example
+<xmp>
 <!DOCTYPE HTML>  
 <html>  
   <style>  
@@ -605,6 +610,7 @@ Example
    </form>  
 </body>  
 </html>  
+</xmp>
 Test it Now
 :first-child pseudo-class
 It matches a particular element, which is the first child of another element and adds a special effect to the corresponding element.
@@ -614,6 +620,7 @@ Note: We have to declare a <!DOCTYPE> at the top of the document to make ":first
 The following illustration explains it more clearly.
 
 Example
+<xmp>
 <!DOCTYPE HTML>  
 <html>  
    <head>  
@@ -633,11 +640,13 @@ Example
       </div>  
    </body>  
 </html>  
+</xmp>
 Test it Now
 The simple tooltip hover
 A tooltip specifies extra information about something when the user moves the cursor over the element. Let's create a tooltip by using the ":hover" pseudo-class.
 
 Example
+<xmp>
 <!DOCTYPE html>  
 <html>  
 <head>  
@@ -666,7 +675,8 @@ div:hover h2 {
 </div>  
   
 </body>  
-</html>  
+</html> 
+</xmp> 
 
 CSS classes and pseudo-classes
 The classes in CSS can be combined with pseudo-classes. We can write it as-
@@ -679,26 +689,28 @@ selector.class: pseudo-class {
 We can understand it with the following example.
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-body{  
-text-align:center;  
-}  
-div.hello:hover {  
-  color: red;  
-  font-size:40px;  
-}   
-</style>  
-</head>  
-<body>  
-<h1>CSS Classes and pseudo-classes</h1>  
-<h2>Move your cursor to the below text</h2>  
-<div class="hello">Hello World</p>  
-  
-</body>  
-</html>
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  body{  
+  text-align:center;  
+  }  
+  div.hello:hover {  
+    color: red;  
+    font-size:40px;  
+  }   
+  </style>  
+  </head>  
+  <body>  
+  <h1>CSS Classes and pseudo-classes</h1>  
+  <h2>Move your cursor to the below text</h2>  
+  <div class="hello">Hello World</p>  
+    
+  </body>  
+  </html>
+</xmp>
     </p>
         <ul>Fonts and Text Effects</ul>
     <p>CSS Font
@@ -723,24 +735,26 @@ By hexadecimal value
 By RGB
 In the above example, we have defined all these formats.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-body {  
-    font-size: 100%;  
-}  
-h1 { color: red; }  
-h2 { color: #9000A1; }   
-p { color:rgb(0, 220, 98); }     
-</style>  
-</head>  
-<body>  
-<h1>This is heading 1</h1>  
-<h2>This is heading 2</h2>  
-<p>This is a paragraph.</p>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  body {  
+      font-size: 100%;  
+  }  
+  h1 { color: red; }  
+  h2 { color: #9000A1; }   
+  p { color:rgb(0, 220, 98); }     
+  </style>  
+  </head>  
+  <body>  
+  <h1>This is heading 1</h1>  
+  <h2>This is heading 2</h2>  
+  <p>This is a paragraph.</p>  
+  </body>  
+  </html>  
+</xmp>
         
 Output:
 
@@ -761,24 +775,26 @@ Serif: Serif fonts include small lines at the end of characters. Example of seri
 Sans-serif: A sans-serif font doesn't include the small lines at the end of characters. Example of Sans-serif: Arial, Verdana etc.
 
 CSS font serif
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-body {  
-font-size: 100%;  
-}  
-h1 { font-family: sans-serif; }  
-h2 { font-family: serif; }   
-p { font-family: monospace; }   
-</style>  
-</head>  
-<body>  
-<h1>This heading is shown in sans-serif.</h1>  
-<h2>This heading is shown in serif.</h2>  
-<p>This paragraph is written in monospace.</p>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  body {  
+  font-size: 100%;  
+  }  
+  h1 { font-family: sans-serif; }  
+  h2 { font-family: serif; }   
+  p { font-family: monospace; }   
+  </style>  
+  </head>  
+  <body>  
+  <h1>This heading is shown in sans-serif.</h1>  
+  <h2>This heading is shown in serif.</h2>  
+  <p>This paragraph is written in monospace.</p>  
+  </body>  
+  </html>  
+</xmp>
 
 Output:
 
@@ -806,24 +822,26 @@ xx-large	used to display extremely large text size.
 smaller	used to display comparatively smaller text size.
 larger	used to display comparatively larger text size.
 size in pixels or %	used to set value in percentage or in pixels.
-<html>  
-<head>  
-<title>Practice CSS font-size property</title>  
-</head>  
-<body>  
-<p style="font-size:xx-small;">  This font size is extremely small.</p>    
-<p style="font-size:x-small;">  This font size is extra small</p>    
-<p style="font-size:small;">  This font size is small</p>    
-<p style="font-size:medium;">  This font size is medium. </p>    
-<p style="font-size:large;">  This font size is large. </p>    
-<p style="font-size:x-large;">  This font size is extra large. </p>    
-<p style="font-size:xx-large;">  This font size is extremely large. </p>    
-<p style="font-size:smaller;">  This font size is smaller. </p>    
-<p style="font-size:larger;">  This font size is larger. </p>    
-<p style="font-size:200%;">  This font size is set on 200%. </p>    
-<p style="font-size:20px;">  This font size is 20 pixels.  </p>    
-</body>  
-</html>  
+<xmp>
+  <html>  
+  <head>  
+  <title>Practice CSS font-size property</title>  
+  </head>  
+  <body>  
+  <p style="font-size:xx-small;">  This font size is extremely small.</p>    
+  <p style="font-size:x-small;">  This font size is extra small</p>    
+  <p style="font-size:small;">  This font size is small</p>    
+  <p style="font-size:medium;">  This font size is medium. </p>    
+  <p style="font-size:large;">  This font size is large. </p>    
+  <p style="font-size:x-large;">  This font size is extra large. </p>    
+  <p style="font-size:xx-large;">  This font size is extremely large. </p>    
+  <p style="font-size:smaller;">  This font size is smaller. </p>    
+  <p style="font-size:larger;">  This font size is larger. </p>    
+  <p style="font-size:200%;">  This font size is set on 200%. </p>    
+  <p style="font-size:20px;">  This font size is 20 pixels.  </p>    
+  </body>  
+  </html>  
+</xmp>
 
 Output:
 
@@ -863,24 +881,26 @@ Output:
 4) CSS Font Style
 CSS Font style property defines what type of font you want to display. It may be italic, oblique, or normal.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-body {  
-font-size: 100%;  
-}  
-h2 { font-style: italic; }  
-h3 { font-style: oblique; }  
-h4 { font-style: normal; }   
-</style>  
-</head>  
-<body>  
-<h2>This heading is shown in italic font.</h2>  
-<h3>This heading is shown in oblique font.</h3>  
-<h4>This heading is shown in normal font.</h4>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  body {  
+  font-size: 100%;  
+  }  
+  h2 { font-style: italic; }  
+  h3 { font-style: oblique; }  
+  h4 { font-style: normal; }   
+  </style>  
+  </head>  
+  <body>  
+  <h2>This heading is shown in italic font.</h2>  
+  <h3>This heading is shown in oblique font.</h3>  
+  <h4>This heading is shown in normal font.</h4>  
+  </body>  
+  </html> 
+</xmp> 
 
 Output:
 
@@ -894,19 +914,21 @@ This heading is shown in normal font.
 CSS font variant property specifies how to set font variant of an element. It may be normal and small-caps.
 
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-p { font-variant: small-caps; }  
-h3 { font-variant: normal; }  
-</style>  
-</head>  
-<body>  
-<h3>This heading is shown in normal font.</h3>  
-<p>This paragraph is shown in small font.</p>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  p { font-variant: small-caps; }  
+  h3 { font-variant: normal; }  
+  </style>  
+  </head>  
+  <body>  
+  <h3>This heading is shown in normal font.</h3>  
+  <p>This paragraph is shown in small font.</p>  
+  </body>  
+  </html>  
+</xmp>
 
 Output:
 
@@ -918,23 +940,25 @@ This paragraph is shown in small font.
 6) CSS Font Weight
 CSS font weight property defines the weight of the font and specify that how bold a font is. The possible values of font weight may be normal, bold, bolder, lighter or number (100, 200..... upto 900).
 
-<!DOCTYPE html>  
-<html>  
-<body>  
-<p style="font-weight:bold;">This font is bold.</p>  
-<p style="font-weight:bolder;">This font is bolder.</p>  
-<p style="font-weight:lighter;">This font is lighter.</p>  
-<p style="font-weight:100;">This font is 100 weight.</p>  
-<p style="font-weight:200;">This font is 200 weight.</p>  
-<p style="font-weight:300;">This font is 300 weight.</p>  
-<p style="font-weight:400;">This font is 400 weight.</p>  
-<p style="font-weight:500;">This font is 500 weight.</p>  
-<p style="font-weight:600;">This font is 600 weight.</p>  
-<p style="font-weight:700;">This font is 700 weight.</p>  
-<p style="font-weight:800;">This font is 800 weight.</p>  
-<p style="font-weight:900;">This font is 900 weight.</p>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <body>  
+  <p style="font-weight:bold;">This font is bold.</p>  
+  <p style="font-weight:bolder;">This font is bolder.</p>  
+  <p style="font-weight:lighter;">This font is lighter.</p>  
+  <p style="font-weight:100;">This font is 100 weight.</p>  
+  <p style="font-weight:200;">This font is 200 weight.</p>  
+  <p style="font-weight:300;">This font is 300 weight.</p>  
+  <p style="font-weight:400;">This font is 400 weight.</p>  
+  <p style="font-weight:500;">This font is 500 weight.</p>  
+  <p style="font-weight:600;">This font is 600 weight.</p>  
+  <p style="font-weight:700;">This font is 700 weight.</p>  
+  <p style="font-weight:800;">This font is 800 weight.</p>  
+  <p style="font-weight:900;">This font is 900 weight.</p>  
+  </body>  
+  </html>  
+</xmp>
 
 Output:
 
@@ -998,43 +1022,45 @@ keep-all: It breaks the word in the default style.
 break-all: It inserts the word break between the characters in order to prevent the word overflow.
 
 Example
-<!DOCTYPE html>   
-<html>   
-    <head>   
-        <title>word-break: break-all</title>   
-        <style>    
-            .jtp{   
-                width: 150px;    
-                border: 2px solid black;   
-                word-break: break-all;    
-                text-align: left;   
-                font-size: 25px;   
-    color: blue;  
-            }   
-            .jtp1{   
-                width: 156px;    
-                border: 2px solid black;   
-                word-break: keep-all;    
-                text-align: left;   
-                font-size: 25px;  
-    color: blue;  
-            }   
-        </style>   
-    </head>   
-      <center>  
-    <body>   
-        <h2>word-break: break-all;</h2>   
-            
-        <p class="jtp">   
-           Welcome to the javaTpoint.com  
-        </p>   
-        <h2>word-break: keep-all;</h2>   
-        <p class="jtp1">   
-            Welcome to the javaTpoint.com   
-        </p>  
-</center>       
-    </body>   
-</html>  
+<xmp>
+  <!DOCTYPE html>   
+  <html>   
+      <head>   
+          <title>word-break: break-all</title>   
+          <style>    
+              .jtp{   
+                  width: 150px;    
+                  border: 2px solid black;   
+                  word-break: break-all;    
+                  text-align: left;   
+                  font-size: 25px;   
+      color: blue;  
+              }   
+              .jtp1{   
+                  width: 156px;    
+                  border: 2px solid black;   
+                  word-break: keep-all;    
+                  text-align: left;   
+                  font-size: 25px;  
+      color: blue;  
+              }   
+          </style>   
+      </head>   
+        <center>  
+      <body>   
+          <h2>word-break: break-all;</h2>   
+              
+          <p class="jtp">   
+             Welcome to the javaTpoint.com  
+          </p>   
+          <h2>word-break: keep-all;</h2>   
+          <p class="jtp1">   
+              Welcome to the javaTpoint.com   
+          </p>  
+  </center>       
+      </body>   
+  </html>  
+</xmp>
 
 word-wrap
 CSS word-wrap property is used to break the long words and wrap onto the next line. This property is used to prevent overflow when an unbreakable string is too long to fit in the containing box.
@@ -1052,39 +1078,41 @@ inherit: It inherits this property from its parent element.
 
 
 Example
-<!DOCTYPE html>    
-<html>    
-<head>    
-<style>     
-.test {    
-    width: 200px;    
-    background-color: lightblue;     
-    border: 2px solid black;    
-    padding:10px;  
-    font-size: 20px;  
-      
-}  
-.test1 {    
-    width: 11em;    
-    background-color: lightblue;     
-    border: 2px solid black;    
-    padding:10px;    
-    word-wrap: break-word;    
-    font-size: 20px;  
-}      
-</style>    
-</head>    
-<body>  
-<center>    
-<h1> Without Using word-wrap </h1>  
-<p class="test"> In this paragraph, there is a very long word:    
- iamsooooooooooooooooooooooooooooooolongggggggggggggggg. </p>    
-<h1> Using word-wrap: break-word; </h1>  
-<p class="test1"> In this paragraph, there is a very long word:    
- iamsooooooooooooooooooooooooooooooolongggggggggggggggg. The long word will break and wrap to the next line. </p>    
- </center>      
-</body>    
-</html>  
+<xmp>
+  <!DOCTYPE html>    
+  <html>    
+  <head>    
+  <style>     
+  .test {    
+      width: 200px;    
+      background-color: lightblue;     
+      border: 2px solid black;    
+      padding:10px;  
+      font-size: 20px;  
+        
+  }  
+  .test1 {    
+      width: 11em;    
+      background-color: lightblue;     
+      border: 2px solid black;    
+      padding:10px;    
+      word-wrap: break-word;    
+      font-size: 20px;  
+  }      
+  </style>    
+  </head>    
+  <body>  
+  <center>    
+  <h1> Without Using word-wrap </h1>  
+  <p class="test"> In this paragraph, there is a very long word:    
+   iamsooooooooooooooooooooooooooooooolongggggggggggggggg. </p>    
+  <h1> Using word-wrap: break-word; </h1>  
+  <p class="test1"> In this paragraph, there is a very long word:    
+   iamsooooooooooooooooooooooooooooooolongggggggggggggggg. The long word will break and wrap to the next line. </p>    
+   </center>      
+  </body>    
+  </html>  
+</xmp>
 
 text-overflow
 It specifies the representation of overflowed text, which is not visible to the user. It signals the user about the content that is not visible. This property helps us to decide whether the text should be clipped or show some dots (ellipsis).
@@ -1099,63 +1127,65 @@ clip: It is the default value that clips the overflowed text.
 ellipsis: This value displays an ellipsis (…) or three dots to show the clipped text. It is displayed within the area, decreasing the amount of text.
 
 Example
-<!DOCTYPE html>   
-<html>   
-    <head>   
-        <style>    
-            .jtp{   
-                white-space: nowrap;    
+<xmp>
+  <!DOCTYPE html>   
+  <html>   
+      <head>   
+          <style>    
+              .jtp{   
+                  white-space: nowrap;    
+          height: 30px;  
+                  width: 250px;                 
+                  overflow: hidden;    
+                  border: 2px solid black;   
+                  font-size: 25px;   
+                  text-overflow: clip;   
+              }   
+       .jtp1 {   
+                  white-space: nowrap;    
         height: 30px;  
-                width: 250px;                 
-                overflow: hidden;    
-                border: 2px solid black;   
-                font-size: 25px;   
-                text-overflow: clip;   
-            }   
-     .jtp1 {   
-                white-space: nowrap;    
-      height: 30px;  
-                width: 250px;    
-                overflow: hidden;    
-                border: 2px solid black;   
-                font-size: 25px;   
-                text-overflow: ellipsis;   
-            }   
-                
-    h2{  
-    color: blue;  
-    }  
-            div:hover {   
-                overflow: visible;   
-            }   
-    p{  
-    font-size: 25px;  
-    font-weight: bold;  
-    color: red;  
-    }  
-        </style>   
-    </head>   
-    <center>  
-    <body>         
-<p> Hover over the bordered text to see the full content. </p>  
-  
-        <h2>   
-            text-overflow: clip;   
-        </h2>   
-            
-        <div class="jtp">   
-            Welcome to the javaTpoint.com  
-        </div>   
-        <h2>   
-            text-overflow: ellipsis;   
-        </h2>   
-  
-        <div class="jtp1">   
-            Welcome to the javaTpoint.com   
-        </div>  
-        </center>  
-    </body>   
-</html>  
+                  width: 250px;    
+                  overflow: hidden;    
+                  border: 2px solid black;   
+                  font-size: 25px;   
+                  text-overflow: ellipsis;   
+              }   
+                  
+      h2{  
+      color: blue;  
+      }  
+              div:hover {   
+                  overflow: visible;   
+              }   
+      p{  
+      font-size: 25px;  
+      font-weight: bold;  
+      color: red;  
+      }  
+          </style>   
+      </head>   
+      <center>  
+      <body>         
+  <p> Hover over the bordered text to see the full content. </p>  
+    
+          <h2>   
+              text-overflow: clip;   
+          </h2>   
+              
+          <div class="jtp">   
+              Welcome to the javaTpoint.com  
+          </div>   
+          <h2>   
+              text-overflow: ellipsis;   
+          </h2>   
+    
+          <div class="jtp1">   
+              Welcome to the javaTpoint.com   
+          </div>  
+          </center>  
+      </body>   
+  </html>  
+</xmp>
 
 writing-mode
 It specifies whether the text will be written in the horizontal or vertical direction. If the writing direction is vertical, then it can be from left to right (vertical-lr) or from right to left (vertical-rl).
@@ -1172,37 +1202,39 @@ vertical-lr: It is similar to vertical-rl, but the text is read from left to rig
 
 
 Example
-<!DOCTYPE html>  
-<html>  
- <head>  
-  <style>  
-    h2 {     
-      border: 2px solid black;  
-      width: 300px;  
-      height: 100px;  
-    }  
-    #tb {  
-      writing-mode: horizontal-tb;  
-    }  
-      
-    #lr {  
-      writing-mode: vertical-lr;  
-    }  
-      
-    #rl {  
-       writing-mode: vertical-rl;  
-    }  
-  </style>  
- </head>  
- <center>  
- <body>  
-   <h1> Example of CSS writing-mode property </h1>  
-   <h2 id="tb"> writing-mode: horizontal-tb; </h2>  
-   <h2 id="lr" style= "height: 300px;"> writing-mode: vertical-lr; </h2><br>  
-   <h2 id="rl" style= "height: 300px;"> writing-mode: vertical-rl; </h2>  
-   </center>  
- </body>  
- </html>  </p>
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+   <head>  
+    <style>  
+      h2 {     
+        border: 2px solid black;  
+        width: 300px;  
+        height: 100px;  
+      }  
+      #tb {  
+        writing-mode: horizontal-tb;  
+      }  
+        
+      #lr {  
+        writing-mode: vertical-lr;  
+      }  
+        
+      #rl {  
+         writing-mode: vertical-rl;  
+      }  
+    </style>  
+   </head>  
+   <center>  
+   <body>  
+     <h1> Example of CSS writing-mode property </h1>  
+     <h2 id="tb"> writing-mode: horizontal-tb; </h2>  
+     <h2 id="lr" style= "height: 300px;"> writing-mode: vertical-lr; </h2><br>  
+     <h2 id="rl" style= "height: 300px;"> writing-mode: vertical-rl; </h2>  
+     </center>  
+   </body>  
+   </html>
+</xmp>  </p>
         <ul>Background</ul>
     <p>CSS  - Background Properties
 
@@ -1275,20 +1307,36 @@ are:
 ones that are present are in this order.
 Multiple Backgrounds
 
-<!DOCTYPE html>
-        <html> 
-            <head> 
+<xmp>
+  <!DOCTYPE html>
+          <html> 
+              <head> 
                 <style> 
-#example1 { background: url(img_flwr.gif) right bottom no-repeat, 
-url(paper.gif) left top repeat;  padding: 15px;} </style> 
-</head>  <body><h1>Multiple Backgrounds</h1> <p>The 
-following div element has two background images:</p><div 
-id="example1">  <h1>Lorem Ipsum Dolor</h1>  <p>Lorem ipsum
-dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>  
-<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
-ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.</p></div>
+                  #example1 { background: url(img_flwr.gif) right bottom no-repeat, 
+                  url(paper.gif) left top repeat;  padding: 15px;} 
+                </style> 
+              </head>
+              <body>
+                <h1>
+                  Multiple Backgrounds
+                </h1>
+                <p>
+                  The following div element has two background images:
+                </p>
+                <div id="example1">
+                  <h1>
+                    Lorem Ipsum Dolor
+                  </h1>  
+                  <p>Lorem ipsum
+                  dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>  
+                  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                  ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                  consequat.</p>
+                </div>
+              </body>
+            </html>
+</xmp>
         </p>
         <ul>Borders and Box effects</ul>
             <p>Border Properties
@@ -1372,9 +1420,11 @@ top border + bottom border + top margin + bottom margin
  Example: width:250px;
 padding:10px;
 border:5px solid gray;
-margin:10px;     
+margin:10px;  
+<xmp>
   <meta name="viewport" content="width=device-width, initial-
-scale=1">
+scale=1"></xmp>
+
  Using the meta viewport value width=device-width instructs the page 
 to match the screen's width in device-independent pixels. This allows 
 the page to reflow content to match different screen sizes, whether 
@@ -1414,135 +1464,141 @@ Let's see some examples of the transition-delay property.
 Example1
 In this example, we are using the transition-property, transition-duration, and transition-delay properties. There is a delay of 0.5s to start the transition effect, i.e., the background color of the div element will be changed after the given amount of time.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<title>  
-CSS transition-delay Property  
-</title>  
-<style>  
-div{  
-width: 100px;  
-height: 100px;  
-background: lightblue;  
-transition-property: background-color;  
-transition-duration: 1s;  
-transition-delay: 0.5s;                
-    
-/* For Safari browser */  
--webkit-transition-property: background-color;  
--webkit-transition-duration: 1s;  
--webkit-transition-delay: 0.5s;  
-}  
-div:hover {  
-background-color: brown;  
-}  
-</style>  
-</head>  
-<body>  
-<div></div>  
-<p> Move the cursor over the div element above, to see the transition effect. </p>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <title>  
+  CSS transition-delay Property  
+  </title>  
+  <style>  
+  div{  
+  width: 100px;  
+  height: 100px;  
+  background: lightblue;  
+  transition-property: background-color;  
+  transition-duration: 1s;  
+  transition-delay: 0.5s;                
+      
+  /* For Safari browser */  
+  -webkit-transition-property: background-color;  
+  -webkit-transition-duration: 1s;  
+  -webkit-transition-delay: 0.5s;  
+  }  
+  div:hover {  
+  background-color: brown;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <div></div>  
+  <p> Move the cursor over the div element above, to see the transition effect. </p>  
+  </body>  
+  </html>  
+</xmp>
 
 
 CSS transition-delay property
 Example2
 In this example, there are two div elements. In the first div we are using the value initial of the transition-delay property. In the second div, we are applying the negative value of the transition-delay property, i.e., -2s. We have to move the cursor over the div elements to see the transition effect.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<title>  
-CSS transition-delay Property  
-</title>  
-  
-<style>  
-p{  
-font-size: 20px;  
-}  
-.first{  
-width: 150px;  
-height: 150px;  
-background-color: lightblue;  
-transition-property: width;  
-transition-duration: 1s;  
-transition-delay: initial;  
-  
-/* For Safari browser */  
--webkit-transition-property: width;  
--webkit-transition-duration: 1s;  
--webkit-transition-delay: initial;  
-  
-}  
-.second{  
-width: 150px;  
-height: 150px;  
-background-color: lightgreen;  
-transition: width 1s, height 2s, background-color 2s;  
-transition-delay: -2s;  
-}  
-  
-.first:hover {  
-width: 300px;  
-}  
-.second:hover{  
-width: 250px;  
-height: 250px;  
-background-color: brown;  
-}  
-</style>  
-</head>  
-  
-<body>  
-<center>  
-<h2> Example of transition-delay Property </h2>  
-<p> Move the cursor over the div element, to see the transition effect. </p>  
-<div class = "first">  
-<p> transition-delay: initial </p>  
-</div>  
-<div class = "second">  
-<p> transition-delay: -2s </p>  
-</div>  
-</center>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <title>  
+  CSS transition-delay Property  
+  </title>  
+    
+  <style>  
+  p{  
+  font-size: 20px;  
+  }  
+  .first{  
+  width: 150px;  
+  height: 150px;  
+  background-color: lightblue;  
+  transition-property: width;  
+  transition-duration: 1s;  
+  transition-delay: initial;  
+    
+  /* For Safari browser */  
+  -webkit-transition-property: width;  
+  -webkit-transition-duration: 1s;  
+  -webkit-transition-delay: initial;  
+    
+  }  
+  .second{  
+  width: 150px;  
+  height: 150px;  
+  background-color: lightgreen;  
+  transition: width 1s, height 2s, background-color 2s;  
+  transition-delay: -2s;  
+  }  
+    
+  .first:hover {  
+  width: 300px;  
+  }  
+  .second:hover{  
+  width: 250px;  
+  height: 250px;  
+  background-color: brown;  
+  }  
+  </style>  
+  </head>  
+    
+  <body>  
+  <center>  
+  <h2> Example of transition-delay Property </h2>  
+  <p> Move the cursor over the div element, to see the transition effect. </p>  
+  <div class = "first">  
+  <p> transition-delay: initial </p>  
+  </div>  
+  <div class = "second">  
+  <p> transition-delay: -2s </p>  
+  </div>  
+  </center>  
+  </body>  
+  </html>  
+</xmp>
 
 
 CSS transition-delay property
 Example
 Now, there is another example in which there is a multiple transition effect. Here, the transition effects on width, height, and transformation. There is also a transition-delay in the milliseconds (ms), i.e., 2.5ms.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-div {  
-padding:15px;  
-width: 200px;  
-height: 200px;  
-background: lightgreen;  
-transition: background-color 1s, width 2s, height 2s, transform 2s;  
-transition-delay: 1.5ms;  
-}  
-p{  
-font-size: 20px;  
-}  
-div:hover {  
-width: 300px;  
-height: 300px;  
--webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  
-transform: rotate(360deg);  
-background-color: orange;  
-}  
-</style>  
-</head>  
-<body>  
-<div>  
-<h2>JavaTpoint.com</h2>  
-<p> (Move your cursor on me to see the effect)</p></div>  
-</body>  
-</html>
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  div {  
+  padding:15px;  
+  width: 200px;  
+  height: 200px;  
+  background: lightgreen;  
+  transition: background-color 1s, width 2s, height 2s, transform 2s;  
+  transition-delay: 1.5ms;  
+  }  
+  p{  
+  font-size: 20px;  
+  }  
+  div:hover {  
+  width: 300px;  
+  height: 300px;  
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */  
+  transform: rotate(360deg);  
+  background-color: orange;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <div>  
+  <h2>JavaTpoint.com</h2>  
+  <p> (Move your cursor on me to see the effect)</p></div>  
+  </body>  
+  </html>
+</xmp>
             </p>
             <p>CSS transform-origin property
 This CSS property is used to change the position of transformed elements. It is a point around which the transformation is applied. It establishes the origin of the transformation of an element. It can be applied to both 2D and 3D rotations.
@@ -1572,50 +1628,52 @@ Let's understand this property by using some illustrations.
 Example
 In this example, we are applying the transform-origin property with the length and percentage values. There is a rotation of 45deg in both of the elements. Here, there is the 2D transformation of elements.
 
-<!DOCTYPE html>  
-<html>  
-  
-<head>  
-<style>  
-div{  
-height: 100px;  
-width: 400px;  
-border: 5px dotted violet;  
-font-size: 20px;  
-}  
-.outer {  
-margin: 100px;  
-background-color: cyan;  
-}  
-.box {  
-background: url( "diamond.png");  
-transform: rotate(35deg);  
-transform-origin: 5% 2%;  
-}  
-.outer1{  
-margin-left: 500px;  
-background-color: cyan;  
-}  
-.box1 {  
-background: url( "diamond.png");  
-transform: rotate(45deg);  
-transform-origin: 5% 2%;  
-}  
-</style>  
-</head>  
-  
-<body>  
-<h1> Example of the CSS transform-origin Property </h1>  
-  
-<div class="outer"> transform-origin: 5% 2%;  
-<div class="box"></div>  
-</div>  
-<div class="outer1"> transform-origin: 100px 200px;  
-<div class="box1"></div>  
-</div>  
-</body>  
-  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+    
+  <head>  
+  <style>  
+  div{  
+  height: 100px;  
+  width: 400px;  
+  border: 5px dotted violet;  
+  font-size: 20px;  
+  }  
+  .outer {  
+  margin: 100px;  
+  background-color: cyan;  
+  }  
+  .box {  
+  background: url( "diamond.png");  
+  transform: rotate(35deg);  
+  transform-origin: 5% 2%;  
+  }  
+  .outer1{  
+  margin-left: 500px;  
+  background-color: cyan;  
+  }  
+  .box1 {  
+  background: url( "diamond.png");  
+  transform: rotate(45deg);  
+  transform-origin: 5% 2%;  
+  }  
+  </style>  
+  </head>  
+    
+  <body>  
+  <h1> Example of the CSS transform-origin Property </h1>  
+    
+  <div class="outer"> transform-origin: 5% 2%;  
+  <div class="box"></div>  
+  </div>  
+  <div class="outer1"> transform-origin: 100px 200px;  
+  <div class="box1"></div>  
+  </div>  
+  </body>  
+    
+  </html>  
+</xmp>
 
 
 CSS transform-origin property
@@ -1624,51 +1682,53 @@ Now, in the next example, we will specify the position using the keyword values.
 Example
 In this example, we are applying the transform-origin property with the keyword values.
 
-<!DOCTYPE html>  
-<html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+    
+  <head>  
+  <style>  
+  div{  
+  height: 100px;  
+  width: 400px;  
+  border: 5px dotted violet;  
+  font-size: 20px;  
+  }  
+  .outer {  
+  margin: 100px;  
+  background-color: cyan;  
+  }  
+  .box {  
+  background: url( "diamond.png");  
+  transform: rotate(35deg);  
+  transform-origin: left bottom;  
+  }  
+  .outer1{  
+  margin-left: 500px;  
+  background-color: cyan;  
+  }  
+  .box1 {  
+  background: url( "diamond.png");  
+  transform: rotate(45deg);  
+  transform-origin: right top;  
+  }  
+  </style>  
+  </head>  
+    
+  <body>  
+  <h1> Example of the CSS transform-origin Property </h1>  
+    
+  <div class="outer"> transform-origin: left bottom;  
+  <div class="box"></div>  
+  </div>  
+  <div class="outer1"> transform-origin: right top;  
+  <div class="box1"></div>  
+  </div>  
+  </body>  
+    
+  </html>  
   
-<head>  
-<style>  
-div{  
-height: 100px;  
-width: 400px;  
-border: 5px dotted violet;  
-font-size: 20px;  
-}  
-.outer {  
-margin: 100px;  
-background-color: cyan;  
-}  
-.box {  
-background: url( "diamond.png");  
-transform: rotate(35deg);  
-transform-origin: left bottom;  
-}  
-.outer1{  
-margin-left: 500px;  
-background-color: cyan;  
-}  
-.box1 {  
-background: url( "diamond.png");  
-transform: rotate(45deg);  
-transform-origin: right top;  
-}  
-</style>  
-</head>  
-  
-<body>  
-<h1> Example of the CSS transform-origin Property </h1>  
-  
-<div class="outer"> transform-origin: left bottom;  
-<div class="box"></div>  
-</div>  
-<div class="outer1"> transform-origin: right top;  
-<div class="box1"></div>  
-</div>  
-</body>  
-  
-</html>  
-
+</xmp>
 
 CSS transform-origin property
 Now, let's apply the transform-origin property on elements with 3D transformation.
@@ -1677,51 +1737,53 @@ Now, let's apply the transform-origin property on elements with 3D transformatio
 Example
 In this example, we are applying the transform-origin property on the 3D transformed elements.
 
-<!DOCTYPE html>  
-<html>  
-  
-<head>  
-<style>  
-div{  
-height: 100px;  
-width: 400px;  
-border: 5px dotted violet;  
-font-size: 20px;  
-}  
-.outer {  
-margin: 100px;  
-background-color: cyan;  
-text-align: center;  
-}  
-.box {  
-background: url( "diamond.png");  
-  transform: rotate3d(3, 2, 1, 75deg);  
-  transform-origin: 70% 10% 150px;  
-}  
-.outer1{  
-margin-left: 500px;  
-background-color: cyan;  
-text-align: center;  
-}  
-.box1 {  
-background: url( "diamond.png");  
-  transform: rotate3d(2, 2, 1, 75deg);  
-  transform-origin: bottom right 200px;  
-}  
-</style>  
-</head>  
-  
-<body>  
-<h1> Example of the CSS transform-origin Property </h1>  
-  
-<div class="outer"> transform-origin: 70% 10% 150px;  
-<div class="box"></div>  
-</div>  
-<div class="outer1"> transform-origin: bottom right 200px;  
-<div class="box1"></div>  
-</div>  
-</body>  
-</html></p>
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+    
+  <head>  
+  <style>  
+  div{  
+  height: 100px;  
+  width: 400px;  
+  border: 5px dotted violet;  
+  font-size: 20px;  
+  }  
+  .outer {  
+  margin: 100px;  
+  background-color: cyan;  
+  text-align: center;  
+  }  
+  .box {  
+  background: url( "diamond.png");  
+    transform: rotate3d(3, 2, 1, 75deg);  
+    transform-origin: 70% 10% 150px;  
+  }  
+  .outer1{  
+  margin-left: 500px;  
+  background-color: cyan;  
+  text-align: center;  
+  }  
+  .box1 {  
+  background: url( "diamond.png");  
+    transform: rotate3d(2, 2, 1, 75deg);  
+    transform-origin: bottom right 200px;  
+  }  
+  </style>  
+  </head>  
+    
+  <body>  
+  <h1> Example of the CSS transform-origin Property </h1>  
+    
+  <div class="outer"> transform-origin: 70% 10% 150px;  
+  <div class="box"></div>  
+  </div>  
+  <div class="outer1"> transform-origin: bottom right 200px;  
+  <div class="box1"></div>  
+  </div>  
+  </body>  
+  </html>
+</xmp></p>
             <p>CSS Animation
 CSS Animation property is used to create animation on the webpage. It can be used as a replacement of animation created by Flash and JavaScript.
 
@@ -1755,136 +1817,143 @@ animation-timing-function	It specifies the speed curve of the animation.
 CSS animation example: changing background color
 Let's see a simple CSS animation example that changes background color of rectangle from RED to BLACK.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>   
-div {  
-    width: 100px;  
-    height: 100px;  
-    background: red;  
-    -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */  
-    animation: myfirst 5s;  
-}  
-/* Chrome, Safari, Opera */  
-@-webkit-keyframes myfirst {  
-    from {background: red;}  
-    to {background: green;}  
-}  
-/* Standard syntax */  
-@keyframes myfirst {  
-    from {background: red;}  
-    to {background: green;}  
-}  
-</style>  
-</head>  
-<body>  
-<p><b>Note:</b> The IE 9 and earlier versions don't support CSS3 animation property. </p>  
-<div></div>  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>   
+  div {  
+      width: 100px;  
+      height: 100px;  
+      background: red;  
+      -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */  
+      animation: myfirst 5s;  
+  }  
+  /* Chrome, Safari, Opera */  
+  @-webkit-keyframes myfirst {  
+      from {background: red;}  
+      to {background: green;}  
+  }  
+  /* Standard syntax */  
+  @keyframes myfirst {  
+      from {background: red;}  
+      to {background: green;}  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <p><b>Note:</b> The IE 9 and earlier versions don't support CSS3 animation property. </p>  
+  <div></div>  
+  </body>  
+  </html>  
+</xmp>
 
 CSS animation example: Moving Rectangle
 Let's take another example to display animation with percentage value.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>   
-div {  
-    width: 100px;  
-    height: 100px;  
-    background: red;  
-    position: relative;  
-    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */  
-    animation: myfirst 5s;  
-}  
-/* Chrome, Safari, Opera */  
-@-webkit-keyframes myfirst {  
-    0%   {background:red; left:0px; top:0px;}  
-    25%  {background:yellow; left:300px; top:0px;}  
-    50%  {background:blue; left:200px; top:300px;}  
-    75%  {background:green; left:0px; top:200px;}  
-    100% {background:red; left:0px; top:0px;}  
-}  
-/* Standard syntax */  
-@keyframes myfirst {  
-    0%   {background:red; left:0px; top:0px;}  
-    25%  {background:yellow; left:300px; top:0px;}  
-    50%  {background:blue; left:300px; top:200px;}  
-    75%  {background:green; left:0px; top:200px;}  
-    100% {background:red; left:0px; top:0px;}  
-}  
-</style>  
-</head>  
-<body>  
-<p><b>Note:</b> The Internet Explorer 9 and its earlier versions don't support this example.</p>  
-<div></div>  
-</body>  
-</html></p>  
-        <ul>Embedding Images and Media</ul>
-            <p>CSS Images
-Images are an important part of any web application. Including a lot of images in a web application is generally not recommended, but it is important to use the images wherever they required. CSS helps us to control the display of images in web applications.
-
-The styling of an image in CSS is similar to the styling of an element by using the borders and margins. There are multiple CSS properties such as border property, height property, width property, etc. that helps us to style an image.
-
-Let's discuss the styling of images in CSS by using some illustrations.
-
-Thumbnail Image
-The border property is used to make a thumbnail image.
-
-
-Example
-
- <!DOCTYPE html>   
-<html>   
-<head>   
-    <style>   
-img{  
-border: 2px solid red;  
-border-radius:5px;  
-padding:10px;  
-}  
-h2{  
-color:red;  
-}  
-    </style>   
-</head>   
-    
-<body>  
- <h1>Thumbnail Image</h1>  
-<img src="jtp.png"></img>  
-<h2>Welcome to javaTpoint</h2>  
-</body>   
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>   
+  div {  
+      width: 100px;  
+      height: 100px;  
+      background: red;  
+      position: relative;  
+      -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */  
+      animation: myfirst 5s;  
+  }  
+  /* Chrome, Safari, Opera */  
+  @-webkit-keyframes myfirst {  
+      0%   {background:red; left:0px; top:0px;}  
+      25%  {background:yellow; left:300px; top:0px;}  
+      50%  {background:blue; left:200px; top:300px;}  
+      75%  {background:green; left:0px; top:200px;}  
+      100% {background:red; left:0px; top:0px;}  
+  }  
+  /* Standard syntax */  
+  @keyframes myfirst {  
+      0%   {background:red; left:0px; top:0px;}  
+      25%  {background:yellow; left:300px; top:0px;}  
+      50%  {background:blue; left:300px; top:200px;}  
+      75%  {background:green; left:0px; top:200px;}  
+      100% {background:red; left:0px; top:0px;}  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <p><b>Note:</b> The Internet Explorer 9 and its earlier versions don't support this example.</p>  
+  <div></div>  
+  </body>  
+  </html>
+</xmp></p>  
+          <ul>Embedding Images and Media</ul>
+              <p>CSS Images
+  Images are an important part of any web application. Including a lot of images in a web application is generally not recommended, but it is important to use the images wherever they required. CSS helps us to control the display of images in web applications.
+  
+  The styling of an image in CSS is similar to the styling of an element by using the borders and margins. There are multiple CSS properties such as border property, height property, width property, etc. that helps us to style an image.
+  
+  Let's discuss the styling of images in CSS by using some illustrations.
+  
+  Thumbnail Image
+  The border property is used to make a thumbnail image.
+  
+  
+  Example
+  
+  <xmp>
+   <!DOCTYPE html>   
+  <html>   
+  <head>   
+      <style>   
+  img{  
+  border: 2px solid red;  
+  border-radius:5px;  
+  padding:10px;  
+  }  
+  h2{  
+  color:red;  
+  }  
+      </style>   
+  </head>   
+      
+  <body>  
+   <h1>Thumbnail Image</h1>  
+  <img src="jtp.png"></img>  
+  <h2>Welcome to javaTpoint</h2>  
+  </body>   
+  </html>  
+</xmp>
 
 Transparent image
 To make an image transparent, we have to use the opacity property. The value of this property lies between 0.0 to 1.0, respectively.
 
 Example
 
- <!DOCTYPE html>   
-<html>   
-<head>   
-    <style>   
-img{  
-border: 2px solid red;  
-border-radius:5px;  
-padding:10px;  
-opacity:0.3;  
-}  
-h2{  
-color:red;  
-}  
-    </style>   
-</head>   
-    
-<body>  
- <h1>Transparent Image</h1>  
-<img src="jtp.png"></img>  
-<h2>Welcome to javaTpoint</h2>  
-</body>  
-</html>  
+ <xmp>
+   <!DOCTYPE html>   
+   <html>   
+   <head>   
+      <style>   
+        mg{  
+          order: 2px solid red;  
+          order-radius:5px;  
+          adding:10px;  
+          pacity:0.3;} 
+     
+          h2{  
+            color:rgb(8, 5, 5);  }
+      </style>   
+   </head>   
+      
+   <body>  
+   <h1>Transparent Image</h1>  
+   <img src="jtp.png"></img>  
+   <h2>Welcome to javaTpoint</h2>  
+   </body>  
+   </html> 
+ </xmp> 
 
 Rounded image
 The border-radius property sets the radius of the bordered image. It is used to create the rounded images. The possible values for the rounded corners are given as follows:
@@ -1896,64 +1965,68 @@ border-bottom-right-radius: It sets the border of the bottom-right corner.
 border-bottom-left-radius: It sets the border of the bottom-left corner.
 Example
 
- <!DOCTYPE html>   
-<html>   
-<head>   
-    <style>   
-#img1{  
-border: 2px solid green;  
-border-radius:10px;  
-padding:5px;  
-}  
-#img2{  
-border: 2px solid green;  
-border-radius:50%;  
-padding:5px;  
-}  
-  
-h2{  
-color:red;  
-}  
-    </style>   
-</head>   
+ <xmp>
+   <!DOCTYPE html>   
+   html>   
+   head>   
+      <style>   
+   img1{  
+   order: 2px solid green;  
+   order-radius:10px;  
+   adding:5px;  
+     
+   img2{  
+   order: 2px solid green;  
+   order-radius:50%;  
+   adding:5px;  
+     
     
-<body>  
- <h1>Rounded Image</h1>  
-<img src="jtp.png" id="img1"></img>  
-<h2>Welcome to javaTpoint</h2>  
-  
- <h1>Circle Image</h1>  
-<img src="jtp.png" id="img2"></img>  
-<h2>Welcome to javaTpoint</h2>  
-</body>   
-</html>  
+   2{  
+   olor:red;  
+     
+      </style>   
+   /head>   
+      
+   body>  
+   <h1>Rounded Image</h1>  
+   img src="jtp.png" id="img1"></img>  
+   h2>Welcome to javaTpoint</h2>  
+    
+   <h1>Circle Image</h1>  
+   img src="jtp.png" id="img2"></img>  
+   h2>Welcome to javaTpoint</h2>  
+   /body>   
+   /html>  
+ </xmp>
 
 Responsive Image
 It automatically adjusts to fit on the screen size. It is used to adjust the image to the specified box automatically.
 
 Example
 
-<!DOCTYPE html>   
-<html>   
-<head>   
-    <style>   
-#img1{  
-max-width:100%;  
-height:auto;  
-}  
-h2{  
-color:red;  
-}  
-    </style>   
-</head>   
-    
-<body>  
- <h1>Responsive image</h1>  
- <h2>You can resize the browser to see the effect</h2>  
-<img src="jtp.png" id="img1" width="1000" height="300"></img>  
-<h2>Welcome to javaTpoint</h2>  
-</body>   
-</html>  
+<xmp>
+  <!DOCTYPE html>   
+  <html>   
+  <head>   
+      <style>   
+  #img1{  
+  max-width:100%;  
+  height:auto;  
+  }  
+  h2{  
+  color:red;  
+  }  
+      </style>   
+  </head>   
+      
+  <body>  
+   <h1>Responsive image</h1>  
+   <h2>You can resize the browser to see the effect</h2>  
+  <img src="jtp.png" id="img1" width="1000" height="300"></img>  
+  <h2>Welcome to javaTpoint</h2>  
+  </body>   
+  </html>  
+</xmp>
 
 Center an Image
 We can center an image by using the left-margin and right-margin property. We have to set these properties to auto in order to make a block element.
@@ -1961,27 +2034,29 @@ We can center an image by using the left-margin and right-margin property. We ha
 
 Example
 
-<!DOCTYPE html>   
-<html>   
-<head>   
-    <style>   
-#img1{  
-margin-left:auto;  
-margin-right:auto;  
-display:block;  
-}  
-h1,h2{  
-text-align:center;  
-}  
-    </style>   
-</head>   
-    
-<body>  
- <h1>Center image</h1>  
-<img src="jtp.png" id="img1"></img>  
-<h2>Welcome to javaTpoint</h2>  
-</body>   
-</html></p>
+<xmp>
+  <!DOCTYPE html>   
+  <html>   
+  <head>   
+      <style>   
+  #img1{  
+  margin-left:auto;  
+  margin-right:auto;  
+  display:block;  
+  }  
+  h1,h2{  
+  text-align:center;  
+  }  
+      </style>   
+  </head>   
+      
+  <body>  
+   <h1>Center image</h1>  
+  <img src="jtp.png" id="img1"></img>  
+  <h2>Welcome to javaTpoint</h2>  
+  </body>   
+  </html>
+</xmp></p>
 <p>What is Media Query?
 CSS Media query is a W3C recommendation and a CSS3 module which is used to adapt to conditions such as screen resolution (e.g. Smartphone screen vs. computer screen).
 
@@ -2015,28 +2090,30 @@ One way to use media queries is to have an alternate CSS section right inside yo
 The following example changes the background-color to lightgreen if the viewport is 480 pixels wide or wider
     (if the viewport is less than 480 pixels, the background-color will be pink):
     Example:
-    <!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-color: pink;
-}
-
-@media screen and (min-width: 480px) {
-  body {
-    background-color: lightgreen;
-  }
-}
-</style>
-</head>
-<body>
-
-<h1>Resize the browser window to see the effect!</h1>
-<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
-
-</body>
-    </html></p>
+    <xmp>
+      <!DOCTYPE html>
+      l>
+      d>
+      le>
+       {
+      ckground-color: pink;
+      
+      
+      ia screen and (min-width: 480px) {
+      dy {
+      background-color: lightgreen;
+      
+      
+      yle>
+      ad>
+      y>
+      
+      Resize the browser window to see the effect!</h1>
+      he media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+      
+      dy>
+      </html>
+    </xmp></p>
         <ul>Navigation Bar</ul>
 <p>CSS Navigation bar
 A Navigation bar or navigation system comes under GUI that helps the visitors in accessing information. It is the UI element on a webpage that includes links for the other sections of the website.
@@ -2059,157 +2136,163 @@ We are also adding the float: left property, which uses float for getting the bl
 
 If we want the full-width background color then we have to add the background-color property to <ul> rather than the <a> element.
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  margin: 0;  
-  padding: 0px;  
-  overflow: hidden;  
-  background-color: lightgray;  
-}  
-  
-li {  
-  float: left;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
- font-size:20px;  
-  text-align: center;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-}  
-.active{  
-background-color: gray;  
-color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0px;  
+    overflow: hidden;  
+    background-color: lightgray;  
+  }  
+    
+  li {  
+    float: left;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+   font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+  }  
+  .active{  
+  background-color: gray;  
   color: white;  
-}  
-</style>  
-</head>  
-<body>  
-  
-<ul>  
-  <li><a class="active" href="#home">Home</a></li>  
-  <li><a href="#">Java</a></li>  
-  <li><a href="#">HTML</a></li>  
-  <li><a href="#">CSS</a></li>  
-</ul>  
-  
-</body>  
-</html>  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+    
+  <ul>  
+    <li><a class="active" href="#home">Home</a></li>  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">HTML</a></li>  
+    <li><a href="#">CSS</a></li>  
+  </ul>  
+    
+  </body>  
+  </html>  
+</xmp>
 
 Border dividers
 We can add the border between the links in the navigation bar by using the border-right property. The following example explains it more clearly.
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  margin: 0;  
-  padding: 0px;  
-  overflow: hidden;  
-  background-color: lightgray;  
-}  
-  
-li {  
-  float: left;  
-    border-right: 1px solid blue;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
- font-size:20px;  
-  text-align: center;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-}  
-.active{  
-background-color: gray;  
-color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0px;  
+    overflow: hidden;  
+    background-color: lightgray;  
+  }  
+    
+  li {  
+    float: left;  
+      border-right: 1px solid blue;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+   font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+  }  
+  .active{  
+  background-color: gray;  
   color: white;  
-}  
-</style>  
-</head>  
-<body>  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+    
+  <ul>  
+    <li><a class="active" href="#home">Home</a></li>  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">HTML</a></li>  
+    <li><a href="#">CSS</a></li>  
+  </ul>  
+    
+  </body>  
+  </html>  
+  </xmp>
   
-<ul>  
-  <li><a class="active" href="#home">Home</a></li>  
-  <li><a href="#">Java</a></li>  
-  <li><a href="#">HTML</a></li>  
-  <li><a href="#">CSS</a></li>  
-</ul>  
+  Fixed Navigation bars
+  When we scrolls the page, fixed navigation bars stay at the bottom or top of the page. See an example of the same.
   
-</body>  
-</html>  
-
-Fixed Navigation bars
-When we scrolls the page, fixed navigation bars stay at the bottom or top of the page. See an example of the same.
-
-Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  position: fixed;  
-  width:100%;  
-  top:0;  
-  margin: 0;  
-  padding: 0px;  
-  overflow: hidden;  
-  background-color: lightgray;  
-}  
-  
-li {  
-  float: left;  
-    border-right: 1px solid blue;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
- font-size:20px;  
-  text-align: center;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-}  
-.active{  
-background-color: gray;  
-color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
+  Example
+  <xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    position: fixed;  
+    width:100%;  
+    top:0;  
+    margin: 0;  
+    padding: 0px;  
+    overflow: hidden;  
+    background-color: lightgray;  
+  }  
+    
+  li {  
+    float: left;  
+      border-right: 1px solid blue;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+   font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+  }  
+  .active{  
+  background-color: gray;  
   color: white;  
-}  
-</style>  
-</head>  
-<body>  
-<ul>  
-  <li><a class="active" href="#home">Home</a></li>  
-  <li><a href="#">Java</a></li>  
-  <li><a href="#">HTML</a></li>  
-  <li><a href="#">CSS</a></li>  
-</ul>  
-<h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
-<h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the fixed navigation bar</h2>  
-  
-</body>  
-</html>  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <ul>  
+    <li><a class="active" href="#home">Home</a></li>  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">HTML</a></li>  
+    <li><a href="#">CSS</a></li>  
+  </ul>  
+  <h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
+  <h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the fixed navigation bar</h2>  
+    
+  </body>  
+  </html>  
+</xmp>
 
 Sticky Navbar
 The position: sticky; property is used to position the element based on the scroll position of the user.
@@ -2217,195 +2300,201 @@ The position: sticky; property is used to position the element based on the scro
 This CSS property allows the elements to stick when the scroll reaches to a certain point. Depending upon the scroll position, a sticky element toggles in between fixed and relative property.
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  position: sticky;  
-  width:100%;  
-  top:0;  
-  margin: 0;  
-  padding: 0px;  
-  overflow: hidden;  
-  background-color: lightgray;  
-}  
-  
-li {  
-  float: left;  
-    border-right: 1px solid blue;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
- font-size:20px;  
-  text-align: center;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-}  
-.active{  
-background-color: gray;  
-color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    position: sticky;  
+    width:100%;  
+    top:0;  
+    margin: 0;  
+    padding: 0px;  
+    overflow: hidden;  
+    background-color: lightgray;  
+  }  
+    
+  li {  
+    float: left;  
+      border-right: 1px solid blue;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+   font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+  }  
+  .active{  
+  background-color: gray;  
   color: white;  
-}  
-</style>  
-</head>  
-<body>  
-<h1> Example of sticky navigation bar</h1>  
-<ul>  
-  <li><a class="active" href="#home">Home</a></li>  
-  <li><a href="#">Java</a></li>  
-  <li><a href="#">HTML</a></li>  
-  <li><a href="#">CSS</a></li>  
-</ul>  
-<h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
-<h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the sticky navigation bar</h2>  
-  
-</body>  
-</html>  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <h1> Example of sticky navigation bar</h1>  
+  <ul>  
+    <li><a class="active" href="#home">Home</a></li>  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">HTML</a></li>  
+    <li><a href="#">CSS</a></li>  
+  </ul>  
+  <h1 style="padding-top: 100px; text-align: center;">Hello World</h1>  
+  <h2 style="padding-bottom: 2000px; text-align: center;">Scroll down the page to see the sticky navigation bar</h2>  
+    
+  </body>  
+  </html>  
+</xmp>
 
 Dropdown Navbar
 Following example explain how to create a dropdown menu inside a navigation bar.
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-  
-ul {  
-  list-style-type: none;  
-  margin: 0;  
-  padding: 0;  
-  overflow: hidden;  
-  background-color: lightgray;  
-}  
-  
-li {  
-  float: left;  
-}  
-  
-li a, .dropbtn {  
-  display: inline-block;  
-  color: blue;  
- font-size:20px;  
-  text-align: center;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-}  
-.active{  
-background-color: gray;  
-color: white;  
-}  
-li a:hover , .dropdown:hover .dropbtn{  
-  background-color: orange;  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+    
+  ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    overflow: hidden;  
+    background-color: lightgray;  
+  }  
+    
+  li {  
+    float: left;  
+  }  
+    
+  li a, .dropbtn {  
+    display: inline-block;  
+    color: blue;  
+   font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+  }  
+  .active{  
+  background-color: gray;  
   color: white;  
-}  
+  }  
+  li a:hover , .dropdown:hover .dropbtn{  
+    background-color: orange;  
+    color: white;  
+  }  
+    
+  .dropdown-content {  
+    display: none;  
+    position: absolute;  
+    background-color: lightblue;  
+    min-width: 160px;  
+    box-shadow: 5px 8px 10px 0px black;  
+   }  
+    
+  .dropdown-content a {  
+    color: black;  
+    padding: 12px 16px;  
+    text-decoration: none;  
+    display: block;  
+    text-align: left;  
+  }  
+    
+  .dropdown-content a:hover {  
+  background-color: gray;  
+  color:white;  
+  }  
+    
+  .dropdown:hover .dropdown-content {  
+    display: block;  
+  }  
+  h1,h2,h3{  
+  text-align:center;   
+  color: green;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+  <ul>  
+    <li><a class="active" href="#home">Home</a></li>  
+    <li><a href="#">Java</a></li>  
+    <li><a href="#">C</a></li>  
+    <li><a href="#">C++</a></li>  
+    <li class="dropdown">  
+      <a href="#" class="dropbtn">Web-designing</a>  
+      <div class="dropdown-content">  
+        <a href="#">HTML</a>  
+        <a href="#">CSS</a>  
+        <a href="#">Bootstrap</a>  
+      </div>  
+    </li>  
+  </ul>  
+  <h1>Welcome to the javaTpoint.com</h1>  
+  <h2>Example of Dropdown Menu inside a Navigation Bar</h2>  
+  <h3>Move your cursor on the "web-designing" to see the dropdown effect.</h3>  
+    
+  </body>  
+  </html>  
   
-.dropdown-content {  
-  display: none;  
-  position: absolute;  
-  background-color: lightblue;  
-  min-width: 160px;  
-  box-shadow: 5px 8px 10px 0px black;  
- }  
-  
-.dropdown-content a {  
-  color: black;  
-  padding: 12px 16px;  
-  text-decoration: none;  
-  display: block;  
-  text-align: left;  
-}  
-  
-.dropdown-content a:hover {  
-background-color: gray;  
-color:white;  
-}  
-  
-.dropdown:hover .dropdown-content {  
-  display: block;  
-}  
-h1,h2,h3{  
-text-align:center;   
-color: green;  
-}  
-</style>  
-</head>  
-<body>  
-<ul>  
-  <li><a class="active" href="#home">Home</a></li>  
-  <li><a href="#">Java</a></li>  
-  <li><a href="#">C</a></li>  
-  <li><a href="#">C++</a></li>  
-  <li class="dropdown">  
-    <a href="#" class="dropbtn">Web-designing</a>  
-    <div class="dropdown-content">  
-      <a href="#">HTML</a>  
-      <a href="#">CSS</a>  
-      <a href="#">Bootstrap</a>  
-    </div>  
-  </li>  
-</ul>  
-<h1>Welcome to the javaTpoint.com</h1>  
-<h2>Example of Dropdown Menu inside a Navigation Bar</h2>  
-<h3>Move your cursor on the "web-designing" to see the dropdown effect.</h3>  
-  
-</body>  
-</html>  
-
+</xmp>
 Vertical Navigation bar
 In this example, we are going to see how to build a vertical navigation bar.
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  margin: 0;  
-  padding: 0;  
-  width: 200px;  
-  background-color: lightblue;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
-  font-size:20px;  
-  padding: 8px 16px;  
-  text-decoration: none;  
-}  
-.active{  
-  background-color: orange;  
-  color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
-  color: white;  
-}  
-</style>  
-</head>  
-<body>  
-  
-<h2>Vertical Navigation Bar</h2>  
-  
-<ul>  
-  <li><a href="#" class = "active">Home</a></li>  
-  <li><a href = "#">Java</a></li>  
-  <li><a href = "#">CSS</a></li>  
-  <li><a href = "#">HTML</a></li>  
-  <li><a href = "#">Bootstrap</a></li>  
-</ul>  
-  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    width: 200px;  
+    background-color: lightblue;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+    font-size:20px;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+  }  
+  .active{  
+    background-color: orange;  
+    color: white;  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+    
+  <h2>Vertical Navigation Bar</h2>  
+    
+  <ul>  
+    <li><a href="#" class = "active">Home</a></li>  
+    <li><a href = "#">Java</a></li>  
+    <li><a href = "#">CSS</a></li>  
+    <li><a href = "#">HTML</a></li>  
+    <li><a href = "#">Bootstrap</a></li>  
+  </ul>  
+    
+  </body>  
+  </html>  
+</xmp>
 
     We can align the links to the center and add borders between them. See an example of the same.
 
@@ -2413,113 +2502,117 @@ Example
 In this example, we are adding the text-align: center; property to <li> and <a> to center the links and border property to <ul> to add the border. We will also add the border-bottom property to all <li> elements.
 
 
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-ul {  
-  list-style-type: none;  
-  margin: 0;  
-  padding: 0;  
-  width: 200px;  
-  background-color: lightblue;  
-  border: 1px solid blue;  
-}  
-  
-li a {  
-  display: block;  
-  color: blue;  
-  font-size:20px;  
-  padding: 10px 20px;  
-  text-decoration: none;  
-  border-bottom: 1px solid blue;  
-}  
-ul:last-child {  
-  border-bottom: none;  
-}  
-.active{  
-  background-color: orange;  
-  color: white;  
-}  
-li a:hover {  
-  background-color: orange;  
-  color: white;  
-}  
-</style>  
-</head>  
-<body>  
-  
-<h2>Vertical Navigation Bar</h2>  
-  
-<ul>  
-  <li><a href="#" class = "active">Home</a></li>  
-  <li><a href = "#">Java</a></li>  
-  <li><a href = "#">CSS</a></li>  
-  <li><a href = "#">HTML</a></li>  
-  <li><a href = "#">Bootstrap</a></li>  
-</ul>  
-  
-</body>  
-</html>  
+<xmp>
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+  <style>  
+  ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    width: 200px;  
+    background-color: lightblue;  
+    border: 1px solid blue;  
+  }  
+    
+  li a {  
+    display: block;  
+    color: blue;  
+    font-size:20px;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+    border-bottom: 1px solid blue;  
+  }  
+  ul:last-child {  
+    border-bottom: none;  
+  }  
+  .active{  
+    background-color: orange;  
+    color: white;  
+  }  
+  li a:hover {  
+    background-color: orange;  
+    color: white;  
+  }  
+  </style>  
+  </head>  
+  <body>  
+    
+  <h2>Vertical Navigation Bar</h2>  
+    
+  <ul>  
+    <li><a href="#" class = "active">Home</a></li>  
+    <li><a href = "#">Java</a></li>  
+    <li><a href = "#">CSS</a></li>  
+    <li><a href = "#">HTML</a></li>  
+    <li><a href = "#">Bootstrap</a></li>
+  </ul>  
+    
+  </body>  
+  </html> 
+</xmp> 
 
 Full-height fixed Vertical Navbar
 We can also create the fixed full-height side navigation bar by using the properties height: 100%; and postion: fixed;
 
 Example
-<!DOCTYPE html>  
-<html>  
-<head>  
-<style>  
-body{  
-background-color: pink;  
-}  
-ul {  
-list-style-type: none;  
-margin: 0;  
-padding: 0;  
-height:100%;  
-top:0;  
-width:150px;  
-overflow: auto;  
-background-color: lightblue;  
-border: 1px solid blue;  
-position: fixed;  
-}  
-li a {  
-display: block;  
-color: blue;  
-font-size:20px;  
-padding: 10px 20px;  
-text-decoration: none;  
-border-bottom: 1px solid blue;  
-}  
-.active{  
-background-color: orange;  
-color: white;  
-}  
-li a:hover {  
-background-color: orange;  
-color: white;  
-}  
-</style>  
-</head>  
-<body>  
-  
-<ul>  
-<li><a href = "#" class = "active">Home</a></li>  
-<li><a href = "#">Java</a></li>  
-<li><a href = "#">CSS</a></li>  
-<li><a href = "#">HTML</a></li>  
-<li><a href = "#">Bootstrap</a></li>  
-</ul>  
-<div style="margin-left:20%;padding-bottom:2000px;color:blue;">  
-<h1>Welcome to the javaTpoint.com</h1>  
-<h2>Side navigation bar with height: 100%; and position: fixed;</h2>  
-<h3>Scroll the page, and see how the sidenav sticks to the page</h3>  
-  
-</div>  
-</body>  
-    </html>  </p>
+<<xmp>
+  !DOCTYPE html>  
+  html>  
+  head>  
+  style>  
+  ody{  
+  ackground-color: pink;  
+    
+  l {  
+  ist-style-type: none;  
+  argin: 0;  
+  adding: 0;  
+  eight:100%;  
+  op:0;  
+  idth:150px;  
+  verflow: auto;  
+  ackground-color: lightblue;  
+  order: 1px solid blue;  
+  osition: fixed;  
+    
+  i a {  
+  isplay: block;  
+  olor: blue;  
+  ont-size:20px;  
+  adding: 10px 20px;  
+  ext-decoration: none;  
+  order-bottom: 1px solid blue;  
+    
+  active{  
+  ackground-color: orange;  
+  olor: white;  
+    
+  i a:hover {  
+  ackground-color: orange;  
+  olor: white;  
+    
+  /style>  
+  /head>  
+  body>  
+   
+  ul>  
+  li><a href = "#" class = "active">Home</a></li>  
+  li><a href = "#">Java</a></li>  
+  li><a href = "#">CSS</a></li>  
+  li><a href = "#">HTML</a></li>  
+  li><a href = "#">Bootstrap</a></li>  
+  /ul>  
+  div style="margin-left:20%;padding-bottom:2000px;color:blue;">  
+  h1>Welcome to the javaTpoint.com</h1>  
+  h2>Side navigation bar with height: 100%; and position: fixed;</h2>  
+  h3>Scroll the page, and see how the sidenav sticks to the page</h3>  
+   
+  /div>  
+  </body>  
+     </html>
+</xmp>  </p>
     </li>
 </body>
 </html>
