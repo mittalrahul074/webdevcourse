@@ -218,8 +218,7 @@
         Fieldset
         A fieldset is a grouping of data fields. This example demonstrates how to draw a
         border with a caption around your data, as shown in Figure 13.9.
-                
-        Try it yourself >>
+        <xmp>
         <html>
         <body>
         <fieldset>
@@ -237,193 +236,201 @@
         </p>
         </body>
         </html>
-
+    </xmp>
         action Attribute
         When the user clicks the Submit button, the content of the form is sent to the
         server. The form’s action attribute defines the name of the file to send the content to. The file defined in the action attribute usually does something with the
         received input.
+        <xmp>
         <form name="input" action="html_form_submit.asp"
         method="get">
         Username:
         <input type="text" name="user" />
         <input type="submit" value="Submit" />
-        </form>
+        </form></xmp>
         Figure 13.10 shows how it looks in a browser. If you type some characters in the
         text field and click the Submit button, the browser sends your input to a page called
         "html_form_submit.asp". The page will show you the received input.
         Form Examples
         This example demonstrates how to add a form to a page. The form contains two
-        input fields and a Submit button. The resulting form appears in Figure 13.11.
-        Try it yourself >>
-        <html>
-        <body>
-        <form name="input" action="html_form_action.asp"
-        method="get">
-        Type your first name:
-        <input type="text" name="FirstName" value="Mickey" size="20">
-        <br>Type your last name:
-        <input type="text" name="LastName" value="Mouse" size="20">
-        <br>
-        <input type="submit" value="Submit">
-        </form>
-        <p>
-        If you click the "Submit" button, you will send your input
-        to a new page called html_form_action.asp.
-        </p>
-        </body>
-        </html>
-
+        input fields and a Submit button.
+        <xmp>
+            <html>
+            <body>
+            <form name="input" action="html_form_action.asp"
+            method="get">
+            Type your first name:
+            <input type="text" name="FirstName" value="Mickey" size="20">
+            <br>Type your last name:
+            <input type="text" name="LastName" value="Mouse" size="20">
+            <br>
+            <input type="submit" value="Submit">
+            </form>
+            <p>
+            If you click the "Submit" button, you will send your input
+            to a new page called html_form_action.asp.
+            </p>
+            </body>
+            </html>
+        </xmp>
         Form with Check Boxes
         The following form contains three check boxes and a Submit button. The results of
         the code appear.
-                
-        Try it yourself >>
-        <html>
-        <body>
-        <form name="input" action="html_form_action.asp"
-        method="get">
-        I have a bike:
-        <input type="checkbox" name="vehicle" value="Bike"
-        checked="checked" />
-        <br />
-        I have a car:
-        <input type="checkbox" name="vehicle" value="Car" />
-        <br />
-        I have an airplane:
-        <input type="checkbox" name="vehicle" value="Airplane" />
-        <br /><br />
-        <input type="submit" value="Submit" />
-        </form> (continued)
-        Learn HTML and CSS with w3schools
-        108
-        <p>
-        If you click the "Submit" button, you send your input to a
-        new page called html_form_action.asp.
-        </p>
-        </body>
-        </html>
+        <xmp>
+            <html>
+            <body>
+            <form name="input" action="html_form_action.asp"
+            method="get">
+            I have a bike:
+            <input type="checkbox" name="vehicle" value="Bike"
+            checked="checked" />
+            <br />
+            I have a car:
+            <input type="checkbox" name="vehicle" value="Car" />
+            <br />
+            I have an airplane:
+            <input type="checkbox" name="vehicle" value="Airplane" />
+            <br /><br />
+            <input type="submit" value="Submit" />
+            </form> (continued)
+            Learn HTML and CSS with w3schools
+            108
+            <p>
+            If you click the "Submit" button, you send your input to a
+            new page called html_form_action.asp.
+            </p>
+            </body>
+            </html>
+        </xmp>
 
         Form with Radio Buttons
 
-        Try it yourself >>
-        <html>
-        <body>
-        <form name="input" action="html_form_action.asp"
-        method="get">
-        Male:
-        <input type="radio" name="Sex" value="Male"
-        checked="checked">
-        <br>
-        Female:
-        <input type="radio" name="Sex" value="Female">
-        <br>
-        <input type ="submit" value ="Submit">
-        </form>
-        <p>
-        If you click the "Submit" button, you will send your input
-        (continued)to a new page called html_form_action.asp.
-        </p>
-        </body>
-        </html>
+        <xmp>
+            <html>
+            <body>
+            <form name="input" action="html_form_action.asp"
+            method="get">
+            Male:
+            <input type="radio" name="Sex" value="Male"
+            checked="checked">
+            <br>
+            Female:
+            <input type="radio" name="Sex" value="Female">
+            <br>
+            <input type ="submit" value ="Submit">
+            </form>
+            <p>
+            If you click the "Submit" button, you will send your input
+            (continued)to a new page called html_form_action.asp.
+            </p>
+            </body>
+            </html>
+        </xmp>
 
         Send E-Mail from a Form
-        The next example demonstrates how to send e-mail from a form. The results of the
-        code appear in Figure 13.14.
+        The next example demonstrates how to send e-mail from a form.
                 
-        Try it yourself >>
-        <html>
-        <body>
-        <form action="MAILTO:someone@w3schools.com" method="post"
-        enctype="text/plain">
-        <h3>This form sends an e-mail to W3Schools.</h3>
-        Name:<br>
-        <input type="text" name="name"
-        value="yourname" size="20">
-        <br>
-        Mail:<br>
-        <input type="text" name="mail"
-        value="yourmail" size="20">
-        <br>
-        Comment:<br>
-        <input type="text" name="comment"
-        value="yourcomment" size="40">
-        <br><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset"> (continued)
-        </form>
-        </body>
-        </html>
-                Form Tags
+        <xmp>
+            <html>
+            <body>
+            <form action="MAILTO:someone@w3schools.com" method="post"
+            enctype="text/plain">
+            <h3>This form sends an e-mail to W3Schools.</h3>
+            Name:<br>
+            <input type="text" name="name"
+            value="yourname" size="20">
+            <br>
+            Mail:<br>
+            <input type="text" name="mail"
+            value="yourmail" size="20">
+            <br>
+            Comment:<br>
+            <input type="text" name="comment"
+            value="yourcomment" size="40">
+            <br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset"> (continued)
+            </form>
+            </body>
+            </html>
+        </xmp>
+        <h3>Form Tags</h3>
         TAG DESCRIPTION
-        <form>-Defines a form for user input
-        <input>-Defines an input field
-        <textarea>-Defines a textarea (a multiline text input control)
-        <label>-efines a label to a control
-        <fieldset>-Defines a fieldset
-        <legend>-Defines a caption for a fieldset
-        <select>-Defines a selectable list (a drop-down box)
-        <optgroup>-Defines an option group
-        <option>-Defines an option in the drop-down box
-        <button>-Defines a pushbutton
-        <isindex>-Deprecated. Use <input> instead
-            <ul>Media Tags</ul>
-        <p>HTML Video
-            The HTML <video> element is used to show a video on a web page.
-            Example:
-        <!DOCTYPE html>
-        <html>
-        <body>
+        <xmp>
+            <form>-Defines a form for user input
+            <input>-Defines an input field
+            <textarea>-Defines a textarea (a multiline text input control)
+            <label>-efines a label to a control
+            <fieldset>-Defines a fieldset
+            <legend>-Defines a caption for a fieldset
+            <select>-Defines a selectable list (a drop-down box)
+            <optgroup>-Defines an option group
+            <option>-Defines an option in the drop-down box
+            <button>-Defines a pushbutton
+            <isindex>-Deprecated. Use <input> instead
+        </xmp>
+        HTML Video <br>
+        The HTML &lt;video&gt; element is used to show a video on a web page.
+        Example:
+        <xmp>
+            <!DOCTYPE html>
+            <html>
+            <body>
 
-        <video width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-        </video>
+            <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
 
-        </body>
-        </html>
-            HTML <video> Autoplay
+            </body>
+            </html>
+        </xmp>
+        HTML &lt;video&gt; Autoplay
         To start a video automatically, use the autoplay attribute.
         Add muted after autoplay to let your video start playing automatically (but muted):
-        <!DOCTYPE html>
-        <html>
-        <body>
-
-        <video width="320" height="240" autoplay muted>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-        </video>
-
-        </body>
-        </html>
+        <xmp>
+            <!DOCTYPE html>
+            <html>
+            <body>
+            <video width="320" height="240" autoplay muted>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+            </body>
+            </html>
+        </xmp>
             HTML Video Tags
         Tag	     Description
+        <xmp>
         <video>	Defines a video or movie
         <source>	Defines multiple media resources for media elements, such as <video> and <audio>
-        <track>	Defines text tracks in media players</p>
-        <p>The HTML <audio> Element
-        To play an audio file in HTML, use the <audio> element
-            HTML <audio> Autoplay
+        <track>	Defines text tracks in media players</xmp></p>
+        <p>The HTML &lt;audio&gt; Element
+        To play an audio file in HTML, use the &lt;audio&gt; element
+            HTML &lt;audio&gt; Autoplay
         To start an audio file automatically, use the autoplay attribute
         Add muted after autoplay to let your audio file start playing automatically (but muted)
             Example:
+        <xmp>
             <!DOCTYPE html>
-        <html>
-        <body>
+            <html>
+            <body>
 
-        <audio controls autoplay muted>
-        <source src="horse.ogg" type="audio/ogg">
-        <source src="horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-        </audio>
+            <audio controls autoplay muted>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
 
-        </body>
-        </html>
+            </body>
+            </html>
+        </xmp>
             HTML Audio Tags
         Tag	      Description
-        <audio>	  Defines sound content
-        <source>	Defines multiple media resources for media elements, such as <video> and <audio>
+        &lt;audio&gt;  Defines sound content
+        &lt;source&gt;	Defines multiple media resources for media elements, such as &lt;video&gt; and &lt;audio&gt;
 
         <p>Plug-ins
         Plug-ins were designed to be used for many different purposes:
@@ -434,37 +441,45 @@
         To display maps
         To scan for viruses
         To verify a bank id
-        The <object> Element
-        The <object> element is supported by all browsers.
+        The &lt;object&gt; Element
+        The &lt;object&gt; element is supported by all browsers.
 
-        The <object> element defines an embedded object within an HTML document.
+        The &lt;object&gt; element defines an embedded object within an HTML document.
 
         It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML
-        Example:<!DOCTYPE html>
-        <html>
-        <body>
+        Example:
+        <xmp>
+            <!DOCTYPE html>
+            <html>
+            <body>
 
-        <object width="100%" height="500px" data="snippet.html"></object>
+            <object width="100%" height="500px" data="snippet.html"></object>
 
+            </body>
+            </html>
+        </xmp>
+        Ex:
+        <Xmp>
+            <!DOCTYPE html>
+            <html>
+            <body>
+
+            <object data="audi.jpeg"></object>
+
+            </body>
+            </html>
+        </Xmp>
+
+        The &lt;embed&gt; element can also be used to include HTML in HTML
+        <Xmp>
+            <!DOCTYPE html>
+            <html>
+            <body>
+
+            <embed width="100%" height="500px" src="snippet.html">
+
+            </body>
+            </html>
+        </Xmp>
         </body>
-        </html>
-        Ex:<!DOCTYPE html>
-        <html>
-        <body>
-
-        <object data="audi.jpeg"></object>
-
-        </body>
-        </html>
-
-        The <embed> element can also be used to include HTML in HTMl
-        <!DOCTYPE html>
-        <html>
-        <body>
-
-        <embed width="100%" height="500px" src="snippet.html">
-
-        </body>
-        </html>
-        </body>
-        </html>
+    </html>
