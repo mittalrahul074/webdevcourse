@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>DeleteBooksServlet.java</title>
+</head>
+<body>
+<xmp>
+   
+         
+            int bid = Integer.parseInt(request.getParameter("id"));
+            
+            try{
+                BooksDao bkd = new BooksDao(ConnectionDao.getCon());
+                bkd.deleteBook(bid);
+                response.sendRedirect("index.jsp");
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            
+
+</xmp>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>AddBooksServlet.java</title>
+</head>
+<body>
+<xmp>
+            String bname = request.getParameter("bkname");
+            String bdesc = request.getParameter("bkdes");
+            String athname = request.getParameter("authname");          
+            String cat = request.getParameter("category");
+            books book = new books(bname, bdesc, athname, cat);
+            try{
+                BooksDao bkdao = new BooksDao(ConnectionDao.getCon());
+                if(bkdao.addBook(book)){
+                    response.sendRedirect("index.jsp");
+                }else{
+                    out.print("wrong cre3dential");
+                }
+                
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            
+
+</xmp>
+</body>
+</html>

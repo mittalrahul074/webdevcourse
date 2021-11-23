@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    	<title>Intro to Database</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- <link rel="stylesheet" href="../Subtopic_style.css"> -->
+	<style>
+		p {
+			margin: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Introduction to MYSQL queries</h2>
+		<h4>Introduction</h4>
+			<p>
+				Databases are a key component of many websites and applications, and are at the core of how data is stored and exchanged across the internet. One of the most important aspects of database management is the practice of retrieving data from a database, whether it’s on an ad hoc basis or part of a process that’s been coded into an application. There are several ways to retrieve information from a database, but one of the most commonly-used methods is performed through submitting queries through the command line.
+				<br><br>
+				In relational database management systems, a query is any command used to retrieve data from a table. In Structured Query Language (SQL), queries are almost always made using the SELECT statement.
+				<br><br>
+				In this guide, we will discuss the basic syntax of SQL queries as well as some of the more commonly-employed functions and operators. We will also practice making SQL queries using some sample data in a MySQL database.
+				<br><br>
+				MySQL is an open-source relational database management system. One of the most widely-deployed SQL-databases, MySQL prioritizes speed, reliability, and usability. It generally follows the ANSI SQL standard, although there are a few cases where MySQL performs operations differently than the recognized standard.
+				<br><br>
+			</p>
+		<h4>Prerequisites</h4>
+			<p>
+				In general, the commands and concepts presented in this guide can be used on any Linux-based operating system running any SQL database software. However, it was written specifically with an Ubuntu 18.04 server running MySQL in mind. To set this up, you will need the following:
+				<br><br>
+				An Ubuntu 18.04 machine with a non-root user with sudo privileges. This can be set up using our Initial Server Setup guide for Ubuntu 18.04.
+				MySQL installed on the machine. Our guide on How to Install MySQL on Ubuntu 18.04 can help you set this up.
+				With this setup in place, we can begin the tutorial.
+				<br><br>
+				</p>
+		<h4>Creating a Sample Database</h4>
+			<p>
+				Before we can begin making queries in SQL, we will first create a database and a couple tables, then populate these tables with some sample data. This will allow you to gain some hands-on experience when you begin making queries later on.
+				<br><br>
+				For the sample database we’ll use throughout this guide, imagine the following scenario:
+				<br><br>
+				You and several of your friends all celebrate your birthdays with one another. On each occasion, the members of the group head to the local bowling alley, participate in a friendly tournament, and then everyone heads to your place where you prepare the birthday-person’s favorite meal. Now that this tradition has been going on for a while, you’ve decided to begin tracking the records from these tournaments. Also, to make planning dinners easier, you decide to create a record of your friends’ birthdays and their favorite entrees, sides, and desserts. Rather than keep this information in a physical ledger, you decide to exercise your database skills by recording it in a MySQL database.
+				<br><br>
+			</p>
+			<p>
+				To begin, open up a MySQL prompt as your root MySQL user. Next, create the database by running:
+				<br>
+				<center>CREATE DATABASE `birthdays`;</center>
+				<br><br>
+				Then select this database by typing:
+				<br>
+				<center>USE birthdays;</center>
+				<br><br>
+			</p>
+			<p>
+				Next, create two tables within this database. We’ll use the first table to track your friends’ records at the bowling alley. The following command will create a table called tourneys with columns for the name of each of your friends, the number of tournaments they’ve won (wins), their all-time best score, and what size bowling shoe they wear (size):
+				<br>
+				<center>
+				CREATE TABLE tourneys (<br>
+				name varchar(30),<br>
+				wins real,<br>
+				best real,<br>
+				size real<br>
+				);<br>
+				</center>
+				<br>
+				Once you run the CREATE TABLE command and populate it with column headings, you’ll receive the following output:
+				<br>
+				<center>
+				Output<br>
+				Query OK, 0 rows affected (0.00 sec)<br>
+				</center>
+				<br><br>
+			</p>
+			<p>
+				Populate the tourneys table with some sample data:
+				<br>
+				<center>
+				INSERT INTO tourneys (name, wins, best, size)<br>
+				VALUES ('Dolly', '7', '245', '8.5'),<br>
+				('Etta', '4', '283', '9'),<br>
+				('Irma', '9', '266', '7'),<br>
+				('Barbara', '2', '197', '7.5'),<br>
+				('Gladys', '13', '273', '8');<br>
+ 				</center>
+				<br><br>
+				You’ll receive an output like this:
+				<br>
+				<center>
+				Output<br>
+				Query OK, 5 rows affected (0.01 sec)<br>
+				Records: 5  Duplicates: 0  Warnings: 0<br>
+				</center>
+				<br>
+			</p>
+			<p>
+				Following this, create another table within the same database which we’ll use to store information about your friends’ favorite birthday meals. The following command creates a table named dinners with columns for the name of each of your friends, their birthdate, their favorite entree, their preferred side dish, and their favorite dessert:
+				<br>
+				<center>
+				CREATE TABLE dinners (<br>
+				name varchar(30),<br>
+				birthdate date,<br>
+				entree varchar(30),<br>
+				side varchar(30),<br>
+				dessert varchar(30)<br>
+				);<br>
+				</center>
+				<br>
+				Similarly for this table, you’ll receive feedback confirming that the command ran successfully:
+				<br>
+				<center>
+				Output<br>
+				Query OK, 0 rows affected (0.01 sec)<br>
+				</center>
+				<br>
+				Populate this table with some sample data as well:
+				<br>
+				<center>
+				INSERT INTO dinners (name, birthdate, entree, side, dessert)<br>
+				VALUES ('Dolly', '1946-01-19', 'steak', 'salad', 'cake'),<br>
+				('Etta', '1938-01-25', 'chicken', 'fries', 'ice cream'),<br>
+				('Irma', '1941-02-18', 'tofu', 'fries', 'cake'),<br>
+				('Barbara', '1948-12-25', 'tofu', 'salad', 'ice cream'),<br>
+				('Gladys', '1944-05-28', 'steak', 'fries', 'ice cream');<br>
+ 				<br>
+				Output<br>
+				Query OK, 5 rows affected (0.00 sec)<br>
+				Records: 5  Duplicates: 0  Warnings: 0<br>
+				</center>
+				<br>
+				Once that command completes successfully, you’re done setting up your database.
+			</p>
+    		<h4>Performing Database CRUD operations with JSP</h4>
+			<p>
+				<h6>What is CRUD?</h6>
+				CRUD is the basic four-function in the database storage system which is Create, Read, Update and Delete. Using an interface we can store our data or retrieve our data from the database. In this post, we will learn how to perform CRUD operation to store data to database, retrieve data from the database, update our data and delete our data if necessary. For the interface, we will use the JSP form, Servlet, and MySQL database to store data.
+			</p>
+			<p>
+				<h6>Prerequisite of CRUD Application</h6>
+				<ul>
+					<li>Netbeans or Eclipse IDE.</li>
+    					<li>Java EE.</li>
+    					<li>MySQL Workbench.</li>
+    					<li>JDBC Connector.</li>
+    					<li>Knowledge in Java, Servlet and SQL.</li>
+    					<li>JSTL Tag Library jstl-1.2.jar file.</li>
+    					<li>Tomcat Server.</li>
+				</ul>
+			</p>
+			<p>
+				<h6>Step 1</h6>
+				This is the basic setup of our project. that will help us to better understanding what we are doing.
+				<ul>
+					<li>Open your Netbeans IDE and create a new project.</li>
+  					<li>Right-click of the Web Pages folder the create two JSP page name index.jsp and editbook.jsp</li>
+    					<li>If Netbeans doesn't create a web.xml file then right-click of the WEB-INF page>New>Other>web.xml to create a new web.xml file.</li>
+    					<li>-Now create a package for our Web Project. Right-click of the Sources Packages folder New>Java Package> package name and click finish.</li>
+    					<li>-Right-click Libraries folder>Add JAR/Folder then select the mysql-connector-java-8.0.18.jar file and jstl-1.2.jar file.</li>
+				</ul>
+			</p>
+			<p>
+				<h6>Step-2: Design the index.jsp and editbook.jsp</h6>
+				For designing, we will use Bootstrap to make it simple. Now copy the below code and paste to your index.jsp page and editbook.jsp page.
+				<br>
+				<a href="db_index-jsp.html">index.jsp</a>
+				<br>
+				<a href="db_editbook-jsp.html">editbook.jsp</a>
+			</p>
+			<p>
+				<h6>Step-3: Create a Database and Table in MySQL Workbench</h6>
+				To store our data we need a database and data table. Below are the database and table values.
+				<br>
+				Database Name: create database curd_project;
+				<br>
+    				Create Table: CREATE TABLE `curd_project`.`books` (`id` INT NOT NULL AUTO_INCREMENT, `bName` VARCHAR(45) NOT NULL, `aDesc` VARCHAR(45) NOT NULL, `aName` VARCHAR(45) NOT NULL, `cat` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`), UNIQUE INDEX `bName_UNIQUE` (`bName` ASC) VISIBLE);
+			</p>
+			<p>
+				<h6>Step-4: Create a JDBC Connection</h6>
+				Right-click your source packages and create a new java class. Name it ConnectionDao.java Copy the below code and paste it.
+				<br>
+				<a href="db_connectiondao-java.html">ConnectionDao.java</a>
+			</p>
+			<p>
+				<h6> Step-5: Create a books.java bean</h6>
+				<a href="db_books-java.html">books.java</a>
+			</p>
+			<p>
+				<h6>Step-6: Create a BooksDao.java class</h6>
+				In this BooksDao class, we will write SQL code for CRUD operation.
+				<br>
+				<a href="db_booksdao-java.html">BooksDao.java</a>
+			</p>
+			<p>
+				<h6>Step-7: Creating the Controller Servlet for our project.</h6>
+				<ul>
+					<li>
+						AddBooksServlet.java paste the below code to your servlet body.<br>
+						<a href="db_addbooksservlet-java.html">AddBooksServlet.java</a>
+					</li>
+					<li>
+						EditBooksServlet.java paste the below code to your servlet body.<br>
+						<a href="db_editbooksservlet-java.html">EditBooksServlet.java</a>
+					</li>
+					<li>
+						DeleteBooksServlet.java paste the below code to your servlet body.<br>
+						<a href="db_deletebooksservlet-java.html">DeleteBooksServlet.java</a>
+					</li>
+				</ul>
+			</p>
+			<p>
+				<h6>Step-8: Run the Project</h6>
+				This is the final step to test our project. If you wrote those codes properly it should be working properly.
+			</p>
+</body>
+</html>
