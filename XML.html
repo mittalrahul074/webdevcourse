@@ -12,108 +12,113 @@
   <body>
       <ul>Introduction</ul>
     <p>What is XML? 
- XML stands for eXtensible Markup Language.
- It is considered “extensible ” because it allows the developer to
-create new tags.
- XML is a markup language much like HTML.
- XML was designed to carry data, not to display data.
- XML tags are not predefined.You must define your own tags.
- XML is designed to be self-descriptive.
- XML is a W3C Recommendation.
+      <ul>XML stands for eXtensible Markup Language.</ul>
+      <ul>It is considered “extensible ” because it allows the developer to create new tags.</ul>
+      <ul>XML is a markup language much like HTML.</ul>
+      <ul>XML was designed to carry data, not to display data.</ul>
+      <ul>XML tags are not predefined.You must define your own tags.</ul>
+      <ul>XML is designed to be self-descriptive.</ul>
+      <ul>XML is a W3C Recommendation.</ul>
+      <h3>The Difference Between XML and HTML</h3> 
+      <ol>XML is not a replacement for HTML.</ol>
+      <ol>XML and HTML were designed with different goals</ol>
+      <ol>XML was designed to transport and store data, with focus on what data is.</ol>
+      <ol>HTML was designed to display data, with focus on how data looks.</ol>
+      <ol>XML tags are not predefined.You must define your own tags.</ol>
+      <ol>HTML tags are predefined.</ol>
+      <ol>
+        <xmp>
+          XML tags are case sensitive. The tag <Letter> is different from the tag <letter>.
+        </xmp>
+      </ol>
+      <ol>
+        <xmp>
+          In XML, the attribute values must always be quoted.(Either single or double quotes) Eg: <note date="12/11/2007">
+        </xmp>
+      </ol>
+      Example
+      The following example is a note to Tony, from Peter, stored as XML:
+      <xmp>
+        <note>
+        <to>Tony</to>
+        <from>Peter</from>
+        <heading>Reminder</heading>
+        <body>Don't forget me this weekend!</body>
+        </note>
+      </xmp>
+      The note above is quite self descriptive. It has sender and receiver information, it also has a heading and a message body.
+      But still, this XML document does not DO anything. It is just information wrapped in tags. Someone must write a piece of software to send, receive or display it</p>
 
-The Difference Between XML and HTML 
- XML is not a replacement for HTML.
- XML and HTML were designed with different goals:
-1. XML was designed to transport and store data, with focus on what data is.
-2. HTML was designed to display data, with focus on how data looks.
-3. XML tags are not predefined.You must define your own tags. (<author>)
-4. HTML tags are predefined. (<h1>,<p>)
-5. In HTML, elements do not have to have a closing tag:<p>This is a paragraph.
-6. In XML, it is illegal to omit the closing tag. All elements must have a closing tag:
-<p>This is a paragraph</p>
-7. XML tags are case sensitive. The tag <Letter> is different from the tag
-<letter>.
-8. In XML, the attribute values must always be quoted.(Either single or double
-quotes) Eg: <note date="12/11/2007">
-
-Example
- The following example is a note to Tony, from Peter, stored as XML:
-<note>
-<to>Tony</to>
-<from>Peter</from>
-<heading>Reminder</heading>
-<body>Don't forget me this weekend!</body>
-</note>
- The note above is quite self descriptive. It has sender and receiver
-information, it also has a heading and a message body.
- But still, this XML document does not DO anything. It is just
-information wrapped in tags. Someone must write a piece of software
-to send, receive or display it</p>
       <ul>XML DOM</ul>
-<p>
-What is XML DOM-
-DOM is an acronym stands for Document Object Model. It defines a standard way to access and manipulate documents. 
-The Document Object Model (DOM) is a programming API for HTML and XML documents. 
-It defines the logical structure of documents and the way a document is accessed and manipulated.
+      <p>
+        <h3>What is XML DOM?</h3> 
+        DOM is an acronym stands for Document Object Model. It defines a standard way to access and manipulate documents. 
+        The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.
+        
+        As a W3C specification, one important objective for the Document Object Model is to provide a standard programming interface that can be used in a wide variety of environments and applications. The Document Object Model can be used with any programming language.
+        
+        XML DOM defines a standard way to access and manipulate XML documents.
 
-As a W3C specification, one important objective for the Document Object Model is to provide a standard programming interface that 
-can be used in a wide variety of environments and applications. The Document Object Model can be used with any programming language.
+        <h4>What is XML DOM?</h4>
+        The XML DOM makes a tree-structure view for an XML document.
 
-XML DOM defines a standard way to access and manipulate XML documents.
+        We can access all elements through the DOM tree.
 
-What does XML DOM
-The XML DOM makes a tree-structure view for an XML document.
+        We can modify or delete their content and also create new elements. The elements, their content (text and attributes) are all known as nodes.
 
-We can access all elements through the DOM tree.
-
-We can modify or delete their content and also create new elements. The elements, their content (text and attributes) are all known as nodes.
-XML DOM Example : Load XML File
-Let's take an example to show how an XML document ("note.xml") is parsed into an XML DOM object.
-
-This example parses an XML document (note.xml) into an XML DOM object and extracts information from it with JavaScript.
-
-Let's see the XML file that contains message.
-
-<?xml version="1.0" encoding="ISO-8859-1"?>    
-<note>    
-  <to>sonoojaiswal@gmail.com</to>    
-  <from>vimal@gmail.com</from>    
-  <body>Hello XML DOM</body>    
-</note>    
-Let's see the HTML file that extracts the data of XML document using DOM.
+        XML DOM Example : Load XML File
+        Let's take an example to show how an XML document ("note.xml") is parsed into an XML DOM object.
 
 
+        This example parses an XML document (note.xml) into an XML DOM object and extracts information from it with JavaScript.
 
-<!DOCTYPE html>  
-<html>  
-<body>  
-<h1>Important Note</h1>  
-<div>  
-<b>To:</b> <span id="to"></span><br>  
-<b>From:</b> <span id="from"></span><br>  
-<b>Message:</b> <span id="message"></span>  
-</div>  
-<script>  
-if (window.XMLHttpRequest)  
-  {// code for IE7+, Firefox, Chrome, Opera, Safari  
-  xmlhttp=new XMLHttpRequest();  
-  }  
-else  
-  {// code for IE6, IE5  
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
-  }  
-xmlhttp.open("GET","note.xml",false);  
-xmlhttp.send();  
-xmlDoc=xmlhttp.responseXML;  
-document.getElementById("to").innerHTML=  
-xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;  
-document.getElementById("from").innerHTML=  
-xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
-document.getElementById("message").innerHTML=  
-xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
-</script>  
-</body>  
-</html>   
+
+        Let's see the XML file that contains message.
+
+        <xmp>
+          <?xml version="1.0" encoding="ISO-8859-1"?>    
+          <note>    
+            <to>sonoojaiswal@gmail.com</to>    
+            <from>vimal@gmail.com</from>    
+            <body>Hello XML DOM</body>    
+          </note> 
+        </xmp>  
+        Let's see the HTML file that extracts the data of XML document using DOM.
+
+
+
+<xmp>
+      <!DOCTYPE html>  
+      <html>  
+      <body>  
+      <h1>Important Note</h1>  
+      <div>  
+      <b>To:</b> <span id="to"></span><br>  
+      <b>From:</b> <span id="from"></span><br>  
+      <b>Message:</b> <span id="message"></span>  
+      </div>  
+      <script>  
+      if (window.XMLHttpRequest)  
+        {// code for IE7+, Firefox, Chrome, Opera, Safari  
+        xmlhttp=new XMLHttpRequest();  
+        }  
+      else  
+        {// code for IE6, IE5  
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+        }  
+      xmlhttp.open("GET","note.xml",false);  
+      xmlhttp.send();  
+      xmlDoc=xmlhttp.responseXML;  
+      document.getElementById("to").innerHTML=  
+      xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;  
+      document.getElementById("from").innerHTML=  
+      xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
+      document.getElementById("message").innerHTML=  
+      xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
+      </script>  
+      </body>  
+      </html>  
+</xmp> 
 
 
 Important Note
@@ -127,68 +132,74 @@ Let's see the HTML file that extracts the data of XML string using DOM.
 
 xmldom.html
 
-<!DOCTYPE html>  
-<html>  
-<body>  
-<h1>Important Note2</h1>  
-<div>  
-<b>To:</b> <span id="to"></span><br>  
-<b>From:</b> <span id="from"></span><br>  
-<b>Message:</b> <span id="message"></span>  
-</div>  
-<script>  
-txt1="<note>";    
-txt2="<to>Sania Mirza</to>";    
-txt3="<from>Serena William</from>";    
-txt4="<body>Don't forget me this weekend!</body>";    
-txt5="</note>";    
-txt=txt1+txt2+txt3+txt4+txt5;  
-  
-if (window.DOMParser)  
-  {  
-  parser=new DOMParser();  
-  xmlDoc=parser.parseFromString(txt,"text/xml");  
-  }  
-else // Internet Explorer  
-  {  
-  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");  
-  xmlDoc.async=false;  
-  xmlDoc.loadXML(txt);  
-  }  
-document.getElementById("to").innerHTML=  
-xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;  
-document.getElementById("from").innerHTML=  
-xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
-document.getElementById("message").innerHTML=  
-xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
-</script>  
-</body>  
-</html></p>  
-<ul>Namespaces</ul>
-<p>What is Namespace?
- An XML namespace is a collection of names that are identified
-by a Uniform Resource Identifier (URI) reference, which are
-used in XML documents as element types and attribute names.
- You might find it easier to think of a namespace as a dictionary
-that is a source of definitions for items that you use within an
-XML document.
- Example: XML Schema
-xmlns:xsd=http://www.w3.org/2001/XMLSchema-instance
- It would mainly be used to avoid naming conflicts.
-Namespace Structure
+<xmp>
+
+  <!DOCTYPE html>  
+  <html>  
+  <body>  
+  <h1>Important Note2</h1>  
+  <div>  
+  <b>To:</b> <span id="to"></span><br>  
+  <b>From:</b> <span id="from"></span><br>  
+  <b>Message:</b> <span id="message"></span>  
+  </div>  
+  <script>  
+  txt1="<note>";    
+  txt2="<to>Sania Mirza</to>";    
+  txt3="<from>Serena William</from>";    
+  txt4="<body>Don't forget me this weekend!</body>";    
+  txt5="</note>";    
+  txt=txt1+txt2+txt3+txt4+txt5;  
+    
+  if (window.DOMParser)  
+    {  
+    parser=new DOMParser();  
+    xmlDoc=parser.parseFromString(txt,"text/xml");  
+    }  
+  else // Internet Explorer  
+    {  
+    xmlDoc=new ActiveXObject("Microsoft.XMLDOM");  
+    xmlDoc.async=false;  
+    xmlDoc.loadXML(txt);  
+    }  
+  document.getElementById("to").innerHTML=  
+  xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;  
+  document.getElementById("from").innerHTML=  
+  xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
+  document.getElementById("message").innerHTML=  
+  xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
+  </script>  
+  </body>  
+  </html>
+</xmp>
+</p>
+<h3>What is Namespace?</h3>
+<p>
+  <ul>An XML namespace is a collection of names that are identified
+    by a Uniform Resource Identifier (URI) reference, which are
+    used in XML documents as element types and attribute names.</ul>
+  <ul>You might find it easier to think of a namespace as a dictionary
+    that is a source of definitions for items that you use within an
+    XML document.</ul>
+  <ul>Example: XML Schema
+    xmlns:xsd=http://www.w3.org/2001/XMLSchema-instance</ul>
+  <ul>It would mainly be used to avoid naming conflicts.
+    Namespace Structure</ul>
 Let's see the XML namespace syntax:
-<element xmlns:name = "URL">  
-<Organization
- xmlns:addr=”http://www.example.com/addresses”
- xmlns=”http://www.example.com/files”>
- The first declaration associates the addr prefix with the
-“www.example.com/addresses” URI.
- The second declaration defines www.example.com/files as the
-default namespace. If there is not a prefix defined for that element, a
-default namespace is applied.
- <highschool:subject>Geometry</highschool:subject>
-and
- <medicalschool:subject>Cardiology</medicalschool:subject>
+<xmp>
+  <element xmlns:name = "URL">  
+  <Organization
+   xmlns:addr=”http://www.example.com/addresses”
+   xmlns=”http://www.example.com/files”>
+   The first declaration associates the addr prefix with the
+  “www.example.com/addresses” URI.
+   The second declaration defines www.example.com/files as the
+  default namespace. If there is not a prefix defined for that element, a
+  default namespace is applied.
+   <highschool:subject>Geometry</highschool:subject>
+  and
+   <medicalschool:subject>Cardiology</medicalschool:subject>
+</xmp>
 
 Namespace Best Practices
  Try to limit the number of Namespaces to about 5 per document.
@@ -208,44 +219,53 @@ Schema element supports Namespaces. It is similar to a database schema that desc
 
 Syntax
 You need to declare a schema in your XML document as follows −
-Example:<?xml version = "1.0" encoding = "UTF-8"?>
-<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
-<xs:element name = "contact">
-<xs:complexType>
-<xs:sequence>
-<xs:element name = "name" type = "xs:string" />
-<xs:element name = "company" type = "xs:string" />
-<xs:element name = "phone" type = "xs:int" />
-</xs:sequence>
-</xs:complexType>
-</xs:element>
-</xs:schema>
-
+Example:
+<xmp>
+  <?xml version = "1.0" encoding = "UTF-8"?>
+  <xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+  <xs:element name = "contact">
+  <xs:complexType>
+  <xs:sequence>
+  <xs:element name = "name" type = "xs:string" />
+  <xs:element name = "company" type = "xs:string" />
+  <xs:element name = "phone" type = "xs:int" />
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  </xs:schema>
+  
+</xmp>
 Elements-
 As we saw in the XML - Elements chapter, elements are the building blocks of XML document.
 An element can be defined within an XSD as follows −
 
-<xs:element name = "x" type = "y"/>
+<xmp>
+  <xs:element name = "x" type = "y"/>
+</xmp>
 Definition Types
 You can define XML schema elements in the following ways −
 
 Simple Type
 Simple type element is used only in the context of the text. Some of the predefined simple types are: xs:integer, xs:boolean, xs:string, xs:date. For example −
 
-<xs:element name = "phone_number" type = "xs:int" />
+<xmp>
+  <xs:element name = "phone_number" type = "xs:int" />
+</xmp>
 Complex Type
 A complex type is a container for other element definitions. This allows you to specify which child 
 elements an element can contain and to provide some structure within your XML documents. For example −
 
-<xs:element name = "Address">
-<xs:complexType>
-<xs:sequence>
-<xs:element name = "name" type = "xs:string" />
-<xs:element name = "company" type = "xs:string" />
-<xs:element name = "phone" type = "xs:int" /> 
-</xs:sequence> 
-</xs:complexType>
-</xs:element> 
+<xmp>
+  <xs:element name = "Address">
+  <xs:complexType>
+  <xs:sequence>
+  <xs:element name = "name" type = "xs:string" />
+  <xs:element name = "company" type = "xs:string" />
+  <xs:element name = "phone" type = "xs:int" /> 
+  </xs:sequence> 
+  </xs:complexType>
+  </xs:element> 
+</xmp>
 In the above example, Address element consists of child elements. This is a container for other <xs:element> definitions, 
 that allows to build a simple hierarchy of elements in the XML document.
 
@@ -253,42 +273,47 @@ Global Types
 With the global type, you can define a single type in your document, which can be used by all other references. 
 For example, suppose you want to generalize the person and company for different addresses of the company. In such case, you can define a general type as follows −
 
-<xs:element name = "AddressType">
-<xs:complexType>
-<xs:sequence>
-<xs:element name = "name" type = "xs:string" />
-<xs:element name = "company" type = "xs:string" />
-</xs:sequence> 
-</xs:complexType>
-</xs:element> 
+<xmp>
+  <xs:element name = "AddressType">
+  <xs:complexType>
+  <xs:sequence>
+  <xs:element name = "name" type = "xs:string" />
+  <xs:element name = "company" type = "xs:string" />
+  </xs:sequence> 
+  </xs:complexType>
+  </xs:element> 
+</xmp>
 Now let us use this type in our example as follows −
 
-<xs:element name = "Address1">
-<xs:complexType>
-<xs:sequence>
-<xs:element name = "address" type = "AddressType" />
-<xs:element name = "phone1" type = "xs:int" /> 
-</xs:sequence> 
-</xs:complexType>
-</xs:element> 
-
-<xs:element name = "Address2">
-<xs:complexType>
-<xs:sequence>
-<xs:element name = "address" type = "AddressType" />
-<xs:element name = "phone2" type = "xs:int" /> 
-</xs:sequence> 
-</xs:complexType>
-</xs:element> 
+<xmp>
+  <xs:element name = "Address1">
+  <xs:complexType>
+  <xs:sequence>
+  <xs:element name = "address" type = "AddressType" />
+  <xs:element name = "phone1" type = "xs:int" /> 
+  </xs:sequence> 
+  </xs:complexType>
+  </xs:element> 
+  
+  <xs:element name = "Address2">
+  <xs:complexType>
+  <xs:sequence>
+  <xs:element name = "address" type = "AddressType" />
+  <xs:element name = "phone2" type = "xs:int" /> 
+  </xs:sequence> 
+  </xs:complexType>
+  </xs:element> 
+</xmp>
 Instead of having to define the name and the company twice (once for Address1 and once for Address2), we now have a single definition. 
 This makes maintenance simpler, i.e., if you decide to add "Postcode" elements to the address, you need to add them at just one place.
 
 Attributes
 Attributes in XSD provide extra information within an element. Attributes have name and type property as shown below −
 
-<xs:attribute name = "x" type = "y"/></p>
+<xmp>
+  <xs:attribute name = "x" type = "y"/></p>
+</xmp>
 <ul>XSLT</ul>
-<p>XSLT
  XSLT stands for XSL Transformations
  XSLT is a language for transforming XML documents into
 XHTML documents or to other XML documents.
@@ -299,36 +324,44 @@ and display, and a lot more.
   
 Style Sheet Declaration
  The root element that declares the document to be an XSL style 
-sheet is <xsl:stylesheet> or <xsl:transform>.
- <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
-
-XML File<?xml version="1.0" encoding="ISO-8859-1"?>
-<?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
-<catalog>
-<cd>
-<title>Empire Burlesque</title>
-<artist>Bob Dylan</artist>
-<country>USA</country>
-<company>Columbia</company>
-<price>10.90</price>
-<year>1985</year>
-</cd> <cd>..</cd><cd>...</cd>
-</catalog>
+sheet is <xmp>
+  <xsl:stylesheet>
+</xmp> or <xmp>
+  <xsl:transform>
+</xmp>.
+<xmp>
+  <xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+  
+  XML File<?xml version="1.0" encoding="ISO-8859-1"?>
+  <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
+  <catalog>
+  <cd>
+  <title>Empire Burlesque</title>
+  <artist>Bob Dylan</artist>
+  <country>USA</country>
+  <company>Columbia</company>
+  <price>10.90</price>
+  <year>1985</year>
+  </cd> <cd>..</cd><cd>...</cd>
+  </catalog>
+</xmp>
 it will nicely transform your XML into XHTML
 
 XSLT File
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="1.0" 
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:template match="/">
-<html>   <body>   <h2>My CD Collection</h2>
-<table border="1">
-<tr>         <th>Title</th>         <th>Artist</th>       </tr>
-<xsl:for-each select="catalog/cd">
-<tr>            <td><xsl:value-of select="title"/></td> 
-<td><xsl:value-of select="artist"/></td>       </tr>
-</xsl:for-each></table></body></html></xsl:template> </xsl:stylesheet>
+<xmp>
+  <?xml version="1.0" encoding="ISO-8859-1"?>
+  <xsl:stylesheet version="1.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+  <html>   <body>   <h2>My CD Collection</h2>
+  <table border="1">
+  <tr>         <th>Title</th>         <th>Artist</th>       </tr>
+  <xsl:for-each select="catalog/cd">
+  <tr>            <td><xsl:value-of select="title"/></td> 
+  <td><xsl:value-of select="artist"/></td>       </tr>
+  </xsl:for-each></table></body></html></xsl:template> </xsl:stylesheet>
+</xmp>
 How XSLT Works
 The XSLT stylesheet is written in XML format. It is used to define the transformation rules to be applied on the target XML document. 
 The XSLT processor takes the XSLT stylesheet and applies the transformation rules on the target XML document and then it generates a formatted document 
