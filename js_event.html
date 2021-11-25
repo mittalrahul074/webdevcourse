@@ -5,13 +5,295 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style_js.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <ul>DOM nods and trees</ul>
-    <ul>Traversing and modifying a DOM tree</ul>
-    <ul>Dynamic styles</ul>
-    <ul>JavaScript Forms</ul>
-    <ul>Creating Simple Forms</ul>
-    <ul>Validation of Forms</ul>
+    <h2>DOM nods and trees</h2>
+    <p>All items in the DOM are defined as <strong>nodes</strong>. There are many types of nodes, but there are three main ones that we work with most often:</p>
+    <ul>
+        <li><strong>Element</strong> nodes</li>
+        <li><strong>Text</strong> nodes</li>
+        <li><strong>Comment</strong> nodes</li>
+    </ul>
+    <p>When an HTML element is an item in the DOM, it is referred to as an <strong>element node</strong>. Any lone text outside of an element is a <strong>text node</strong>, and an HTML comment is a <strong>comment node</strong>. In addition to these three node types, the <code>document</code> itself is a <strong>document</strong> node, which is the root of all other nodes.</p>
+    <p>The DOM consists of a <strong>tree</strong> structure of nested nodes, which is often referred to as the <strong>DOM tree</strong>. You may be familiar with an ancestral family tree, which consists of parents, children, and siblings. The nodes in the DOM are also referred to as parents, children, and siblings, depending on their relation to other nodes.</p>
+    <p>To demonstrate, create a <code>nodes.html</code> file. We’ll add text, comment, and element nodes.</p>
+    <div class="code-label" title="nodes.html">nodes.html</div>
+    <pre>
+        <code class="code-highlight  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Learning About Nodes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>An element node<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- a comment node --&gt;</span>
+        A text node.
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+        <p>The <code>html</code> element node is the parent node. <code>head</code> and <code>body</code> are siblings, children of <code>html</code>. <code>body</code> contains three child nodes, which are all siblings — the type of node does not change the level at which it is nested.</p>
+
+        <span class="note"><strong>Note:</strong> When working with an HTML-generated DOM, the indentation of the HTML source code will create many empty text nodes, which won’t be visible from the DevTools Elements tab. Read about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">Whitespace in the DOM</a><br></span>
+    <h2>Traversing and modifying a DOM tree</h2>
+    <p>The DOM gives you access to the elements of a document, allowing you to modify the contents of a page dynamically using event-driven JavaScript. This section introduces properties and methods of all DOM nodes that enable you to traverse the DOM tree, modify nodes and create or delete content dynamically.</p>
+    <pre> 
+        <strong>1</strong> <strong><em>&lt;?xml version =</em></strong> <strong>"1.0"</strong> <strong><em>encoding =</em></strong> <strong>"utf-8"?</strong><strong><em>&gt;</em></strong>
+        <strong>2</strong>    <strong><em>&lt;!DOCTYPE html PUBLIC</em></strong> <strong>"-//W3C//DTD XHTML 1.0 Strict//EN"</strong>
+        <strong>3</strong>       <strong>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</strong><strong><em>&gt;</em></strong>
+        <strong>4</strong>
+        <strong>5</strong>    <em>&lt;!-- Fig. 10.2: dom.html --&gt;</em> 
+        <strong>6</strong>    <em>&lt;!-- Basic DOM functionality. --&gt;</em> 
+        <strong>7</strong>    <strong><em>&lt;html xmlns =</em></strong> <strong>"http://www.w3.org/1999/xhtml"</strong><strong><em>&gt;</em></strong>
+        <strong>8</strong>       <strong><em>&lt;head&gt;</em></strong>
+        <strong>9</strong>          <strong><em>&lt;title&gt;</em></strong>Basic DOM Functionality<strong><em>&lt;/title&gt;</em></strong>
+       <strong>10</strong>          <strong><em>&lt;style type =</em></strong> <strong>"text/css"</strong><strong><em>&gt;</em></strong>
+       <strong>11</strong>             <strong><em>h1, h3</em></strong>       { <strong><em>text-align:</em></strong> <strong>center;</strong>
+       <strong>12</strong>                            <strong><em>font-family:</em></strong> <strong>tahoma, geneva, sans-serif</strong> }
+       <strong>13</strong>             <strong><em>p</em></strong>            { <strong><em>margin-left:</em></strong> <strong>5%;</strong>
+       <strong>14</strong>                            <strong><em>margin-right:</em></strong> <strong>5%;</strong>
+       <strong>15</strong>                            <strong><em>font-family:</em></strong> <strong>arial, helvetica, sans-serif</strong> }
+       <strong>16</strong>             <strong><em>ul</em></strong>           { <strong><em>margin-left:</em></strong> <strong>10%</strong> }
+       <strong>17</strong>             <strong><em>a</em></strong>            { <strong><em>text-decoration:</em></strong> <strong>none</strong> }
+       <strong>18</strong>             <strong><em>a:hover</em></strong>      { <strong><em>text-decoration:</em></strong> <strong>underline</strong> }
+       <strong>19</strong>             <strong><em>.nav</em></strong>         { <strong><em>width:</em></strong> <strong>100%;</strong>
+       <strong>20</strong>                            <strong><em>border-top:</em></strong> <strong>3px dashed blue;</strong>
+       <strong>21</strong>                            <strong><em>padding-top:</em></strong> <strong>10px</strong> }
+       <strong>22</strong>             <strong><font color="#4C4C4C"><strong><em>.highlighted</em></strong> { <strong><em>background-color:</em></strong> <strong>yellow</strong> }</font></strong>
+       <strong>23</strong>             <strong><em>.submit</em></strong>      { <strong><em>width:</em></strong> <strong>120px</strong> }
+       <strong>24</strong>          &lt;/style&gt;
+       <strong>25</strong>          &lt;script type = "text/javascript"&gt;
+       <strong>26</strong>             &lt;!--
+       <strong>27</strong>             <strong><em>var</em></strong> currentNode; <em>// stores the currently highlighted node</em> 
+       <strong>28</strong>             <strong><em>var</em></strong> idcount = <strong>0</strong>; <em>// used to assign a unique id to new elements</em> 
+       <strong>29</strong>
+       <strong>30</strong>             <em>// get and highlight an element by its id attribute</em> 
+       <strong>31</strong>             <strong><em>function</em></strong> byId()
+       <strong>32</strong>             {
+       <strong>33</strong>             <strong><em>var</em></strong> id = document.getElementById<strong>"gbi"</strong> ).value;
+       <strong>34</strong>             <strong><em>var</em></strong> target = document.getElementById( id );
+       <strong>35</strong>
+       <strong>36</strong>             <strong><em>if</em></strong> ( target )
+       <strong>37</strong>                switchTo( target );
+       <strong>38</strong>          } <em>// end function byId</em>
+       <strong>39</strong>
+       <strong>40</strong>          <em>// insert a paragraph element before the current element</em>
+       <strong>41</strong>          <em>// using the insertBefore method</em>
+       <strong>42</strong>          <strong><em>function</em></strong> insert()
+       <strong>43</strong>          {
+       <strong>44</strong>             <strong><em>var</em></strong> newNode = createNewNode(
+       <strong>45</strong>                document.getElementById( <strong>"ins"</strong> ).value );
+       <strong>46</strong>             <strong><font color="#4C4C4C">currentNode.parentNode.insertBefore( newNode, currentNode );</font></strong>
+       <strong>47</strong>             switchTo( newNode );
+       <strong>48</strong>          } <em>// end function insert</em>
+       <strong>49</strong>
+       <strong>50</strong>          <em>// append a paragraph node as the child of the current node</em>
+       <strong>51</strong>          <strong><em>function</em></strong> appendNode()
+       <strong>52</strong>          {
+       <strong>53</strong>             <strong><em>var</em></strong> newNode = createNewNode(
+       <strong>54</strong>                document.getElementById( <strong>"append"</strong> ).value );
+       <strong>55</strong>             currentNode.appendChild( newNode );
+       <strong>56</strong>             switchTo( newNode );
+       <strong>57</strong>          } <em>// end function appendNode</em>
+       <strong>58</strong>
+       <strong>59</strong>          <em>// replace the currently selected node with a paragraph node</em>
+       <strong>60</strong>          <strong><em>function</em></strong> replaceCurrent()
+       <strong>61</strong>          {
+       <strong>62</strong>             <strong><em>var</em></strong> newNode = createNewNode(           
+       <strong>63</strong>                document.getElementById( <strong>"replace"</strong> ).value );
+       <strong>64</strong>             <strong><font color="#4C4C4C">currentNode.parentNode.replaceChild( newNode, currentNode );</font></strong>
+       <strong>65</strong>             switchTo( newNode );
+       <strong>66</strong>          } <em>// end function replaceCurrent</em>
+       <strong>67</strong>
+       <strong>68</strong>          <em>// remove the current node</em> 
+       <strong>69</strong>          <strong><em>function</em></strong> remove()
+       <strong>70</strong>          {
+       <strong>71</strong>             <strong><em>if</em></strong> ( currentNode.parentNode == document.body )
+       <strong>72</strong>                alert( <strong>"Can't remove a top-level element."</strong> );
+       <strong>73</strong>             <strong><em>else</em></strong>
+       <strong>74</strong>             {
+       <strong>75</strong>                <strong><em>var</em></strong> oldNode = currentNode;
+       <strong>76</strong>                switchTo( oldNode.parentNode );
+       <strong>77</strong>                <strong><font color="#4C4C4C">currentNode.removeChild( oldNode );</font></strong>
+       <strong>78</strong>             } <em>// end else</em>
+       <strong>79</strong>          } <em>// end function remove</em>
+       <strong>80</strong>
+       <strong>81</strong>          <em>// get and highlight the parent of the current node</em> 
+       <strong>82</strong>          <strong><em>function</em></strong> parent()
+       <strong>83</strong>          {
+       <strong>84</strong>             <strong><em>var</em></strong> target = currentNode.parentNode;
+       <strong>85</strong>
+       <strong>86</strong>             <strong><em>if</em></strong> ( target != document.body )
+       <strong>87</strong>                switchTo( target );
+       <strong>88</strong>             <strong><em>else</em></strong>
+       <strong>89</strong>                alert( <strong>"No parent."</strong> );
+        <strong>90</strong>          } <em>// end function parent</em>
+        <strong>91</strong>
+        <strong>92</strong>          <em>// helper function that returns a new paragraph node containing</em> 
+        <strong>93</strong>          <em>// a unique id and the given text</em> 
+        <strong>94</strong>          <strong><em>function</em></strong> createNewNode( text )
+        <strong>95</strong>          {
+        <strong>96</strong>             <strong><font color="#4C4C4C"><strong><em>var</em></strong> newNode = document.createElement( <strong>"p"</strong> );</font></strong>
+        <strong>97</strong>             nodeId = <strong>"new"</strong> + idcount;
+        <strong>98</strong>             ++idcount;
+        <strong>99</strong>             newNode.id = nodeId;
+        <strong>100</strong>            text = <strong>"["</strong> + nodeId + <strong>"] "</strong> + text;
+        <strong>101</strong>            <strong><font color="#4C4C4C">newNode.appendChild(document.createTextNode( text ) );</font></strong>
+        <strong>102</strong>            <strong><em>return</em></strong> newNode;
+        <strong>103</strong>         } <em>// end function createNewNode</em>
+        <strong>104</strong>
+        <strong>105</strong>         <em>// helper function that switches to a new currentNode</em> 
+        <strong>106</strong>         <strong><em>function</em></strong> switchTo( newNode )
+        <strong>107</strong>         {
+        <strong>108</strong>            <strong><font color="#4C4C4C">currentNode.className = "";</font></strong> <em>// remove old highlighting</em>
+        <strong>109</strong>            currentNode = newNode;
+        <strong>110</strong>            currentNode.className = <strong>"highlighted";</strong> <em>// highlight new node</em> 
+        <strong>111</strong>            document.getElementById( <strong>"gbi"</strong> ).value = <em>currentNode.id</em>;
+        <strong>112</strong>         } <em>// end function switchTo</em> 
+        <strong>113</strong>         // --&gt;
+        <strong>114</strong>      <strong><em>&lt;/script&gt;</em></strong>
+        <strong>115</strong>   <strong><em>&lt;/head&gt;</em></strong>
+        <strong>116</strong>   <strong><em>&lt;body onload</em></strong> = <strong>"currentNode = document.getElementById( 'bigheading' )"&gt;</strong>
+        <strong>117</strong>      <strong><em>&lt;h1 id</em></strong> = <strong>"bigheading"</strong> <strong><em>class =</em></strong> <strong>"highlighted"</strong><strong><em>&gt;</em></strong>
+        <strong>118</strong>         [bigheading] DHTML Object Model<strong><em>&lt;/h1&gt;</em></strong>
+        <strong>119</strong>      <strong><em>&lt;h3 id =</em></strong> <strong>"smallheading"</strong><strong><em>&gt;</em></strong>[smallheading] Element Functionality<strong><em>&lt;/h3&gt;</em></strong>
+        <strong>120</strong>      <strong><em>&lt;p id =</em></strong> <strong>"para1"</strong><strong><em>&gt;</em></strong>[para1] The Document Object Model (DOM) allows for
+        <strong>121</strong>         quick, dynamic access to all elements in an XHTML document for
+        <strong>122</strong>         manipulation with JavaScript.<strong><em>&lt;/p&gt;</em></strong>
+        <strong>123</strong>      <strong><em>&lt;p id =</em></strong> <strong>"para2"</strong><strong><em>&gt;</em></strong>[para2] For more information, check out the
+        <strong>124</strong>         "JavaScript and the DOM" section of Deitel's
+        <strong>125</strong>         <strong><em>&lt;a id =</em></strong> <strong>"link"</strong> <strong><em>href =</em></strong> <strong>"http://www.deitel.com/javascript"</strong><strong><em>&gt;</em></strong>
+        <strong>126</strong>            [link] JavaScript Resource Center.&lt;/a&gt;&lt;/p&gt;
+        <strong>127</strong>      <strong><em>&lt;p id =</em></strong> <strong>"para3"</strong><strong><em>&gt;</em></strong>[para3] The buttons below demonstrate:(list)<strong><em>&lt;/p&gt;</em></strong>
+        <strong>128</strong>      <strong><em>&lt;ul id =</em></strong> <strong>"list"</strong><strong><em>&gt;</em></strong>
+        <strong>129</strong>         <strong><em>&lt;li id =</em></strong> <strong>"item1"</strong><strong><em>&gt;</em></strong>[item1] getElementById and parentNode<strong><em>&lt;/li&gt;</em></strong>
+        <strong>130</strong>         <strong><em>&lt;li id =</em></strong> <strong>"item2"</strong><strong><em>&gt;</em></strong>[item2] insertBefore and appendChild<strong><em>&lt;/li&gt;</em></strong>
+        <strong>131</strong>         <strong><em>&lt;li id =</em></strong> <strong>"item3"</strong><strong><em>&gt;</em></strong>[item3] replaceChild and removeChild <strong><em>&lt;/li&gt;</em></strong>
+        <strong>132</strong>      <strong><em>&lt;/ul&gt;</em></strong>
+        <strong>133</strong>      <strong><em>&lt;div id =</em></strong> <strong>"nav"</strong> <strong><em>class</em></strong> = <strong>"nav"</strong><strong><em>&gt;</em></strong>
+        <strong>134</strong>         <strong><em>&lt;form onsubmit =</em></strong> <strong>"return false"</strong> <strong><em>action =</em></strong> <strong>""</strong><strong><em>&gt;</em></strong>
+        <strong>135</strong>            <strong><em>&lt;table&gt;</em></strong>
+        <strong>136</strong>               <strong><em>&lt;tr&gt;</em></strong>
+        <strong>137</strong>                  <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"text"</strong> <strong><em>id =</em></strong> <strong>"gbi"</strong>
+        <strong>138</strong>                     <strong><em>value =</em></strong> <strong>"bigheading"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>139</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Get By id"</strong>
+        <strong>140</strong>                        <strong><em>onclick =</em></strong> <strong>"byId()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>141</strong>                  <strong><em>&lt;/tr&gt;&lt;tr&gt;</em></strong>
+        <strong>142</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"text"</strong> <strong><em>id =</em></strong> <strong>"ins"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>143</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Insert Before"</strong>
+        <strong>144</strong>                        <strong><em>onclick =</em></strong> <strong>"insert()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>145</strong>                  <strong><em>&lt;/tr&gt;&lt;tr&gt;</em></strong>
+        <strong>146</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"text"</strong> <strong><em>id =</em></strong> <strong>"append"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>147</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Append Child"</strong>
+        <strong>148</strong>                        <strong><em>onclick =</em></strong> <strong>"appendNode()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>149</strong>                  <strong><em>&lt;/tr&gt;&lt;tr&gt;</em></strong>
+        <strong>150</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"text"</strong> <strong><em>id =</em></strong> <strong>"replace"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>151</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Replace Current"</strong>
+        <strong>152</strong>                        <strong><em>onclick =</em></strong> <strong>"replaceCurrent()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>153</strong>                  <strong><em>&lt;/tr&gt;&lt;tr&gt;&lt;td /&gt;</em></strong>
+        <strong>154</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Remove Current"</strong>
+        <strong>155</strong>                        <strong><em>onclick =</em></strong> <strong>"remove()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>156</strong>                  <strong><em>&lt;/tr&gt;&lt;tr&gt;&lt;td /&gt;</em></strong>
+        <strong>157</strong>                     <strong><em>&lt;td&gt;&lt;input type =</em></strong> <strong>"submit"</strong> <strong><em>value =</em></strong> <strong>"Get Parent"</strong>
+        <strong>158</strong>                        <strong><em>onclick =</em></strong> <strong>"parent()"</strong> <strong><em>class =</em></strong> <strong>"submit"</strong> <strong><em>/&gt;&lt;/td&gt;</em></strong>
+        <strong>159</strong>                  <strong><em>&lt;/tr&gt;</em></strong>
+        <strong>160</strong>               <strong><em>&lt;/table&gt;</em></strong>
+        <strong>161</strong>            <strong><em>&lt;/form&gt;</em></strong>
+        <strong>162</strong>         <strong><em>&lt;/div&gt;</em></strong>
+        <strong>163</strong>      <strong><em>&lt;/body&gt;</em></strong>
+        <strong>164</strong>   <strong><em>&lt;/html&gt;</em></strong>
+    </pre>
+    <h2>JavaScript Forms</h2>
+    <p>To create a form in HTML, you use the <code>&lt;form&gt;</code> element:</p>
+    <code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/signup"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"signup"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+    <p>The <code>&lt;form&gt;</code> element has two important attributes: <code>action</code> and <code>method</code>.</p>
+    <ul><li><code>action</code> specifies a URL that processes the form submission. In this example, the action is the <code>/signup</code> URL.</li><li><code>method</code> specifies the HTTP method to submit the form with. The method is either <code>post</code> or <code>get</code>.</li></ul>
+    <p>Typically, you use the <code>get</code> method when you want to retrieve data from the server and the <code>post</code> method when you want to change something on the server.</p> 
+    <p>JavaScript uses the <code>HTMLFormElement</code> object to represent a form. The <code>HTMLFormElement</code> has the following properties that correspond to the HTML attributes:</p>
+    <ul><li><code>action</code> – is the URL that processes the form data. It is equivalent to the <code>action</code> attribute of the <code>&lt;form&gt;</code> element.</li><li><code>method</code> – is the HTTP method which is equivalent to the <code>method</code> attribute of the <code>&lt;form&gt;</code> element.</li></ul>
+    <p>The <code>HTMLFormElement</code> element also provides the following useful methods:</p>
+    <ul><li><code>submit()</code> – submit the form.</li><li><code>reset()</code> – reset the form.</li></ul>
+    <h2>Referencing forms</h2>
+    <p>To reference the <code>&lt;form&gt;</code> element, you can use DOM selecting methods such as <code><a href="https://www.javascripttutorial.net/javascript-dom/javascript-getelementbyid/">getElementById()</a></code>:</p>
+    <pre class="wp-block-code" aria-describedby="shcb-language-2" data-shcb-language-name="JavaScript" data-shcb-language-slug="javascript"><div><code class="hljs language-javascript"><span class="hljs-keyword">const</span> form = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'subscribe'</span>);</code></div><small class="shcb-language" id="shcb-language-2"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small><i class="icon-copy btn-copy-code"></i></pre>
+    <p>An HTML document can have multiple forms. The <code>document.forms</code> property returns a collection of forms (<code>HTMLFormControlsCollection</code>) on the document:</p>
+    <pre class="wp-block-code" aria-describedby="shcb-language-3" data-shcb-language-name="JavaScript" data-shcb-language-slug="javascript"><div><code class="hljs language-javascript"><span class="hljs-built_in">document</span>.forms</code></div><small class="shcb-language" id="shcb-language-3"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">JavaScript</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">javascript</span><span class="shcb-language__paren">)</span></small><i class="icon-copy btn-copy-code"></i></pre>
+    <p>To reference a form, you use an index. For example, the following statement returns the first form of the HTML document:</p>
+    <pre class="wp-block-code" aria-describedby="shcb-language-4" data-shcb-language-name="CSS" data-shcb-language-slug="css"><div><code class="hljs language-css"><span class="hljs-selector-tag">document</span><span class="hljs-selector-class">.forms</span><span class="hljs-selector-attr">[0]</span></code></div><small class="shcb-language" id="shcb-language-4"></span></small><i class="icon-copy btn-copy-code"></i></pre>
+    <h2>Submitting a form</h2>
+    <p>Typically, a form has a submit button. When you click it, the browser sends form data to the server. To create a submit button, you use <code>&lt;input&gt;</code> or <code>&lt;button&gt;</code> element with the type <code>submit</code>:</p>
+    <pre class="wp-block-code" aria-describedby="shcb-language-5" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Subscribe"</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-5"></span></small><i class="icon-copy btn-copy-code"></i></pre>
+    <p>Or</p>
+    <pre class="wp-block-code" aria-describedby="shcb-language-6" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Subscribe<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-6"></small><i class="icon-copy btn-copy-code"></i></pre>
+    <h2>Creating Simple Forms</h2>
+    <p>The <code>submit</code> event triggers when the form is submitted, it is usually used to validate the form before sending it to the server or to abort the submission and process it in JavaScript.</p>
+    <p>The method <code>form.submit()</code> allows to initiate form sending from JavaScript. We can use it to dynamically create and send our own forms to server.</p>
+    <p>Let’s see more details of them.</p>
+    <h2><a class="main__anchor" name="event-submit" href="#event-submit">Event: submit</a></h2>
+    <p>There are two main ways to submit a form:</p>
+    <ol>
+        <li>The first – to click <code>&lt;input type="submit"&gt;</code> or <code>&lt;input type="image"&gt;</code>.</li>
+        <li>The second – press <kbd class="shortcut">Enter</kbd> on an input field.</li>
+    </ol>
+    <p>Both actions lead to <code>submit</code> event on the form. The handler can check the data, and if there are errors, show them and call <code>event.preventDefault()</code>, then the form won’t be sent to the server.</p>
+    <p>In the form below:</p>
+    <ol>
+        <li>Go into the text field and press <kbd class="shortcut">Enter</kbd>.</li>
+        <li>Click <code>&lt;input type="submit"&gt;</code>.</li>
+    </ol>
+    <p>Both actions show <code>alert</code> and the form is not sent anywhere due to <code>return false</code>:</p>
+    <div class="codebox code-example__codebox">
+        
+        <div class="codebox__code" data-code="1">
+          <pre class="line-numbers  language-markup"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">onsubmit</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert(<span class="token punctuation">'</span>submit!<span class="token punctuation">'</span>);return false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  First: Enter in the input field <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+  Second: Click "submit": <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span></code></pre>
+        </div>
+      </div>
+      <h2><a class="main__anchor" name="method-submit" href="#method-submit">Method: submit</a></h2>
+      <p>To submit a form to the server manually, we can call <code>form.submit()</code>.</p>
+      <p>Then the <code>submit</code> event is not generated. It is assumed that if the programmer calls <code>form.submit()</code>, then the script already did all related processing.</p><p>Sometimes that’s used to manually create and send a form, like this:</p>
+      <div id="coqrrtgrgw" data-trusted="1" class="code-example" data-prism-highlighted="1">
+        <div class="codebox code-example__codebox">
+          
+          <div class="toolbar codebox__toolbar">
+            <div class="toolbar__tool">
+              <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+            </div>
+            <div class="toolbar__tool">
+              <a href="#" title="open in sandbox" target="_blank" data-action="edit" class="toolbar__button toolbar__button_edit"></a>
+            </div>
+          </div>
+          <div class="codebox__code" data-code="1">
+            <pre class="line-numbers  language-javascript"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  form<span class="token punctuation">.</span>action <span class="token operator">=</span> <span class="token string">'https://google.com/search'</span><span class="token punctuation">;</span>
+  form<span class="token punctuation">.</span>method <span class="token operator">=</span> <span class="token string">'GET'</span><span class="token punctuation">;</span>
+  
+  form<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'&lt;input name="q" value="test"&gt;'</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// the form must be in the document to submit it</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  form<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+          </div>
+        </div>
+        
+        </div>
+
+    <h2>Validation of Forms</h2>
+    <p>Forms are used in webpages for the user to enter their required details that further send it to the server for processing. A form is also known as a web form or HTML form. Examples of form use are prevalent in e-commerce websites, online banking, online surveys to name a few.</p>
+    <p><strong>Validating a form: </strong>The data entered into a form needs to be in the right format and certain fields need to be filled in order to effectively use the submitted form. Username, password, contact information are some details that are mandatory in forms and thus need to be provided by the user.<br>Below is a code in HTML, CSS, and JavaScript to validate a form. <strong>HTML</strong> is used to create the form.<strong>JavaScript</strong> to validate the form.</p>
+    <div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;script&gt;</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">function</code> <code class="plain">GEEKFORGEEKS() {</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">name = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"Name"</code><code class="plain">];</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">email = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"EMail"</code><code class="plain">];</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">phone = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"Telephone"</code><code class="plain">];</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">what = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"Subject"</code><code class="plain">];</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">password = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"Password"</code><code class="plain">];</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">var</code> <code class="plain">address = document.forms[</code><code class="string">"RegForm"</code><code class="plain">][</code><code class="string">"Address"</code><code class="plain">];</code></div><div class="line number9 index8 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(name.value == </code><code class="string">""</code><code class="plain">) {</code></div><div class="line number11 index10 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.alert(</code><code class="string">"Please enter your name."</code><code class="plain">);</code></div><div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">name.focus();</code></div><div class="line number13 index12 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number14 index13 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number15 index14 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number16 index15 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(address.value == </code><code class="string">""</code><code class="plain">) {</code></div><div class="line number17 index16 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.alert(</code><code class="string">"Please enter your address."</code><code class="plain">);</code></div><div class="line number18 index17 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">address.focus();</code></div><div class="line number19 index18 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number20 index19 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number21 index20 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number22 index21 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(email.value == </code><code class="string">""</code><code class="plain">) {</code></div><div class="line number23 index22 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.alert(</code></div><div class="line number24 index23 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="string">"Please enter a valid e-mail address."</code><code class="plain">);</code></div><div class="line number25 index24 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">email.focus();</code></div><div class="line number26 index25 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number27 index26 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number28 index27 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number29 index28 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(phone.value == </code><code class="string">""</code><code class="plain">) {</code></div><div class="line number30 index29 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.alert(</code></div><div class="line number31 index30 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="string">"Please enter your telephone number."</code><code class="plain">);</code></div><div class="line number32 index31 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">phone.focus();</code></div><div class="line number33 index32 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number34 index33 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number35 index34 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number36 index35 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(password.value == </code><code class="string">""</code><code class="plain">) {</code></div><div class="line number37 index36 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.alert(</code><code class="string">"Please enter your password"</code><code class="plain">);</code></div><div class="line number38 index37 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">password.focus();</code></div><div class="line number39 index38 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number40 index39 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number41 index40 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number42 index41 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(what.selectedIndex &lt; 1) {</code></div><div class="line number43 index42 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">alert(</code><code class="string">"Please enter your course."</code><code class="plain">);</code></div><div class="line number44 index43 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">what.focus();</code></div><div class="line number45 index44 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">false</code><code class="plain">;</code></div><div class="line number46 index45 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number47 index46 alt2"><code class="undefined spaces">&nbsp;</code>&nbsp;</div><div class="line number48 index47 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">return</code> <code class="keyword">true</code><code class="plain">;</code></div><div class="line number49 index48 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number50 index49 alt1"><code class="plain">&lt;/script&gt;</code></div></div>
+    <p><strong>Styling the form:</strong></p>
+    <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;style&gt;</code></div><div class="line number2 index1 alt1"><code class="plain">div {&nbsp;</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">box-sizing: border-box;</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">: </code><code class="value">100%</code><code class="plain">;</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">border</code><code class="plain">: </code><code class="value">100px</code> <code class="value">solid</code> <code class="value">black</code><code class="plain">;</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">float</code><code class="plain">: </code><code class="value">left</code><code class="plain">;</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">align-</code><code class="keyword">content</code><code class="plain">: </code><code class="value">center</code><code class="plain">;</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">align-items: </code><code class="value">center</code><code class="plain">;</code></div><div class="line number9 index8 alt2"><code class="plain">}</code></div><div class="line number10 index9 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code>&nbsp;</div><div class="line number11 index10 alt2"><code class="plain">form {&nbsp;&nbsp;&nbsp;</code></div><div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">margin</code><code class="plain">: </code><code class="value">0</code> <code class="value">auto</code><code class="plain">;</code></div><div class="line number13 index12 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">width</code><code class="plain">: </code><code class="value">600px</code><code class="plain">;</code></div><div class="line number14 index13 alt1"><code class="plain">}&lt;/style&gt;</code></div></div></td></tr></tbody></table>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
