@@ -1,25 +1,31 @@
 <html>
 <head>
 <title>ConnectionDoa</title>
+<link rel="stylesheet" href="db__style.css">
 <head>
 <body>
+<div class="menubar">
+	<h2>Database Connectivity</h2>
+</div>
+<div class="exmp">
 <xmp>
 package com.crudtest;
 import java.sql.*;
 
 public class ConnectionDao {
-    private static Connection con;
-
-    public static Connection getCon() throws SQLException {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/curd_project","root","almamun@123");
-        }catch (Exception ex) {
-            ex.printStackTrace();
-        } 
+	private static Connection con;
+	public static Connection getCon() throws SQLException {
+        	try {
+        		Class.forName("com.mysql.cj.jdbc.Driver");
+            		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/curd_project","root","almamun@123");
+        	}catch (Exception ex) {
+        		ex.printStackTrace();
+        	} 
         return con;
-    }
+	}
 }
 </xmp>
+</div>
+<center><a href="db.html" class="button">Go Back</a></center>
 </body>
 </html>

@@ -1,22 +1,24 @@
 <html>
 <head>
 <title>DeleteBooksServlet.java</title>
+<link rel="stylesheet" href="db__style.css">
 </head>
 <body>
+<div class="menubar">
+	<h2>Database Connectivity</h2>
+</div>
+<div class="exmp">
 <xmp>
-   
-         
-            int bid = Integer.parseInt(request.getParameter("id"));
-            
-            try{
-                BooksDao bkd = new BooksDao(ConnectionDao.getCon());
-                bkd.deleteBook(bid);
-                response.sendRedirect("index.jsp");
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-            
-
+int bid = Integer.parseInt(request.getParameter("id"));
+try{
+	BooksDao bkd = new BooksDao(ConnectionDao.getCon());
+	bkd.deleteBook(bid);
+	response.sendRedirect("index.jsp");
+}catch(Exception e){
+	e.printStackTrace();
+}
 </xmp>
+</div>
+<center><a href="db.html" class="button">Go Back</a></center>
 </body>
 </html>
