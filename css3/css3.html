@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS</title>
+    <link rel="stylesheet" href="css3.css">
 </head>
 <body>
-    <li>
-        <h1>Introducton</h1>
+    <div class="menubar">
+		<h2>Database Connectivity</h2>
+    </div>
+        <h3>Introducton</h3>
         <p>CSS Tutorial
           CSS tutorial or CSS 3 tutorial provides basic and advanced concepts of CSS technology. Our CSS tutorial is developed for beginners and professionals. The major points of CSS are given below:
 
@@ -19,6 +22,7 @@
           CSS Example with CSS Editor
           In this tutorial, you will get a lot of CSS examples, you can edit and run these examples with our online CSS editor tool.
           Example:
+	  <div class="exmp">
           <xmp>
             <!DOCTYPE>  
             <html>  
@@ -40,11 +44,12 @@
             </body>  
             </html>
           </xmp>
+	  </div>
           <h1>What is CSS?</h1>
           <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
 
           CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.</p>
-          <h1>What does CSS do</h1>
+          <h4>What does CSS do</h4>
           <p>You can add new looks to your old HTML documents.
           You can completely change the look of your website with only a few changes in CSS code.</br></p>
           <h1>CSS Syntax</h1>
@@ -53,17 +58,20 @@
           CSS syntax
           Selector: Selector indicates the HTML element you want to style. It could be any tag like &lt;h1&gt;, &lt;title&gt; etc.</p>
           <p>Declaration Block: The declaration block can contain one or more declarations separated by a semicolon. For the above example, there are two declarations:</p>
-          <xmp>
+          <div class="exmp">
+	  <xmp>
             color: yellow;
             font-size: 11 px;
           </xmp>
+	  </div>
           <p>Each declaration contains a property name and value, separated by a colon.</p>
           <h1>CSS Selector</h1>
           <p>CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
           <p>
             There are several different types of selectors in CSS.
             <ol>CSS Element Selector: <br> The element selector selects the HTML element by name.
-            <xmp>
+            <div class="exmp">
+	    <xmp>
               <!DOCTYPE html>  
               <html>  
               <head>  
@@ -80,14 +88,15 @@
               <p>And me!</p>  
               </body>  
               </html> 
-            </xmp></ol>
+            </xmp></div></ol>
             <ol>
               CSS Id Selector: <br>The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
 
               It is written with the hash character (#), followed by the id of the element.
               
               Let?s take an example with the id "para1".
-              <xmp>
+              <div class="exmp">
+	      <xmp>
                 <!DOCTYPE html>  
                   <html>  
                   <head>  
@@ -104,12 +113,14 @@
                   </body>  
                   </html> 
               </xmp>
+	      </div>
             </ol>
             <ol>CSS Class Selector: <br> The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
 
               Note: A class name should not be started with a number.
               Let's take an example with a class "center".
-            <xmp>
+             <div class="exmp">
+	     <xmp>
               <!DOCTYPE html>  
               <html>  
               <head>  
@@ -125,12 +136,13 @@
               <p class="center">This paragraph is blue and center-aligned.</p>   
               </body>  
               </html>  
-            </xmp></ol>
+            </xmp></div></ol>
             <ol>CSS Class Selector for specific element: <br>
               If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
 
               Let's see an example.
-              <xmp>
+              <div class="exmp">
+	     <xmp>
                 <!DOCTYPE html>  
                 <html>  
                 <head>  
@@ -147,10 +159,12 @@
                 </body>  
                 </html>
               </xmp>
+</div>
             </ol>
             <ol>
               CSS Universal Selector: <br>The universal selector is used as a wildcard character. It selects all the elements on the pages.
-              <xmp>
+        <div class="exmp">      
+	<xmp>
                 <!DOCTYPE html>  
                 <html>  
                 <head>  
@@ -169,6 +183,7 @@
                 </body>  
                 </html>   
               </xmp>
+</div>
             </ol>
             <ol> 
               CSS Group Selector: 
@@ -178,7 +193,8 @@
                 Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
 
                 Let's see the CSS code without group selector.
-                <xmp>
+        <div class="exmp">        
+	<xmp>
                   h1 {  
                     text-align: center;  
                     color: blue;  
@@ -192,20 +208,24 @@
                       color: blue;  
                   }
                 </xmp>
+</div>
                 As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
-                <xmp>
+                <div class="exmp">
+		<xmp>
                   h1,h2,p {  
                     text-align: center;  
                     color: blue;  
                   } 
                 </xmp>
+</div>
               </p>
             </ol>
           </p>
           <p>
             Let's see the full example of CSS group selector.
           </p>
-          <xmp>
+        <div class="exmp">  
+	<xmp>
             <!DOCTYPE html>  
             <html>  
             <head>  
@@ -223,42 +243,50 @@
             </body>  
             </html>  
           </xmp>
+	</div>
           <p>
             How to add CSS
             CSS is added to HTML pages to format the document according to information in the style sheet. There are three ways to insert CSS in HTML documents.
             <ol>Inline CSS
               Inline CSS is used to apply CSS on a single line or element.
               For example:
-              <xmp>
+        <div class="exmp">      
+	<xmp>
                 <p style="color:blue">Hello CSS</p>  
               </xmp>
+</div>
             </ol>
             <ol>
               2) Internal CSS
               Internal CSS is used to apply CSS on a single document or page. It can affect all the elements of the page. It is written inside the style tag within head section of html.
 
               For example:
-
+<div class="exmp">
               <xmp>
                 <style>  
                   p{color:blue}  
                 </style>
               </xmp>
+</div>
             </ol>
             <ol>
               External CSS
               External CSS is used to apply CSS on multiple pages or all pages. Here, we write all the CSS code in a css file. Its extension must be .css for example style.css.
 
               For example:
+<div class="exmp">
               <xmp>
                 p{color:blue}
               </xmp>
+</div>
               <p>
                 You need to link this style.css file to your html pages like this:
               </p>
+<div class="exmp">
               <xmp>
                 <link rel="stylesheet" type="text/css" href="style.css">  
               </xmp>
+</div>
               <p>
                 The link tag must be used inside head section of html.
               </p>
@@ -273,6 +301,7 @@
             <ol>CSS Element Selector
               <p>
                 The element selector selects the HTML element by name.
+<div class="exmp">
                 <xmp>
                   <!DOCTYPE html>  
                   <html>  
@@ -291,6 +320,7 @@
                   </body>  
                   </html>
                 </xmp>
+</div>
               </p>
             </ol>
             <ol>CSS Id Selector
@@ -300,6 +330,7 @@
                 It is written with the hash character (#), followed by the id of the element.
 
                 Let?s take an example with the id "para1".
+<div class="exmp">
                 <xmp>
                   <!DOCTYPE html>  
                   <html>  
@@ -317,6 +348,7 @@
                   </body>  
                   </html> 
                 </xmp>
+</div>
               </p>
             </ol>
             <ol>CSS Class Selector
@@ -326,6 +358,7 @@
 Note: A class name should not be started with a number.
 Let's take an example with a class "center".
               </p>
+<div class="exmp">
               <xmp>
                 <!DOCTYPE html>  
                 <html>  
@@ -343,6 +376,7 @@ Let's take an example with a class "center".
                 </body>  
                 </html> 
               </xmp>
+</div>
             </ol>
             <ol>CSS Class Selector for specific element
               <p>
@@ -350,6 +384,7 @@ Let's take an example with a class "center".
 
                 Let's see an example.
               </p>
+<div class="exmp">
               <Xmp>
                 <!DOCTYPE html>  
                 <html>  
@@ -367,12 +402,14 @@ Let's take an example with a class "center".
                 </body>  
                 </html>  
               </Xmp>
+</div>
             </ol>
             <ol>
               CSS Universal Selector
               <p>
                 The universal selector is used as a wildcard character. It selects all the elements on the pages.
               </p>
+<div class="exmp">
               <xmp>
                 <!DOCTYPE html>  
                 <html>  
@@ -392,6 +429,7 @@ Let's take an example with a class "center".
                 </body>  
                 </html>
               </xmp>
+</div>
             </ol>
             <ol>
               CSS Group Selector
@@ -401,6 +439,7 @@ Let's take an example with a class "center".
                 
                 Let's see the CSS code without group selector.
               </p>
+<div class="exmp">
               <xmp>
                 h1 {  
                   text-align: center;  
@@ -421,9 +460,11 @@ Let's take an example with a class "center".
                   color: blue;  
               }  
               </xmp>
+</div>
             </ol>
           </p>
-          <h2>Let's see the full example of CSS group selector.</h2>
+          <h3>Let's see the full example of CSS group selector.</h3>
+<div class="exmp">
           <xmp>
             <!DOCTYPE html>  
             <html>  
@@ -442,15 +483,18 @@ Let's take an example with a class "center".
             </body>  
             </html>  
           </xmp>
+</div>
           <h1>CSS pseudo-classes</h1>
           <p>
             A pseudo-class can be defined as a keyword which is combined to a selector that defines the special state of the selected elements. It is added to the selector for adding an effect to the existing elements based on their states. For example, The ":hover" is used for adding special effects to an element when the user moves the cursor over the element.<br>The names of the pseudo-class are not case-sensitive.<br>Syntax <br>A pseudo-class starts with a colon (:). Let's see its syntax.
           </p>
+<div class="exmp">
           <xmp>
             selector: pseudo-class {  
               property: value;  
             } 
           </xmp>
+</div>
 Although there are various CSS pseudo-classes, here we are going to discuss some of the most commonly used pseudo-classes. The widely used CSS classes are tabulated as follows:
 
 
@@ -468,6 +512,7 @@ pseudo-class	Description
 This pseudo-class adds a special style to an element when the user moves the cursor over it. If you want to make it effective, it must be applied after the ":link" and ":visited" pseudo-classes.
 
 Example
+<div class="exmp">
 <xmp>
   
 <html>  
@@ -492,6 +537,7 @@ Example
 </html>  
 
 </xmp>
+</div>
 Test it Now
 :active pseudo-class
 It applies when the elements are clicked or activated. It selects the activated element.
@@ -499,6 +545,7 @@ It applies when the elements are clicked or activated. It selects the activated 
 We can understand it with the example given below.
 
 Example
+<div class="exmp">
 <xmp>
 <!DOCTYPE html>   
 <html>   
@@ -525,11 +572,13 @@ Example
 </html> 
 
 </xmp> 
+</div>
 Test it Now
 :visited pseudo-class
 It selects the visited links and adds special styles to them. Its possible values can be any color name in a valid format.
 
 Example
+<div class="exmp">
 <xmp>
 <!DOCTYPE html>   
 <html>   
@@ -554,6 +603,7 @@ Example
 </html>  
 
 </xmp>
+</div>
 Test it Now
 :lang pseudo-class
 It is helpful in documents that require multiple languages. It allows us to define special rules for different languages.
@@ -561,6 +611,7 @@ It is helpful in documents that require multiple languages. It allows us to defi
 Example
 In this example, we specify p:lang(fr) which selects the elements having attribute lang="fr".
 
+<div class="exmp">
 <xmp>
 <!DOCTYPE HTML>  
  <html>  
@@ -583,13 +634,15 @@ In this example, we specify p:lang(fr) which selects the elements having attribu
   <p lang="fr">With :lang pseudo class with the value fr</p>  
 </body>  
 </html> 
-</xmp>  
+</xmp>
+</div>  
 Test it Now
 :focus pseudo-class
 It selects the elements that are currently focused on by the user. It is generally used in input elements of the forms and triggers when the user clicks on it.
 
 
 Example
+<div class="exmp">
 <xmp>
 <!DOCTYPE HTML>  
 <html>  
@@ -611,6 +664,7 @@ Example
 </body>  
 </html>  
 </xmp>
+</div>
 Test it Now
 :first-child pseudo-class
 It matches a particular element, which is the first child of another element and adds a special effect to the corresponding element.
@@ -620,6 +674,7 @@ Note: We have to declare a <!DOCTYPE> at the top of the document to make ":first
 The following illustration explains it more clearly.
 
 Example
+<div class="exmp">
 <xmp>
 <!DOCTYPE HTML>  
 <html>  
@@ -641,11 +696,13 @@ Example
    </body>  
 </html>  
 </xmp>
+</div>
 Test it Now
 The simple tooltip hover
 A tooltip specifies extra information about something when the user moves the cursor over the element. Let's create a tooltip by using the ":hover" pseudo-class.
 
 Example
+<div class="exmp">
 <xmp>
 <!DOCTYPE html>  
 <html>  
@@ -676,7 +733,8 @@ div:hover h2 {
   
 </body>  
 </html> 
-</xmp> 
+</xmp>
+</div> 
 
 CSS classes and pseudo-classes
 The classes in CSS can be combined with pseudo-classes. We can write it as-
@@ -689,6 +747,7 @@ selector.class: pseudo-class {
 We can understand it with the following example.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -711,6 +770,7 @@ Example
   </body>  
   </html>
 </xmp>
+</div>
     </p>
         <ul>Fonts and Text Effects</ul>
     <p>CSS Font
@@ -735,6 +795,7 @@ By hexadecimal value
 By RGB
 In the above example, we have defined all these formats.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -755,6 +816,7 @@ In the above example, we have defined all these formats.
   </body>  
   </html>  
 </xmp>
+</div>
         
 Output:
 
@@ -775,6 +837,7 @@ Serif: Serif fonts include small lines at the end of characters. Example of seri
 Sans-serif: A sans-serif font doesn't include the small lines at the end of characters. Example of Sans-serif: Arial, Verdana etc.
 
 CSS font serif
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -795,6 +858,7 @@ CSS font serif
   </body>  
   </html>  
 </xmp>
+</div>
 
 Output:
 
@@ -822,6 +886,7 @@ xx-large	used to display extremely large text size.
 smaller	used to display comparatively smaller text size.
 larger	used to display comparatively larger text size.
 size in pixels or %	used to set value in percentage or in pixels.
+<div class="exmp">
 <xmp>
   <html>  
   <head>  
@@ -842,6 +907,7 @@ size in pixels or %	used to set value in percentage or in pixels.
   </body>  
   </html>  
 </xmp>
+</div>
 
 Output:
 
@@ -881,6 +947,7 @@ Output:
 4) CSS Font Style
 CSS Font style property defines what type of font you want to display. It may be italic, oblique, or normal.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -900,7 +967,8 @@ CSS Font style property defines what type of font you want to display. It may be
   <h4>This heading is shown in normal font.</h4>  
   </body>  
   </html> 
-</xmp> 
+</xmp>
+</div> 
 
 Output:
 
@@ -914,6 +982,7 @@ This heading is shown in normal font.
 CSS font variant property specifies how to set font variant of an element. It may be normal and small-caps.
 
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -929,6 +998,7 @@ CSS font variant property specifies how to set font variant of an element. It ma
   </body>  
   </html>  
 </xmp>
+</div>
 
 Output:
 
@@ -940,6 +1010,7 @@ This paragraph is shown in small font.
 6) CSS Font Weight
 CSS font weight property defines the weight of the font and specify that how bold a font is. The possible values of font weight may be normal, bold, bolder, lighter or number (100, 200..... upto 900).
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -959,6 +1030,7 @@ CSS font weight property defines the weight of the font and specify that how bol
   </body>  
   </html>  
 </xmp>
+</div>
 
 Output:
 
@@ -1022,6 +1094,7 @@ keep-all: It breaks the word in the default style.
 break-all: It inserts the word break between the characters in order to prevent the word overflow.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>   
   <html>   
@@ -1061,6 +1134,7 @@ Example
       </body>   
   </html>  
 </xmp>
+</div>
 
 word-wrap
 CSS word-wrap property is used to break the long words and wrap onto the next line. This property is used to prevent overflow when an unbreakable string is too long to fit in the containing box.
@@ -1078,6 +1152,7 @@ inherit: It inherits this property from its parent element.
 
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>    
   <html>    
@@ -1113,6 +1188,7 @@ Example
   </body>    
   </html>  
 </xmp>
+</div>
 
 text-overflow
 It specifies the representation of overflowed text, which is not visible to the user. It signals the user about the content that is not visible. This property helps us to decide whether the text should be clipped or show some dots (ellipsis).
@@ -1127,6 +1203,7 @@ clip: It is the default value that clips the overflowed text.
 ellipsis: This value displays an ellipsis (…) or three dots to show the clipped text. It is displayed within the area, decreasing the amount of text.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>   
   <html>   
@@ -1186,6 +1263,7 @@ Example
       </body>   
   </html>  
 </xmp>
+</div>
 
 writing-mode
 It specifies whether the text will be written in the horizontal or vertical direction. If the writing direction is vertical, then it can be from left to right (vertical-lr) or from right to left (vertical-rl).
@@ -1202,6 +1280,7 @@ vertical-lr: It is similar to vertical-rl, but the text is read from left to rig
 
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1234,7 +1313,7 @@ Example
      </center>  
    </body>  
    </html>
-</xmp>  </p>
+</xmp></div>  </p>
         <ul>Background</ul>
     <p>CSS  - Background Properties
 
@@ -1307,6 +1386,7 @@ are:
 ones that are present are in this order.
 Multiple Backgrounds
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>
           <html> 
@@ -1337,6 +1417,7 @@ Multiple Backgrounds
               </body>
             </html>
 </xmp>
+</div>
         </p>
         <ul>Borders and Box effects</ul>
             <p>Border Properties
@@ -1421,9 +1502,11 @@ top border + bottom border + top margin + bottom margin
 padding:10px;
 border:5px solid gray;
 margin:10px;  
+<div class="exmp">
 <xmp>
   <meta name="viewport" content="width=device-width, initial-
 scale=1"></xmp>
+</div>
 
  Using the meta viewport value width=device-width instructs the page 
 to match the screen's width in device-independent pixels. This allows 
@@ -1464,6 +1547,7 @@ Let's see some examples of the transition-delay property.
 Example1
 In this example, we are using the transition-property, transition-duration, and transition-delay properties. There is a delay of 0.5s to start the transition effect, i.e., the background color of the div element will be changed after the given amount of time.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1496,12 +1580,14 @@ In this example, we are using the transition-property, transition-duration, and 
   </body>  
   </html>  
 </xmp>
+</div>
 
 
 CSS transition-delay property
 Example2
 In this example, there are two div elements. In the first div we are using the value initial of the transition-delay property. In the second div, we are applying the negative value of the transition-delay property, i.e., -2s. We have to move the cursor over the div elements to see the transition effect.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1561,12 +1647,14 @@ In this example, there are two div elements. In the first div we are using the v
   </body>  
   </html>  
 </xmp>
+</div>
 
 
 CSS transition-delay property
 Example
 Now, there is another example in which there is a multiple transition effect. Here, the transition effects on width, height, and transformation. There is also a transition-delay in the milliseconds (ms), i.e., 2.5ms.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1599,6 +1687,7 @@ Now, there is another example in which there is a multiple transition effect. He
   </body>  
   </html>
 </xmp>
+</div>
             </p>
             <p>CSS transform-origin property
 This CSS property is used to change the position of transformed elements. It is a point around which the transformation is applied. It establishes the origin of the transformation of an element. It can be applied to both 2D and 3D rotations.
@@ -1628,6 +1717,7 @@ Let's understand this property by using some illustrations.
 Example
 In this example, we are applying the transform-origin property with the length and percentage values. There is a rotation of 45deg in both of the elements. Here, there is the 2D transformation of elements.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1674,6 +1764,7 @@ In this example, we are applying the transform-origin property with the length a
     
   </html>  
 </xmp>
+</div>
 
 
 CSS transform-origin property
@@ -1682,6 +1773,7 @@ Now, in the next example, we will specify the position using the keyword values.
 Example
 In this example, we are applying the transform-origin property with the keyword values.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1729,6 +1821,7 @@ In this example, we are applying the transform-origin property with the keyword 
   </html>  
   
 </xmp>
+</div>
 
 CSS transform-origin property
 Now, let's apply the transform-origin property on elements with 3D transformation.
@@ -1737,6 +1830,7 @@ Now, let's apply the transform-origin property on elements with 3D transformatio
 Example
 In this example, we are applying the transform-origin property on the 3D transformed elements.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1783,7 +1877,7 @@ In this example, we are applying the transform-origin property on the 3D transfo
   </div>  
   </body>  
   </html>
-</xmp></p>
+</xmp></div></p>
             <p>CSS Animation
 CSS Animation property is used to create animation on the webpage. It can be used as a replacement of animation created by Flash and JavaScript.
 
@@ -1817,6 +1911,7 @@ animation-timing-function	It specifies the speed curve of the animation.
 CSS animation example: changing background color
 Let's see a simple CSS animation example that changes background color of rectangle from RED to BLACK.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1847,10 +1942,12 @@ Let's see a simple CSS animation example that changes background color of rectan
   </body>  
   </html>  
 </xmp>
+</div>
 
 CSS animation example: Moving Rectangle
 Let's take another example to display animation with percentage value.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -1887,7 +1984,7 @@ Let's take another example to display animation with percentage value.
   <div></div>  
   </body>  
   </html>
-</xmp></p>  
+</xmp></div></p>  
           <ul>Embedding Images and Media</ul>
               <p>CSS Images
   Images are an important part of any web application. Including a lot of images in a web application is generally not recommended, but it is important to use the images wherever they required. CSS helps us to control the display of images in web applications.
@@ -1902,7 +1999,8 @@ Let's take another example to display animation with percentage value.
   
   Example
   
-  <xmp>
+<div class="exmp">  
+   <xmp>
    <!DOCTYPE html>   
   <html>   
   <head>   
@@ -1925,12 +2023,14 @@ Let's take another example to display animation with percentage value.
   </body>   
   </html>  
 </xmp>
+</div>
 
 Transparent image
 To make an image transparent, we have to use the opacity property. The value of this property lies between 0.0 to 1.0, respectively.
 
 Example
 
+<div class="exmp">
  <xmp>
    <!DOCTYPE html>   
    <html>   
@@ -1953,7 +2053,8 @@ Example
    <h2>Welcome to javaTpoint</h2>  
    </body>  
    </html> 
- </xmp> 
+ </xmp>
+</div> 
 
 Rounded image
 The border-radius property sets the radius of the bordered image. It is used to create the rounded images. The possible values for the rounded corners are given as follows:
@@ -1965,6 +2066,7 @@ border-bottom-right-radius: It sets the border of the bottom-right corner.
 border-bottom-left-radius: It sets the border of the bottom-left corner.
 Example
 
+<div class="exmp">
  <xmp>
    <!DOCTYPE html>   
    html>   
@@ -1999,12 +2101,14 @@ Example
    /body>   
    /html>  
  </xmp>
+</div>
 
 Responsive Image
 It automatically adjusts to fit on the screen size. It is used to adjust the image to the specified box automatically.
 
 Example
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>   
   <html>   
@@ -2028,6 +2132,7 @@ Example
   </body>   
   </html>  
 </xmp>
+</div>
 
 Center an Image
 We can center an image by using the left-margin and right-margin property. We have to set these properties to auto in order to make a block element.
@@ -2035,6 +2140,7 @@ We can center an image by using the left-margin and right-margin property. We ha
 
 Example
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>   
   <html>   
@@ -2057,7 +2163,7 @@ Example
   <h2>Welcome to javaTpoint</h2>  
   </body>   
   </html>
-</xmp></p>
+</xmp></div></p>
 <p>What is Media Query?
 CSS Media query is a W3C recommendation and a CSS3 module which is used to adapt to conditions such as screen resolution (e.g. Smartphone screen vs. computer screen).
 
@@ -2091,6 +2197,7 @@ One way to use media queries is to have an alternate CSS section right inside yo
 The following example changes the background-color to lightgreen if the viewport is 480 pixels wide or wider
     (if the viewport is less than 480 pixels, the background-color will be pink):
     Example:
+<div class="exmp">
     <xmp>
       <!DOCTYPE html>
       l>
@@ -2114,7 +2221,7 @@ The following example changes the background-color to lightgreen if the viewport
       
       dy>
       </html>
-    </xmp></p>
+    </xmp></div></p>
         <ul>Navigation Bar</ul>
 <p>CSS Navigation bar
 A Navigation bar or navigation system comes under GUI that helps the visitors in accessing information. It is the UI element on a webpage that includes links for the other sections of the website.
@@ -2137,6 +2244,7 @@ We are also adding the float: left property, which uses float for getting the bl
 
 If we want the full-width background color then we have to add the background-color property to <ul> rather than the <a> element.
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2184,11 +2292,13 @@ If we want the full-width background color then we have to add the background-co
   </body>  
   </html>  
 </xmp>
+</div>
 
 Border dividers
 We can add the border between the links in the navigation bar by using the border-right property. The following example explains it more clearly.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2237,11 +2347,13 @@ Example
   </body>  
   </html>  
   </xmp>
+</div>
   
   Fixed Navigation bars
   When we scrolls the page, fixed navigation bars stay at the bottom or top of the page. See an example of the same.
   
   Example
+<div class="exmp">
   <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2294,6 +2406,7 @@ Example
   </body>  
   </html>  
 </xmp>
+</div>
 
 Sticky Navbar
 The position: sticky; property is used to position the element based on the scroll position of the user.
@@ -2301,6 +2414,7 @@ The position: sticky; property is used to position the element based on the scro
 This CSS property allows the elements to stick when the scroll reaches to a certain point. Depending upon the scroll position, a sticky element toggles in between fixed and relative property.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2354,11 +2468,13 @@ Example
   </body>  
   </html>  
 </xmp>
+</div>
 
 Dropdown Navbar
 Following example explain how to create a dropdown menu inside a navigation bar.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2447,10 +2563,12 @@ Example
   </html>  
   
 </xmp>
+</div>
 Vertical Navigation bar
 In this example, we are going to see how to build a vertical navigation bar.
 
 Example
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2496,6 +2614,7 @@ Example
   </body>  
   </html>  
 </xmp>
+</div>
 
     We can align the links to the center and add borders between them. See an example of the same.
 
@@ -2503,6 +2622,7 @@ Example
 In this example, we are adding the text-align: center; property to <li> and <a> to center the links and border property to <ul> to add the border. We will also add the border-bottom property to all <li> elements.
 
 
+<div class="exmp">
 <xmp>
   <!DOCTYPE html>  
   <html>  
@@ -2552,13 +2672,15 @@ In this example, we are adding the text-align: center; property to <li> and <a> 
     
   </body>  
   </html> 
-</xmp> 
+</xmp>
+</div> 
 
 Full-height fixed Vertical Navbar
 We can also create the fixed full-height side navigation bar by using the properties height: 100%; and postion: fixed;
 
 Example
-<<xmp>
+<div class="exmp">
+<xmp>
   !DOCTYPE html>  
   html>  
   head>  
@@ -2613,7 +2735,9 @@ Example
   /div>  
   </body>  
      </html>
-</xmp>  </p>
-    </li>
+</xmp></div>  </p>
+<center>
+	<a href="../index.html" class="button">Go Back</a>
+</center>
 </body>
 </html>
