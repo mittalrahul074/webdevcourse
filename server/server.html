@@ -8,18 +8,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="server.css">
   </head>
   <body>
-   <h2>What are Servlets?</h2>
+   <h1>What are Servlets?</h1>
    <p>Java Servlets are programs that run on a Web or Application server and act as a middle layer between a requests coming from a Web browser or other HTTP client and databases or applications on the HTTP server.</p>
    <p>Using Servlets, you can collect input from users through web page forms, present records from a database or another source, and create web pages dynamically.</p>
    <p>Java Servlets often serve the same purpose as programs implemented using the Common Gateway Interface (CGI). But Servlets offer several advantages in comparison with the CGI.</p>
    <ul class="list">
-      <li><p>Performance is significantly better.</p></li>
-      <li><p>Servlets execute within the address space of a Web server. It is not necessary to create a separate process to handle each client request.</p></li>
-      <li><p>Servlets are platform-independent because they are written in Java.</p></li>
-      <li><p>Java security manager on the server enforces a set of restrictions to protect the resources on a server machine. So servlets are trusted.</p></li>
-      <li><p>The full functionality of the Java class libraries is available to a servlet. It can communicate with applets, databases, or other software via the sockets and RMI mechanisms that you have seen already.</p>
+      <li>Performance is significantly better</li>
+      <li>Servlets execute within the address space of a Web server. It is not necessary to create a separate process to handle each client request</li>
+      <li>Servlets are platform-independent because they are written in Java</li>
+      <li>Java security manager on the server enforces a set of restrictions to protect the resources on a server machine. So servlets are trusted.</li>
+      <li>The full functionality of the Java class libraries is available to a servlet. It can communicate with applets, databases, or other software via the sockets and RMI mechanisms that you have seen already.
       </li>
    </ul>
    <h2>Servlets Architecture</h2>
@@ -75,7 +76,7 @@
 </span><span class="pun">}</span></pre>
 <h2>The doPost() Method</h2>
 <p>A POST request results from an HTML form that specifically lists POST as the METHOD and it should be handled by doPost() method.</p>
-<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> doPost</span><span class="pun">(</span><span class="typ">HttpServletRequest</span><span class="pln"> request</span><span class="pun">,</span><span class="pln"> </span><span class="typ">HttpServletResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln">
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> doPost</span><span class="pun">(</span><span class="typ">HttpServletRequest</span><span class="pln"> request</span><span class="pun">,</span><span class="pln"> </span><span class="typ">HttpServletResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln">
 </span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">ServletException</span><span class="pun">,</span><span class="pln"> </span><span class="typ">IOException</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
 </span><span class="com">// Servlet code</span><span class="pln">
 </span><span class="pun">}</span></pre>
