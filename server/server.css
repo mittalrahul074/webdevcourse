@@ -42,7 +42,7 @@ xmp {
 	padding: 10px;
 }
 
-p {
+p,h2,xmp {
 	margin-left: 150px;
 	margin-right: 150px;
 }
