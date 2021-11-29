@@ -1,3 +1,23 @@
+.code-label{
+    background-color:#e5e5e5;
+    border-radius:3px 3px 0 0;
+    color:#323232;
+    display:block;
+    font-size:14px;
+    font-weight:400;
+    padding:8px 15px;
+    position:relative;
+    text-align:center;
+    z-index:2
+}
+
+.note{
+    font-size:15px;white-space:normal;
+    background-color:#eae9cc;
+    margin-bottom:-3px;padding:8px 15px;
+    border-radius:3px;display:block;font-size:15px;line-height:26px;margin-bottom:22px;padding:13px 17px;white-space:normal;
+    
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -23,7 +43,7 @@ h6 {
 	margin-left: 100px;
 }
 
-p {
+p,li,div {
 	margin-left: 150px;
 	margin-right: 150px;
 }

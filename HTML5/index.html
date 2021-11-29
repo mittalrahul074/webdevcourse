@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Subtopic_style.css">
+    <link rel="stylesheet" href="Subtopic_style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Introduction</h1>
+    <h2>Introduction to HTML</h2>
     <p>
         Welcome to Learn HTML and CSS . This page is for Web devloper learning to create their own Web pages using HTML, the standard tagging language for the World Wide Web. 
     </p>
@@ -22,7 +22,7 @@
         view pages on the Web.
         If you want to study these subjects first, please read The Internet For Dummies, 12th Edition, also from Wiley Publishing.
         <br>
-        <li>What is HTML?</li>
+        <p>What is HTML?</p>
         <br>
         &nbsp; &nbsp; &nbsp;&nbsp; HTML is a language for describing Web pages.
         <br>
@@ -30,20 +30,22 @@
         <ul>HTML is not a programming language, it is a markup language.</ul>
         <ul>A markup language is a collection of markup tags.</ul>
         <ul>HTML uses markup tags to describe Web pages.</ul>
-        <li>What are Tags?</li>
+        <p>What are Tags?</p>
         <ul>HTML markup tags are usually called HTML tags or just tags.</ul>
         <ul>HTML tags are keywords surrounded by angle brackets like &lt;html&gt;.</ul>
         <ul>HTML tags normally come in pairs, like &lt;b&gt; and &lt;/b&gt;.</ul>
         <ul>The first tag in a pair is the start tag; the second tag is the end tag.</ul>
         <ul>Start and end tags are also called opening tags and closing tags.</ul>
-        <li>What are HTML Documents?</li>
+        <p>What are HTML Documents?</p>
         <ul>HTML documents describe Web pages.</ul>
         <ul>HTML documents contain HTML tags and plain text.</ul>
         <ul>HTML documents are also called Web pages.</ul>
         <br>
+	<p>
         The purpose of a Web browser (like Internet Explorer or Mozilla Firefox) is to read 
         HTML documents and display them as Web pages. The browser does not display 
         the HTML tags, but uses the tags to interpret the content of the page.
+	</p>
         <br><br>
         &lt;html&gt;<br>
         &lt;body&gt;<br>
@@ -131,6 +133,7 @@
         This example demonstrates how to create check boxes on an HTML page .
         A user can select or deselect a check box.
 
+	<div class="exmp">
         <xmp>
         <html>
         <body>
@@ -145,7 +148,8 @@
         </form>
         </body>
         </html>
-    </xmp>
+    	</xmp>
+	</div>
 
 
         Radio Buttons
@@ -153,7 +157,8 @@
         HTML form. When a user clicks a radio button, that button becomes selected, and
         all other buttons in the same group become deselected.
 
-        <xmp>
+        <div class="exmp">
+	<xmp>
             <html>
             <body>
             <form action="">
@@ -168,12 +173,14 @@
             </body>
             </html>
         </xmp>
+	</div>
 
         Drop-Down List
         The next example shows how to create a simple drop-down list on an HTML page.
         A drop-down list is a selectable list.
 
-        <xmp>
+        <div class="exmp">
+	<xmp>
         <html>
         <body>
         <form action="">
@@ -188,11 +195,13 @@
         </form>
         </body>
         </html></xmp>
+	</div>
 
         Text Area
         Using a textarea (a multiline text input control) like the one in Figure 13.7, you can
         write an unlimited number of characters. A textarea can be in a form or elsewhere
         on a page.
+	<div class="exmp">
         <xmp>
             <html>
             <body>
@@ -214,11 +223,13 @@
             </body>
             </html>
         </xmp>
+	</div>
 
         Fieldset
         A fieldset is a grouping of data fields. This example demonstrates how to draw a
         border with a caption around your data, as shown in Figure 13.9.
-        <xmp>
+        <div class="exmp">
+	<xmp>
         <html>
         <body>
         <fieldset>
@@ -236,24 +247,27 @@
         </p>
         </body>
         </html>
-    </xmp>
+    	</xmp>
+	</div>
         action Attribute
         When the user clicks the Submit button, the content of the form is sent to the
         server. The form’s action attribute defines the name of the file to send the content to. The file defined in the action attribute usually does something with the
         received input.
+	<div class="exmp">
         <xmp>
         <form name="input" action="html_form_submit.asp"
         method="get">
         Username:
         <input type="text" name="user" />
         <input type="submit" value="Submit" />
-        </form></xmp>
+        </form></xmp></div>
         Figure 13.10 shows how it looks in a browser. If you type some characters in the
         text field and click the Submit button, the browser sends your input to a page called
         "html_form_submit.asp". The page will show you the received input.
         Form Examples
         This example demonstrates how to add a form to a page. The form contains two
         input fields and a Submit button.
+	<div class="exmp">
         <xmp>
             <html>
             <body>
@@ -273,9 +287,11 @@
             </body>
             </html>
         </xmp>
+	</div>
         Form with Check Boxes
         The following form contains three check boxes and a Submit button. The results of
         the code appear.
+	<div class="exmp">
         <xmp>
             <html>
             <body>
@@ -302,9 +318,11 @@
             </body>
             </html>
         </xmp>
+	</div>
 
         Form with Radio Buttons
 
+	<div class="exmp">
         <xmp>
             <html>
             <body>
@@ -326,10 +344,12 @@
             </body>
             </html>
         </xmp>
+	</div>
 
         Send E-Mail from a Form
         The next example demonstrates how to send e-mail from a form.
-                
+
+	<div class="exmp">  
         <xmp>
             <html>
             <body>
@@ -354,8 +374,10 @@
             </body>
             </html>
         </xmp>
+	</div>
         <h3>Form Tags</h3>
         TAG DESCRIPTION
+	<div class="exmp">
         <xmp>
             <form>-Defines a form for user input
             <input>-Defines an input field
@@ -369,9 +391,11 @@
             <button>-Defines a pushbutton
             <isindex>-Deprecated. Use <input> instead
         </xmp>
+	</div>
         HTML Video <br>
         The HTML &lt;video&gt; element is used to show a video on a web page.
         Example:
+	<div class="exmp">
         <xmp>
             <!DOCTYPE html>
             <html>
@@ -386,10 +410,12 @@
             </body>
             </html>
         </xmp>
+	</div>
         HTML &lt;video&gt; Autoplay
         To start a video automatically, use the autoplay attribute.
         Add muted after autoplay to let your video start playing automatically (but muted):
-        <xmp>
+        <div class="exmp">
+	<xmp>
             <!DOCTYPE html>
             <html>
             <body>
@@ -401,18 +427,23 @@
             </body>
             </html>
         </xmp>
+	</div>
             HTML Video Tags
         Tag	     Description
+	<div class="exmp">
         <xmp>
         <video>	Defines a video or movie
         <source>	Defines multiple media resources for media elements, such as <video> and <audio>
-        <track>	Defines text tracks in media players</xmp></p>
+        <track>	Defines text tracks in media players</xmp>
+	</div>
+	</p>
         <p>The HTML &lt;audio&gt; Element
         To play an audio file in HTML, use the &lt;audio&gt; element
             HTML &lt;audio&gt; Autoplay
         To start an audio file automatically, use the autoplay attribute
         Add muted after autoplay to let your audio file start playing automatically (but muted)
             Example:
+	<div class="exmp">
         <xmp>
             <!DOCTYPE html>
             <html>
@@ -427,6 +458,7 @@
             </body>
             </html>
         </xmp>
+	</div>
             HTML Audio Tags
         Tag	      Description
         &lt;audio&gt;  Defines sound content
@@ -448,6 +480,7 @@
 
         It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML
         Example:
+	<div class="exmp">
         <xmp>
             <!DOCTYPE html>
             <html>
@@ -458,7 +491,9 @@
             </body>
             </html>
         </xmp>
+	</div>
         Ex:
+	<div class="exmp">
         <Xmp>
             <!DOCTYPE html>
             <html>
@@ -469,9 +504,10 @@
             </body>
             </html>
         </Xmp>
-
+	</div>
         The &lt;embed&gt; element can also be used to include HTML in HTML
-        <Xmp>
+        <div class="exmp">
+	<Xmp>
             <!DOCTYPE html>
             <html>
             <body>
@@ -481,5 +517,9 @@
             </body>
             </html>
         </Xmp>
+	</div>
+	<center>
+		<a href="../afterhome.html" class="button">Go Back</a>
+	</center>
         </body>
     </html>

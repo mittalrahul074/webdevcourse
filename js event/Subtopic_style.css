@@ -23,7 +23,7 @@ h6 {
 	margin-left: 100px;
 }
 
-p {
+p,li,div {
 	margin-left: 150px;
 	margin-right: 150px;
 }

@@ -5,6 +5,7 @@
 body{
     background-image: url(./bg.png);
     text-align: center;
+    color: yellow;
 }
 
 .row{
@@ -18,4 +19,11 @@ body{
 .top{
     color: Yellow;
     font-family: Calibri, Helvetica, sans-serif;
+}
+.mt-2{margin-top:.5rem!important}
+li,h1{
+    margin-left: 30%;
+    float: r;
+    margin-top: 1%;
+    width: 40%;  
 }
